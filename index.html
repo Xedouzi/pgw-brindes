@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="only light">
+<meta name="theme-color" content="#1B7A3A">
+<!-- o site e sempre claro: a extensao Dark Reader nao mexe -->
+<meta name="darkreader-lock">
+<title>PGW Brindes &amp; Personalizados | Canecas, garrafas e presentes em Cravinhos</title>
+<meta name="description" content="Canecas, garrafas, copos, camisetas, cestas e brindes personalizados. Escreva o nome, veja na peça, pague pelo site e retire na loja. Av. Pedro Duarte Amoroso, 532, Cravinhos (SP).">
+<!-- DEMO: remover a linha abaixo quando publicar no dominio definitivo do cliente -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="img/icone.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700..800&family=Manrope:wght@400..800&family=Dancing+Script:wght@700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "PGW Brindes & Personalizados",
+  "telephone": "+55-16-99173-2180",
+  "image": "img/fachada.webp",
+  "address": { "@type": "PostalAddress", "streetAddress": "Av. Pedro Duarte Amoroso, 532", "addressLocality": "Cravinhos", "addressRegion": "SP", "postalCode": "14140-000", "addressCountry": "BR" },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "144" },
+  "sameAs": ["https://www.instagram.com/pgwbrindes"]
+}
+</script>
+<style>
+  /* ============================================================
+     PGW BRINDES - as tres bolinhas do logo: G laranja, P verde, W azul.
+     Verde nos botoes e na faixa "Para empresas", laranja nos selos,
+     azul escuro na faixa de fatos e no rodape. Fundo creme claro.
+     ============================================================ */
+  :root {
+    /* "only light": o site e sempre claro e o navegador nao escurece sozinho */
+    color-scheme: only light;
+    --branco:   #FFFFFF;
+    --ceu:      #FBF4EC;   /* creme claro das faixas */
+    --ceu-2:    #F4E6D6;
+    --azul:     #1B7A3A;   /* o verde do "P": botoes, links e a faixa das empresas. 5.4:1 no branco */
+    --azul-2:   #145C2B;
+    --azul-claro: #E2F2E6;
+    --vermelho: #BF4E0A;   /* o laranja do "G", escurecido para o texto branco: 4.6:1 */
+    --vermelho-2: #9A3E07;
+    --marinho:  #102A5C;   /* o azul do "W": faixa de fatos, rodape e botao selecionado */
+    --marinho-2:#1A3A78;
+    --tinta:    #141B2D;
+    --tinta-2:  #4E566A;   /* 7.3:1 no branco */
+    --linha:    #E7E1D8;
+    --linha-forte: #857F77;/* contorno de controle: 3.8:1 no branco */
+    --raio:     16px;
+
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-gaveta: cubic-bezier(0.32, 0.72, 0, 1);
+    --dur-entra: .7s;
+    --dur-ui: .22s;
+
+    --fonte: "Manrope", "Manrope reserva", Arial, sans-serif;
+    --fonte-titulo: "Syne", "Syne reserva", "Arial Black", Arial, sans-serif;
+    --largura: 1240px;
+    --margem: clamp(16px, 4vw, 40px);
+  }
+  @font-face { font-family: "Manrope reserva"; src: local("Arial"); size-adjust: 102%; }
+  @font-face { font-family: "Syne reserva"; src: local("Arial Bold"); size-adjust: 104%; }
+
+  /* ---------- base ---------- */
+  *, *::before, *::after { box-sizing: border-box; }
+  html { background: #FFFFFF; scrollbar-color: #B9B0A4 #FFFFFF; scroll-behavior: smooth; scroll-padding-top: 90px; -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { overflow-x: clip; margin: 0; background: var(--branco); color: var(--tinta); font: 400 1.0625rem/1.6 var(--fonte); -webkit-tap-highlight-color: transparent; }
+  img, svg { max-width: 100%; }
+  img { height: auto; }
+  [hidden] { display: none !important; }
+  figure, blockquote { margin: 0; }
+  a { color: var(--azul); text-underline-offset: .18em; }
+  a, button, input, select, label { touch-action: manipulation; }
+  :focus-visible { outline: 3px solid var(--azul); outline-offset: 3px; }
+  h1, h2, h3 { font-family: var(--fonte-titulo); font-weight: 750; line-height: 1.05; margin: 0; letter-spacing: -.02em; text-wrap: balance; overflow-wrap: break-word; color: var(--tinta); }
+  h2 { font-size: clamp(1.9rem, 1.35rem + 2.2vw, 2.9rem); }
+  h3 { font-size: 1.2rem; }
+  p { margin: 0; }
+  p, li, label, small, legend, .btn { overflow-wrap: anywhere; }
+  .envoltorio { max-width: var(--largura); margin-inline: auto; padding-inline: var(--margem); }
+  .so-leitor { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .pular { position: absolute; left: 1rem; top: -5rem; z-index: 60; padding: .8rem 1rem; background: var(--branco); color: var(--tinta); }
+  .pular:focus { top: 1rem; }
+
+  /* movimento padrao: revela ao rolar (uma vez) */
+  .com-js [data-revela] { opacity: 0; transform: translateY(16px); transition: opacity var(--dur-entra) var(--ease-out), transform var(--dur-entra) var(--ease-out); transition-delay: calc(var(--i, 0) * 70ms); }
+  .com-js [data-revela].visto { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .com-js [data-revela] { transform: none; transition: opacity .3s ease; transition-delay: 0s; } }
+
+  /* botoes */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem; max-width: 100%;
+    min-height: 52px; padding: .75rem 1.4rem; border: 0; border-radius: 12px;
+    background: var(--azul); color: #fff; font: 650 1rem/1.2 var(--fonte); text-decoration: none; text-align: center; cursor: pointer;
+    transition: background-color var(--dur-ui) ease, box-shadow var(--dur-ui) ease, color var(--dur-ui) ease, transform .12s var(--ease-out);
+  }
+  .btn:hover { background: var(--azul-2); }
+  .btn:active { transform: scale(.97); }
+  .btn svg { width: 1.25em; height: 1.25em; flex: none; }
+  .btn-branco { background: var(--branco); color: var(--tinta); }
+  .btn-branco:hover { background: var(--ceu); }
+  .btn-linha { background: var(--branco); color: var(--tinta); box-shadow: inset 0 0 0 1.5px var(--linha-forte); }
+  .btn-linha:hover { background: var(--branco); box-shadow: inset 0 0 0 1.5px var(--tinta); }
+  .btn-zap { background: #12803B; color: #fff; }
+  .btn-zap:hover { background: #0E6A31; }
+  @media (prefers-reduced-motion: reduce) { .btn { transition: none; } .btn:active { transform: none; } }
+
+  /* ---------- topo ---------- */
+  .topo { position: sticky; top: 0; z-index: 30; background: var(--branco); border-bottom: 1px solid var(--linha); }
+  .topo-grade { display: flex; align-items: center; justify-content: space-between; gap: .75rem 1.5rem; padding-block: .55rem; }
+  .marca { display: inline-flex; align-items: center; gap: .7rem; min-width: 0; min-height: 44px; color: var(--tinta-2); text-decoration: none; }
+  .marca img { width: 50px; height: 50px; flex: none; }
+  .marca span { display: grid; line-height: 1.1; }
+  .marca strong { font-family: var(--fonte-titulo); font-size: 1.45rem; font-weight: 800; font-style: italic; letter-spacing: -.02em; color: var(--azul); }
+  .marca strong b, .rodape-nome b { margin-inline: .06em; color: var(--vermelho); }
+  .marca small { font-size: .82rem; }
+  .menu { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0 1.4rem; align-items: center; margin-left: auto; }
+  .menu a { color: var(--tinta); text-decoration: none; padding: .55rem 0; white-space: nowrap; font-weight: 500; font-size: .98rem; }
+  .menu a:hover { color: var(--azul); text-decoration: underline; }
+  .sacola-botao { position: relative; display: inline-flex; align-items: center; gap: .45rem; flex: none; min-height: 48px; padding: .45rem 1rem; border: 0; border-radius: 12px; background: var(--azul); color: #fff; font: 650 1rem/1 var(--fonte); cursor: pointer; transition: background-color var(--dur-ui) ease; }
+  .sacola-botao:hover { background: var(--azul-2); }
+  .sacola-botao svg { width: 22px; height: 22px; }
+  .sacola-botao .conta { display: inline-grid; place-items: center; min-width: 1.55rem; height: 1.55rem; padding: 0 .35rem; border-radius: 999px; background: var(--vermelho); color: #fff; font-size: .82rem; }
+  .menu-botao { display: none; }
+  @media (max-width: 60em) {
+    .menu-botao {
+      display: grid; align-content: center; justify-items: center; gap: 5px; flex: none; width: 52px; height: 52px; margin-right: -8px; padding: 0;
+      border: 0; border-radius: var(--raio); background: none; cursor: pointer;
+    }
+    .menu-botao span { display: block; width: 28px; height: 4px; border-radius: 4px; background: var(--tinta); transition: transform .25s var(--ease-out), opacity .2s; }
+    .menu-aberto .menu-botao span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+    .menu-aberto .menu-botao span:nth-child(2) { opacity: 0; }
+    .menu-aberto .menu-botao span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+    .menu {
+      display: grid; position: absolute; top: 100%; left: 0; right: 0; margin: 0;
+      grid-template-columns: minmax(0, 1fr); gap: 0; padding: .5rem var(--margem) 1.25rem;
+      background: var(--branco); border-bottom: 1px solid var(--linha); box-shadow: 0 18px 30px -22px rgba(16, 42, 92, .5);
+      opacity: 0; visibility: hidden; transform: translateY(-6px);
+      transition: opacity var(--dur-ui) var(--ease-out), transform var(--dur-ui) var(--ease-out), visibility 0s linear var(--dur-ui);
+    }
+    .menu-aberto .menu { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+    .menu a { display: flex; align-items: center; min-height: 52px; padding: 0; border-bottom: 1px solid var(--linha); font-size: 1.05rem; }
+    .menu a:last-child { border-bottom: 0; }
+    .sacola-botao { margin-left: auto; }
+  }
+  @media (max-width: 480px) {
+    .sacola-botao .rotulo { display: none; }
+    .sacola-botao { padding: .45rem .8rem; }
+    .marca img { width: 42px; height: 42px; }
+    .marca strong { font-size: 1.2rem; }
+    .marca small { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) { .menu-botao span, .menu { transition: none !important; } }
+
+  /* ---------- abertura: carrossel de campanhas ---------- */
+  .destaques-secao { padding-block: clamp(.9rem, 2vw, 1.4rem) 0; }
+  .destaques { position: relative; container-type: inline-size; }
+  .destaques-trilho { display: grid; grid-auto-flow: column; grid-auto-columns: 100%; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; margin: 0; padding: 0; list-style: none; border-radius: 22px; }
+  .destaques-trilho::-webkit-scrollbar { display: none; }
+  .destaque { scroll-snap-align: start; position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); align-items: center; min-height: clamp(360px, 44vw, 460px); background: var(--cor); overflow: hidden; }
+  .destaque-texto { position: relative; z-index: 1; display: grid; justify-items: start; align-content: center; gap: .9rem; padding: clamp(1.8rem, 4vw, 3rem) 1rem clamp(3.4rem, 5vw, 3.6rem) clamp(4.2rem, 7vw, 5.5rem); min-width: 0; }
+  .destaque-texto > * { max-width: 100%; }
+  .destaque-chapeu { color: var(--azul); font-weight: 650; font-size: .98rem; }
+  .destaque h2 { font-size: clamp(2rem, 1.2rem + 2.6vw, 3.4rem); line-height: .98; max-width: 10em; }
+  .destaque-texto > p:not(.destaque-chapeu) { max-width: 27rem; color: var(--tinta-2); font-size: 1.05rem; line-height: 1.5; }
+  .destaque-foto { align-self: stretch; display: grid; place-items: center; padding: 1rem clamp(3.6rem, 6vw, 5rem) 1rem 0; min-width: 0; }
+  /* fotos de produto tem fundo branco: multiply deixa o fundo da cor do banner */
+  .destaque-foto img { display: block; width: 100%; max-width: 560px; height: auto; mix-blend-mode: multiply; }
+  /* o ultimo banner e a propria loja: agua funda com a fachada de verdade */
+  .destaque-escuro { color: #fff; }
+  .destaque-escuro h2 { color: #fff; }
+  .destaque-escuro .destaque-chapeu { color: #A9BCFF; }
+  .destaque-escuro .destaque-texto > p:not(.destaque-chapeu) { color: #D5DDF5; }
+  .destaque-escuro .destaque-foto { padding: 0; }
+  .destaque-escuro .destaque-foto img { max-width: none; height: 100%; object-fit: cover; object-position: 50% 30%; mix-blend-mode: normal; -webkit-mask-image: linear-gradient(90deg, transparent, #000 22%); mask-image: linear-gradient(90deg, transparent, #000 22%); }
+  .destaques .seta { position: absolute; top: 50%; translate: 0 -50%; z-index: 2; box-shadow: 0 6px 18px -8px rgba(16, 42, 92, .5); }
+  .destaques .seta-ant { left: .9rem; }
+  .destaques .seta-prox { right: .9rem; }
+  .destaques .pontos { position: absolute; left: 50%; bottom: .35rem; translate: -50% 0; z-index: 2; }
+  .seta { width: 46px; height: 46px; border: 0; border-radius: 50%; background: var(--branco); color: var(--tinta); display: grid; place-items: center; cursor: pointer; transition: background-color var(--dur-ui) ease, transform .12s var(--ease-out); }
+  @media (hover: hover) and (pointer: fine) { .seta:hover { background: var(--ceu); } }
+  .seta:active { transform: scale(.94); }
+  .seta svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+  .pontos { display: flex; gap: 0; }
+  .ponto { width: 36px; height: 40px; padding: 0; border: 0; background: none; cursor: pointer; display: grid; place-items: center; }
+  .ponto::before { content: ""; width: 10px; height: 10px; border-radius: 999px; background: rgba(18, 35, 58, .25); transition: width var(--dur-ui) var(--ease-out), background-color var(--dur-ui) ease; }
+  .ponto[aria-current="true"]::before { width: 26px; background: var(--tinta); }
+  .no-escuro .ponto::before { background: rgba(255, 255, 255, .4); }
+  .no-escuro .ponto[aria-current="true"]::before { background: #fff; }
+  @media (max-width: 760px) {
+    .destaque { grid-template-columns: minmax(0, 1fr); align-items: start; min-height: 0; }
+    .destaque-foto { order: -1; aspect-ratio: 6 / 5; padding: 1rem 3.4rem .2rem; }
+    .destaque-foto { min-height: 0; overflow: hidden; }
+    .destaque-foto img { width: 100%; height: 100%; max-width: none; object-fit: contain; }
+    .destaque-escuro .destaque-foto img { width: 100%; height: 100%; max-height: none; -webkit-mask-image: linear-gradient(180deg, #000 70%, transparent); mask-image: linear-gradient(180deg, #000 70%, transparent); }
+    .destaque-texto { padding: .4rem var(--margem) 3.4rem; gap: .7rem; }
+    .destaque h2 { font-size: clamp(1.75rem, 1.3rem + 2.4vw, 2.4rem); }
+    .destaques .seta { top: calc(50cqw * 5 / 6); width: 42px; height: 42px; }
+    .destaques .seta-ant { left: .5rem; }
+    .destaques .seta-prox { right: .5rem; }
+  }
+
+  /* faixa de fatos logo abaixo do carrossel */
+  .fatos { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .5rem 1.5rem; margin: 0; padding: 1.2rem 0 .4rem; list-style: none; }
+  .fato { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: .7rem; align-items: center; font-size: .93rem; line-height: 1.35; color: var(--tinta-2); }
+  .fato svg { width: 34px; height: 34px; fill: none; stroke: var(--azul); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  .fato strong { display: block; color: var(--tinta); font-weight: 650; }
+  @media (max-width: 960px) { .fatos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; } }
+  @media (max-width: 460px) { .fatos { grid-template-columns: minmax(0, 1fr); gap: .8rem; } }
+
+  .secao-ceu { background: var(--ceu); }
+  .secao-cabeca { display: grid; grid-template-columns: minmax(0, 1fr); gap: .8rem; max-width: 44rem; margin-bottom: clamp(1.75rem, 4vw, 2.75rem); }
+  .secao-cabeca p { color: var(--tinta-2); font-size: 1.08rem; }
+
+  /* categorias: bolhas com foto */
+  .categorias { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 1rem; margin-bottom: clamp(2.5rem, 5vw, 3.5rem); }
+  .categoria { display: grid; justify-items: center; align-content: start; gap: .7rem; padding: 0; border: 0; background: none; color: var(--tinta); font: 600 1rem/1.2 var(--fonte); text-align: center; cursor: pointer; }
+  .categoria span:first-child { display: block; width: min(100%, 136px); aspect-ratio: 1; border-radius: 50%; overflow: hidden; background: var(--branco); box-shadow: 0 0 0 0 var(--azul); transition: box-shadow var(--dur-ui) var(--ease-out); }
+  .categoria img { display: block; width: 100%; height: 100%; object-fit: contain; padding: 14%; transition: transform .5s var(--ease-out); }
+  .categoria-todos span:first-child { display: grid; place-items: center; background: var(--azul-claro); }
+  .categoria-todos svg { width: 46%; height: 46%; fill: none; stroke: var(--azul); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .categoria[aria-pressed="true"] span:first-child { box-shadow: 0 0 0 4px var(--tinta); }
+  @media (hover: hover) and (pointer: fine) { .categoria:hover img { transform: scale(1.05); } }
+  @media (max-width: 860px) {
+    .categorias { display: flex; gap: .9rem; overflow-x: auto; scroll-snap-type: x mandatory; margin-inline: calc(var(--margem) * -1); padding: 4px var(--margem) .5rem; scrollbar-width: none; }
+    .categorias::-webkit-scrollbar { display: none; }
+    .categoria { flex: 0 0 100px; scroll-snap-align: start; font-size: .95rem; }
+  }
+
+  /* vitrine: prateleiras que rolam de lado */
+  .vitrine { display: grid; gap: clamp(2.4rem, 4vw, 3.4rem); padding: 0; margin: 0; list-style: none; }
+  .prateleira { min-width: 0; }
+  .prateleira.some { display: none; }
+  .prateleira-topo { display: flex; align-items: center; gap: .5rem 1rem; margin-bottom: 1rem; }
+  .prateleira-topo h3 { margin-right: auto; font-size: clamp(1.35rem, 1.15rem + .7vw, 1.75rem); }
+  .ver-tudo { min-height: 44px; padding: 0; border: 0; background: none; color: var(--azul); font: 600 1rem/1.2 var(--fonte); text-decoration: underline; text-underline-offset: .18em; cursor: pointer; }
+  .prateleira-setas { display: flex; gap: .4rem; }
+  .prateleira-setas .seta { box-shadow: inset 0 0 0 1px var(--linha); }
+  .prateleira-setas .seta:disabled { opacity: .35; cursor: default; }
+  .fileira { --col: 5; --vao: 1.1rem; position: relative; display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - (var(--col) - 1) * var(--vao)) / var(--col)); gap: var(--vao); overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding: 0; margin: 0; list-style: none; }
+  .fileira::-webkit-scrollbar { display: none; }
+  .fileira > li { scroll-snap-align: start; }
+  .filtrada .prateleira-topo { display: none; }
+  .filtrada .fileira { grid-auto-flow: row; grid-template-columns: repeat(var(--col), minmax(0, 1fr)); grid-auto-rows: 1fr; row-gap: clamp(1.4rem, 3vw, 2rem); overflow: visible; }
+  @media (max-width: 1100px) { .fileira { --col: 4; } }
+  @media (max-width: 860px) { .fileira { --col: 3; } }
+  @media (max-width: 560px) {
+    .fileira { --col: 2; --vao: .75rem; grid-auto-columns: 46%; margin-inline: calc(var(--margem) * -1); padding-inline: var(--margem); scroll-padding-inline: var(--margem); }
+    .filtrada .fileira { margin-inline: 0; padding-inline: 0; }
+    .prateleira-setas { display: none; }
+  }
+  /* cartao: branco sobre a nevoa, todos do mesmo tamanho */
+  .produto { display: grid; grid-template-rows: auto 1fr; overflow: hidden; min-width: 0; border-radius: var(--raio); background: var(--branco); box-shadow: 0 0 0 1px var(--linha); }
+  .produto-foto { position: relative; display: block; aspect-ratio: 1; background: var(--branco); border-bottom: 1px solid var(--linha); }
+  .produto-foto img { display: block; width: 100%; height: 100%; object-fit: contain; transition: transform .6s var(--ease-out); }
+  @media (hover: hover) and (pointer: fine) { .produto:hover .produto-foto img { transform: scale(1.04); } }
+  .selo { position: absolute; left: .7rem; top: .7rem; padding: .25rem .65rem; border-radius: 999px; background: var(--vermelho); color: #fff; font-size: .8rem; font-weight: 650; }
+  .produto-info { display: flex; flex-direction: column; gap: .35rem; min-width: 0; padding: .85rem .9rem .95rem; }
+  .produto-marca { color: var(--azul); font-size: .86rem; font-weight: 650; }
+  .produto h4 { margin: 0; font-size: 1rem; font-weight: 600; line-height: 1.3; }
+  .produto h4, .produto-desc { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; min-height: 2lh; }
+  .produto-desc { color: var(--tinta-2); font-size: .9rem; line-height: 1.45; }
+  .produto h4 a { color: inherit; text-decoration: none; }
+  @media (hover: hover) and (pointer: fine) { .produto h4 a:hover { text-decoration: underline; text-underline-offset: 3px; } }
+  .produto-preco { font-weight: 700; font-size: 1.15rem; }
+  .produto-preco small { font-size: .8rem; font-weight: 500; color: var(--tinta-2); }
+  .produto .btn { width: 100%; min-height: 46px; padding-inline: .8rem; margin-top: auto; }
+  .btn.adicionado { background: var(--marinho); color: #fff; }
+  .procura { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: .4rem 1.5rem; margin-top: clamp(3rem, 2rem + 3vw, 4.5rem); padding: 1.4rem 1.6rem; border-radius: var(--raio); background: var(--branco); box-shadow: 0 0 0 1px var(--linha); }
+  .procura h3 { font-size: 1.4rem; }
+  .procura p { color: var(--tinta-2); }
+  .procura .btn { grid-column: 2; grid-row: 1 / span 2; }
+  @media (max-width: 640px) { .procura { grid-template-columns: minmax(0, 1fr); } .procura .btn { grid-column: auto; grid-row: auto; justify-self: start; margin-top: .4rem; } }
+  @media (max-width: 560px) { .produto-desc { display: none; } .produto-info { padding: .7rem .7rem .8rem; } .produto h4 { font-size: .95rem; } }
+
+  /* ---------- presente certo: a faixa azul, com as sugestoes num cartao amarrado pela fita ---------- */
+  .presente { background: var(--azul); color: #fff; padding-block: clamp(3rem, 7vw, 5.5rem); }
+  .presente-grade { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+  .presente h2 { color: #fff; font-size: clamp(2.1rem, 1.4rem + 2.6vw, 3.4rem); }
+  .presente-texto { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.6rem; }
+  .presente-texto > p { font-size: 1.1rem; max-width: 34rem; color: #DCE4FA; }
+  .passo { display: grid; grid-template-columns: minmax(0, 1fr); gap: .8rem; margin: 0; padding: 0; border: 0; min-width: 0; }
+  .passo legend { display: flex; align-items: baseline; gap: .7rem; max-width: 100%; padding: 0; margin-bottom: .8rem; font-weight: 650; font-size: 1.08rem; }
+  .passo legend b { display: inline-grid; place-items: center; flex: none; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--vermelho); color: #fff; font: 800 1rem/1 var(--fonte-titulo); }
+  .idades, .valores { display: grid; gap: .55rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 8.5rem), 1fr)); }
+  .cartela { position: relative; display: grid; align-content: center; min-height: 52px; padding: .7rem .95rem; border-radius: 12px; background: var(--azul-2); color: #fff; box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, .45); cursor: pointer; transition: background-color var(--dur-ui) ease, color var(--dur-ui) ease; }
+  .cartela input { position: absolute; inset: 0; margin: 0; opacity: 0; cursor: pointer; }
+  .cartela strong { font-weight: 650; }
+  @media (hover: hover) and (pointer: fine) { .cartela:hover { background: var(--marinho-2); } }
+  .cartela:has(input:checked) { background: #fff; color: var(--azul); box-shadow: none; }
+  .cartela:has(input:focus-visible) { outline: 3px solid #fff; outline-offset: 2px; }
+  /* as sugestoes: cartao branco com a fita vermelha por cima e o laco, como a caixa de presente */
+  .lista { position: relative; display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; margin-top: 18px; padding: calc(clamp(1.3rem, 3vw, 1.9rem) + 14px) clamp(1.3rem, 3vw, 1.9rem) clamp(1.3rem, 3vw, 1.9rem); border-radius: 20px; background: var(--branco); color: var(--tinta); }
+  .lista::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 14px; border-radius: 20px 20px 0 0; background: var(--vermelho); }
+  .laco { position: absolute; left: 50%; top: -24px; width: 76px; height: 44px; translate: -50% 0; }
+  .lista > * { position: relative; }
+  .lista > .laco { position: absolute; }
+  .lista h3 { font-size: clamp(1.4rem, 1.2rem + .7vw, 1.8rem); }
+  .lista ul { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
+  .lista li { display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; gap: .15rem .85rem; align-items: center; padding: .6rem 0; border-top: 1px solid var(--linha); }
+  .lista li:first-child { border-top: 0; }
+  .lista li img { grid-row: span 2; width: 64px; aspect-ratio: 1; object-fit: contain; border-radius: 10px; box-shadow: inset 0 0 0 1px var(--linha); }
+  .lista li a { color: var(--tinta); font-weight: 600; line-height: 1.3; text-decoration: none; }
+  @media (hover: hover) and (pointer: fine) { .lista li a:hover { text-decoration: underline; } }
+  .lista li small { grid-column: 2; color: var(--tinta-2); font-size: .88rem; }
+  .lista li strong { grid-column: 3; grid-row: 1; white-space: nowrap; text-align: right; }
+  .lista li .mini { grid-column: 3; grid-row: 2; justify-self: end; min-height: 40px; padding: .35rem .8rem; font-size: .9rem; }
+  .lista-vazia { color: var(--tinta-2); }
+  .lista-mais { justify-self: start; }
+  .lista-botoes { display: grid; gap: .55rem; }
+  .lista-botoes .btn { width: 100%; }
+  .lista-status { font-size: .95rem; }
+  .lista-status:empty { display: none; }
+  .lista-nota { color: var(--tinta-2); font-size: .88rem; }
+  /* embalagem para presente, no carrinho */
+  .embalar { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .1rem .7rem; align-items: start; padding: .85rem 1rem; border-radius: 12px; background: var(--ceu); cursor: pointer; }
+  .embalar input { grid-row: span 2; width: 22px; height: 22px; margin: .1rem 0 0; accent-color: var(--azul); }
+  .embalar small { color: var(--tinta-2); font-size: .86rem; }
+  @media (max-width: 900px) { .presente-grade { grid-template-columns: minmax(0, 1fr); } }
+  @media (max-width: 420px) { .lista li { grid-template-columns: 52px minmax(0, 1fr); } .lista li img { width: 52px; grid-row: span 3; } .lista li strong, .lista li .mini { grid-column: 2; grid-row: auto; justify-self: start; text-align: left; } }
+  /* ---------- a loja ---------- */
+  .loja-grade { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: clamp(2rem, 4vw, 3.5rem); align-items: center; }
+  .loja-fotos { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(.75rem, 1.6vw, 1.2rem); }
+  .loja-fotos img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--raio); }
+  .loja-fotos figure:last-child { margin-top: clamp(1.5rem, 4vw, 3rem); }
+  .loja-texto { display: grid; grid-template-columns: minmax(0, 1fr); gap: .9rem; }
+  .loja-texto > p:not(.nota-google) { font-size: 1.1rem; color: var(--tinta-2); max-width: 36rem; }
+  .nota-google { display: flex; flex-wrap: wrap; align-items: baseline; gap: .3rem .7rem; margin-top: .3rem; }
+  .nota-google strong { font-family: var(--fonte-titulo); font-size: 2.4rem; font-weight: 800; line-height: 1; color: var(--azul); }
+  .avaliacoes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .75rem; }
+  .avaliacao { display: flex; flex-direction: column; padding: .95rem 1rem; border-radius: var(--raio); background: var(--ceu); }
+  .avaliacao p { font-size: .95rem; line-height: 1.4; font-weight: 500; }
+  .avaliacao footer { margin-top: auto; padding-top: .5rem; color: var(--tinta-2); font-size: .82rem; }
+  @media (max-width: 1080px) { .avaliacoes { grid-template-columns: minmax(0, 1fr); } }
+  @media (max-width: 860px) { .loja-grade { grid-template-columns: minmax(0, 1fr); } .loja-fotos { max-width: 560px; } }
+
+  /* ---------- como chegar ---------- */
+  .chegar { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); overflow: hidden; border-radius: 20px; background: var(--branco); box-shadow: 0 0 0 1px var(--linha); }
+  .chegar-mapa { display: block; width: 100%; height: 100%; min-height: 280px; border: 0; background: var(--ceu-2); }
+  .chegar-dados { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.1rem; align-content: center; padding: clamp(1.4rem, 3vw, 2.2rem); }
+  .chegar-dados h3 { font: 600 .95rem/1.3 var(--fonte); color: var(--tinta-2); margin-bottom: .1rem; }
+  .chegar-dados p, .chegar-dados a { font-family: var(--fonte-titulo); font-size: clamp(1.15rem, 1rem + .5vw, 1.4rem); font-weight: 700; line-height: 1.3; }
+  .chegar-dados a:not(.btn) { display: inline-block; max-width: 100%; padding-block: .4rem; text-decoration: none; overflow-wrap: anywhere; }
+  @media (hover: hover) and (pointer: fine) { .chegar-dados a:hover { text-decoration: underline; text-underline-offset: 4px; } }
+  .chegar-dados .btn { justify-self: start; font-family: var(--fonte); font-size: 1rem; font-weight: 600; }
+  @media (max-width: 760px) { .chegar { grid-template-columns: minmax(0, 1fr); } .chegar-mapa { height: 260px; } }
+
+  /* ---------- rodape ---------- */
+  .rodape { background: var(--marinho); color: #CBD5F0; padding: 1.1rem 0 calc(1.1rem + env(safe-area-inset-bottom)); font-size: .92rem; }
+  .rodape-grade { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem 2.5rem; }
+  .rodape-grade > * { min-width: 0; max-width: 100%; }
+  .rodape-marca { display: inline-flex; align-items: center; gap: .8rem; color: #fff; text-decoration: none; }
+  .rodape-marca { flex-wrap: wrap; gap: .2rem .8rem; }
+  .rodape-nome { font-family: var(--fonte-titulo); font-size: 1.25rem; font-weight: 800; font-style: italic; }
+  .rodape-nome b { color: #FF8A8E; }
+  .rodape a { color: #fff; }
+  .redes { display: flex; gap: .4rem; }
+  .redes a { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: rgba(255, 255, 255, .08); transition: background-color var(--dur-ui) ease; }
+  .redes svg { width: 22px; height: 22px; }
+  @media (hover: hover) and (pointer: fine) { .redes a:hover { background: var(--vermelho); color: #fff; } }
+  @media (max-width: 700px) { .rodape-grade { flex-direction: column; align-items: flex-start; gap: .6rem; } }
+
+  /* ---------- pagina do produto: abre por cima da vitrine e tem endereco proprio (#produto-id) ---------- */
+  .ficha {
+    position: fixed; width: min(100% - 2rem, 980px); max-width: none; max-height: min(92dvh, 740px); margin: auto; padding: 0; border: 0;
+    border-radius: 22px; background: var(--branco); color: var(--tinta); overflow: auto; overscroll-behavior: contain;
+    opacity: 0; transform: translateY(14px) scale(.98); transition: opacity .28s var(--ease-out), transform .28s var(--ease-out);
+  }
+  .ficha[open] { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); }
+  .ficha.aberta { opacity: 1; transform: none; }
+  .ficha::backdrop { background: rgba(16, 42, 92, .55); opacity: 0; transition: opacity .28s ease; }
+  .ficha.aberta::backdrop { opacity: 1; }
+  .ficha > .fechar { position: absolute; top: .8rem; right: .8rem; z-index: 2; }
+  .ficha-foto { position: relative; align-self: start; aspect-ratio: 1; border-right: 1px solid var(--linha); }
+  .ficha-foto img { display: block; width: 100%; height: 100%; object-fit: contain; }
+  .ficha-info { display: flex; flex-direction: column; gap: .85rem; min-width: 0; padding: clamp(1.4rem, 3vw, 2.4rem); }
+  .ficha-info h2 { padding-right: 2.6rem; font-size: clamp(1.45rem, 1.2rem + .9vw, 1.9rem); line-height: 1.12; }
+  .ficha-preco { font-size: 1.6rem; font-weight: 700; }
+  .ficha-desc { color: var(--tinta-2); }
+  .variacao { min-width: 0; margin: .2rem 0 0; padding: 0; border: 0; }
+  .variacao legend { padding: 0; margin-bottom: .45rem; color: var(--tinta-2); font-size: .95rem; }
+  .variacao legend strong { color: var(--tinta); font-weight: 600; }
+  .opcoes { display: flex; flex-wrap: wrap; gap: .45rem; }
+  .opcao { position: relative; display: flex; }
+  .opcao input { position: absolute; inset: 0; margin: 0; opacity: 0; cursor: pointer; }
+  .opcao span { display: inline-flex; align-items: center; min-height: 44px; padding: .45rem .95rem; border-radius: 10px; box-shadow: inset 0 0 0 1.5px var(--linha); font-size: .95rem; cursor: pointer; transition: background-color var(--dur-ui) ease, color var(--dur-ui) ease, box-shadow var(--dur-ui) ease; }
+  @media (hover: hover) and (pointer: fine) { .opcao:hover span { box-shadow: inset 0 0 0 1.5px var(--linha-forte); } }
+  .opcao input:checked + span { background: var(--marinho); color: #fff; box-shadow: none; }
+  .opcao input:focus-visible + span { outline: 3px solid var(--azul); outline-offset: 3px; }
+  .ficha-add { width: 100%; min-height: 52px; margin-top: .3rem; }
+  .ficha-status { min-height: 1.5em; margin-top: -.3rem; font-size: .95rem; }
+  .ficha-status:empty { display: none; }
+  .ver-sacola { padding: 0; border: 0; background: none; color: var(--azul); font: 600 .95rem/1.5 var(--fonte); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+  .ficha-entrega { display: grid; gap: .35rem; margin: .3rem 0 0; padding: 1rem 0 0; border-top: 1px solid var(--linha); color: var(--tinta-2); font-size: .92rem; list-style: none; }
+  .ficha-entrega li { display: flex; gap: .55rem; }
+  .ficha-entrega li::before { content: ""; flex: none; width: 6px; height: 6px; margin-top: .55em; border-radius: 50%; background: var(--azul); }
+  @media (max-width: 760px) {
+    .ficha { width: 100%; max-height: 94dvh; margin: auto 0 0; border-radius: 22px 22px 0 0; transform: translateY(40px); }
+    .ficha[open] { grid-template-columns: minmax(0, 1fr); }
+    .ficha-foto { aspect-ratio: 4 / 3; border-right: 0; border-bottom: 1px solid var(--linha); }
+  }
+  @media (prefers-reduced-motion: reduce) { .ficha { transform: none; transition: opacity .2s ease; } }
+  html:has(dialog[open]) { overflow: hidden; }
+
+  /* ---------- carrinho: gaveta que entra pela direita ---------- */
+  .sacola {
+    position: fixed; inset: 0 0 0 auto; margin: 0; padding: 0; border: 0;
+    width: min(100%, 460px); max-width: 100%; height: 100dvh; max-height: 100dvh;
+    border-radius: 22px 0 0 22px; background: var(--branco); color: var(--tinta);
+    transform: translateX(100%); transition: transform .34s var(--ease-gaveta);
+  }
+  .sacola[open] { display: flex; flex-direction: column; }
+  .sacola.aberta { transform: none; }
+  .sacola::backdrop { background: rgba(16, 42, 92, .55); opacity: 0; transition: opacity .34s ease; }
+  .sacola.aberta::backdrop { opacity: 1; }
+  @media (prefers-reduced-motion: reduce) { .sacola { transform: none; opacity: 0; transition: opacity .2s ease; } .sacola.aberta { opacity: 1; } }
+  .sacola-topo { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem 1.3rem; border-bottom: 1px solid var(--linha); }
+  .sacola-topo h2 { font-size: 1.6rem; }
+  .fechar { display: grid; place-items: center; width: 46px; height: 46px; flex: none; border: 0; border-radius: 50%; background: var(--ceu); color: var(--tinta); cursor: pointer; }
+  .fechar svg { width: 22px; height: 22px; }
+  .sacola-corpo { flex: 1; overflow: auto; overscroll-behavior: contain; display: grid; align-content: start; gap: 1.4rem; padding: 1.2rem 1.3rem; }
+  .itens { display: grid; gap: 1rem; padding: 0; margin: 0; list-style: none; }
+  .item { display: grid; grid-template-columns: 68px minmax(0, 1fr); gap: .35rem .9rem; }
+  .item img { grid-row: span 4; width: 68px; aspect-ratio: 1; object-fit: contain; border-radius: 10px; background: #fff; box-shadow: inset 0 0 0 1px var(--linha); }
+  .item h3 { font: 600 1rem/1.3 var(--fonte); }
+  .item-linha { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 0 .6rem; }
+  .item-linha .remover { grid-column: 1 / -1; justify-self: start; }
+  .qtd { display: inline-flex; align-items: center; border-radius: 10px; box-shadow: inset 0 0 0 1px var(--linha-forte); }
+  .qtd button { width: 44px; height: 44px; border: 0; border-radius: 10px; background: none; color: var(--tinta); font-size: 1.2rem; cursor: pointer; }
+  .qtd output { min-width: 1.6rem; text-align: center; font-weight: 600; }
+  .remover { min-height: 44px; padding: 0 .2rem; border: 0; background: none; color: var(--tinta-2); font: 400 .95rem/1 var(--fonte); text-decoration: underline; cursor: pointer; }
+  .item-var { color: var(--tinta-2); font-size: .9rem; }
+  .item-preco { justify-self: end; font-size: 1rem; white-space: nowrap; }
+  .vazia { display: grid; justify-items: center; gap: 1rem; padding: 2.5rem 0; color: var(--tinta-2); text-align: center; }
+  .vazia svg { width: 96px; height: auto; }
+  .bloco { display: grid; gap: .7rem; min-width: 0; margin: 0; padding: 1.2rem 0 0; border: 0; border-top: 1px solid var(--linha); }
+  .bloco legend { float: left; width: 100%; margin-bottom: .7rem; padding: 0; font: 700 1.2rem/1.2 var(--fonte-titulo); }
+  .escolhas { display: grid; gap: .5rem; }
+  .escolha { position: relative; display: grid; gap: .1rem; padding: .8rem 1rem .85rem 2.9rem; border-radius: 12px; box-shadow: inset 0 0 0 1px var(--linha-forte); cursor: pointer; transition: box-shadow var(--dur-ui) ease, background-color var(--dur-ui) ease; }
+  .escolha input { position: absolute; left: 1rem; top: 1.05rem; width: 1.15rem; height: 1.15rem; margin: 0; accent-color: var(--tinta); }
+  .escolha strong { font-weight: 600; }
+  .escolha small { color: var(--tinta-2); font-size: .9rem; }
+  .escolha:has(input:checked) { background: var(--ceu); box-shadow: inset 0 0 0 2px var(--tinta); }
+  .pilulas { display: flex; flex-wrap: wrap; gap: .45rem; }
+  .pilula { position: relative; display: inline-flex; align-items: center; min-height: 44px; padding: .45rem 1rem; border-radius: 10px; box-shadow: inset 0 0 0 1px var(--linha-forte); cursor: pointer; transition: background-color var(--dur-ui) ease, color var(--dur-ui) ease; }
+  .pilula input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; }
+  .pilula:has(input:checked) { background: var(--marinho); color: #fff; box-shadow: none; }
+  .pilula:has(input:focus-visible), .escolha:has(input:focus-visible) { outline: 3px solid var(--azul); outline-offset: 2px; }
+  .pilula:has(input:disabled) { opacity: .4; cursor: not-allowed; }
+  .pilula:has(input:disabled) input { cursor: not-allowed; }
+  .campos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; }
+  .campo { display: grid; grid-template-columns: minmax(0, 1fr); gap: .3rem; min-width: 0; font-weight: 600; font-size: .95rem; }
+  .campo-largo { grid-column: 1 / -1; }
+  .campo small { font-weight: 400; color: var(--tinta-2); }
+  .campo input, .campo select {
+    width: 100%; min-width: 0; min-height: 48px; padding: .6rem .85rem; border: 0; border-radius: 10px;
+    background: var(--branco); box-shadow: inset 0 0 0 1.5px var(--linha-forte); color: var(--tinta); font: 400 1rem/1.3 var(--fonte);
+    transition: box-shadow var(--dur-ui) ease;
+  }
+  .campo input:focus, .campo select:focus { outline: none; box-shadow: inset 0 0 0 2px var(--azul); }
+  .aviso { color: var(--tinta-2); font-size: .92rem; }
+  .nota { color: var(--tinta-2); font-size: .9rem; }
+  .previa-caixa summary { min-height: 44px; display: flex; align-items: center; cursor: pointer; font-weight: 600; color: var(--azul); }
+  .previa { padding: .9rem 1rem 1.05rem; border-radius: 12px 12px 12px 3px; background: #D9FDD3; color: #12241B; font-size: .95rem; line-height: 1.5; white-space: pre-line; overflow-wrap: anywhere; }
+  .sacola-pe { display: grid; gap: .55rem; padding: 1rem 1.3rem max(1.2rem, env(safe-area-inset-bottom)); border-top: 1px solid var(--linha); }
+  .sacola-pe .btn { width: 100%; }
+  .subtotal { display: flex; justify-content: space-between; align-items: baseline; font-size: 1.05rem; }
+  .subtotal strong { font-size: 1.3rem; }
+  .sacola-pe p { color: var(--tinta-2); font-size: .88rem; text-align: center; }
+  .sacola-pe .erro { color: #B3261E; font-weight: 600; }
+  /* pagamento simulado: Pix com QR Code, cartao e pedido aprovado */
+  .campo-cartao { position: relative; }
+  .campo-cartao input { padding-right: 6.5rem; }
+  .bandeira { position: absolute; right: .7rem; bottom: 13px; padding: .15rem .5rem; border-radius: 6px; background: var(--ceu); font-size: .78rem; font-weight: 700; pointer-events: none; }
+  .bandeira:empty { visibility: hidden; }
+  .demo { justify-self: center; padding: .25rem .75rem; border-radius: 999px; background: var(--ceu); box-shadow: inset 0 0 0 1px var(--linha-forte); color: var(--tinta-2); font-size: .8rem; font-weight: 600; }
+  .pagar, .aprovado { display: grid; justify-items: center; gap: .8rem; padding: .4rem 0 1rem; text-align: center; }
+  .pagar h3, .aprovado h3 { font-size: 1.6rem; }
+  .pagar > p { max-width: 30ch; color: var(--tinta-2); }
+  .pagar .valor { color: var(--tinta); font-size: 1.5rem; font-weight: 700; }
+  .qr { width: 200px; padding: 12px; border-radius: 16px; background: #fff; box-shadow: inset 0 0 0 1.5px var(--linha-forte); }
+  .qr svg { display: block; width: 100%; height: auto; }
+  .copia { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .5rem; width: 100%; }
+  .copia input { min-width: 0; min-height: 48px; padding: .6rem .85rem; border: 0; border-radius: 10px; background: var(--ceu); box-shadow: inset 0 0 0 1.5px var(--linha-forte); color: var(--tinta-2); font: 400 .9rem/1.3 var(--fonte); text-overflow: ellipsis; }
+  .copia .btn { min-height: 48px; padding-inline: 1.1rem; }
+  .status { display: inline-flex; align-items: center; gap: .55rem; font-weight: 600; }
+  .pulso { width: 10px; height: 10px; border-radius: 50%; background: var(--azul); animation: pulso 1.2s ease-in-out infinite; }
+  .status.pago { color: #12803B; }
+  .status.pago .pulso { background: #179A48; animation: none; }
+  @keyframes pulso { 50% { opacity: .3; transform: scale(.7); } }
+  .girando::before { content: ""; width: 1.1em; height: 1.1em; border: 2.5px solid currentColor; border-right-color: transparent; border-radius: 50%; animation: gira .7s linear infinite; }
+  @keyframes gira { to { transform: rotate(1turn); } }
+  .btn.girando { gap: .6rem; cursor: progress; }
+  .aprovado svg { width: 84px; height: 84px; }
+  .aprovado circle { fill: #E3F6E8; }
+  .aprovado path { fill: none; stroke: #179A48; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 40; stroke-dashoffset: 40; animation: risca .45s .15s var(--ease-out) forwards; }
+  @keyframes risca { to { stroke-dashoffset: 0; } }
+  .aprovado p { max-width: 32ch; color: var(--tinta-2); }
+  .aprovado .numero { color: var(--tinta); font-weight: 700; }
+  @media (prefers-reduced-motion: reduce) { .pulso, .girando::before { animation: none; } .aprovado path { animation: none; stroke-dashoffset: 0; } }
+  @media (max-width: 520px) { .sacola { border-radius: 0; } .campos { grid-template-columns: minmax(0, 1fr); } .campos.cartao-campos { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+  /* ---------- botao flutuante ---------- */
+  .flutuante {
+    display: grid; place-items: center; position: fixed; z-index: 25;
+    right: max(clamp(16px, 2vw, 28px), env(safe-area-inset-right)); bottom: calc(clamp(16px, 2vw, 28px) + env(safe-area-inset-bottom));
+    width: 62px; height: 62px; border-radius: 50%; background: #179A48; color: #fff;
+    box-shadow: 0 10px 28px -10px rgba(23, 154, 72, .7), 0 2px 6px rgba(16, 42, 92, .2);
+    opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity .25s var(--ease-out), transform .25s var(--ease-out), background-color .2s;
+  }
+  .flutuante.visivel { opacity: 1; transform: none; pointer-events: auto; }
+  .flutuante:hover { background: #12803B; }
+  .flutuante svg { width: 30px; height: 30px; }
+  @media (max-width: 600px) { .flutuante { width: 56px; height: 56px; } .flutuante svg { width: 27px; height: 27px; } }
+  @media (prefers-reduced-motion: reduce) { .flutuante { transition: none; transform: none; } }
+
+  /* ============================================================
+     JEITO DA CASA: o que faz esta loja nao parecer as outras.
+     A abertura e a propria bancada de gravacao: a pessoa escreve o
+     nome e ve na caneca, na garrafa e no copo. O nome digitado
+     aparece tambem nos produtos da vitrine. Fundo de mesa de corte
+     (grade fina) atras dos produtos, categorias em etiqueta com furo,
+     faixa de fatos azul com as tres bolinhas do logo.
+     ============================================================ */
+  h1, h2, h3 { font-weight: 800; letter-spacing: -.025em; line-height: 1.02; }
+  /* a Syne e larga: titulos um pouco menores para a palavra longa caber no celular */
+  h2 { font-size: clamp(1.7rem, 1.2rem + 2vw, 2.7rem); }
+  .empresas h2 { font-size: clamp(1.8rem, 1.2rem + 2.3vw, 3rem); }
+  .marca { gap: .6rem; color: var(--tinta-2); }
+  .marca .logo { width: 52px; height: 46px; flex: none; }
+  .marca strong { font-style: normal; font-size: 1.55rem; letter-spacing: -.01em; color: var(--tinta); }
+  .marca small { font-size: .8rem; }
+  @media (max-width: 480px) { .marca .logo { width: 44px; height: 39px; } .marca strong { font-size: 1.3rem; } }
+  .rodape-nome { font-style: normal; }
+
+  /* grade da mesa de corte: fundo de palco e de cartao */
+  .mesa { background-color: #FBF8F3; background-image: linear-gradient(rgba(27, 122, 58, .09) 1px, transparent 1px), linear-gradient(90deg, rgba(27, 122, 58, .09) 1px, transparent 1px); background-size: 22px 22px; background-position: -1px -1px; }
+
+  /* ---------- abertura: bancada de personalizacao ---------- */
+  .bancada { padding-block: clamp(1.2rem, 3vw, 2.4rem) clamp(1.6rem, 3vw, 2.4rem); }
+  /* texto e campos na esquerda, a peca na direita; no celular a peca fica entre o texto e os campos */
+  .bancada-grade { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); grid-template-areas: "texto palco" "campos palco"; column-gap: clamp(1.6rem, 4vw, 3.5rem); row-gap: 1.3rem; align-items: start; }
+  .bancada-texto { grid-area: texto; align-self: end; }
+  .gravar { grid-area: campos; }
+  .bancada-palco { grid-area: palco; align-self: center; }
+  .bancada-texto { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.15rem; min-width: 0; }
+  .chapeu { display: inline-flex; align-items: center; gap: .5rem; justify-self: start; color: var(--vermelho); font-weight: 700; font-size: .98rem; }
+  .bolinhas { display: inline-flex; gap: 4px; }
+  .bolinhas i { width: 10px; height: 10px; border-radius: 50%; background: #F07A1A; }
+  .bolinhas i:nth-child(2) { background: #2FA34F; }
+  .bolinhas i:nth-child(3) { background: #1D5FC4; }
+  .bancada h1 { font-size: clamp(2rem, 1.2rem + 2.5vw, 3.25rem); line-height: 1; max-width: 12em; }
+  .bancada-texto > p { max-width: 34rem; color: var(--tinta-2); font-size: 1.1rem; }
+  .gravar { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; margin: 0; padding: 0; border: 0; min-width: 0; }
+  .rotulo-campo { display: block; margin-bottom: .4rem; font-weight: 700; font-size: .95rem; }
+  .rotulo-campo small { font-weight: 500; color: var(--tinta-2); }
+  .gravar-campo { width: 100%; min-height: 58px; padding: .7rem 1rem; border: 0; border-radius: 14px; background: var(--branco); box-shadow: inset 0 0 0 2px var(--linha-forte); color: var(--tinta); font: 600 1.25rem/1.2 var(--fonte); transition: box-shadow var(--dur-ui) ease; }
+  .gravar-campo:focus { outline: none; box-shadow: inset 0 0 0 2.5px var(--azul); }
+  .gravar-campo::placeholder { color: #8A8F9B; font-weight: 500; }
+  .pecas, .letras { display: flex; flex-wrap: wrap; gap: .45rem; }
+  .peca, .letra { position: relative; display: inline-flex; align-items: center; gap: .45rem; min-height: 48px; padding: .4rem .95rem .4rem .55rem; border-radius: 12px; background: var(--branco); box-shadow: inset 0 0 0 1.5px var(--linha); cursor: pointer; font-weight: 600; transition: box-shadow var(--dur-ui) ease, background-color var(--dur-ui) ease; }
+  .letra { padding-inline: 1rem; font-weight: 400; }
+  .peca input, .letra input, .cor input { position: absolute; inset: 0; margin: 0; opacity: 0; cursor: pointer; }
+  .peca svg { width: 34px; height: 34px; }
+  @media (hover: hover) and (pointer: fine) { .peca:hover, .letra:hover { box-shadow: inset 0 0 0 1.5px var(--linha-forte); } }
+  .peca:has(input:checked), .letra:has(input:checked) { background: var(--azul-claro); box-shadow: inset 0 0 0 2px var(--azul); }
+  .peca:has(input:focus-visible), .letra:has(input:focus-visible), .cor:has(input:focus-visible) { outline: 3px solid var(--azul); outline-offset: 2px; }
+  .letra span { font-size: 1.15rem; line-height: 1; }
+  .cores { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .cor { position: relative; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; }
+  .cor span { width: 34px; height: 34px; border-radius: 50%; background: var(--c); box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .14); transition: transform var(--dur-ui) var(--ease-out); }
+  .cor:has(input:checked) { box-shadow: inset 0 0 0 2.5px var(--tinta); }
+  .cor:has(input:checked) span { transform: scale(.82); }
+  .rotulo-campo strong { font-weight: 600; color: var(--tinta-2); }
+
+  .bancada-palco { position: relative; display: grid; grid-template-rows: minmax(0, 1fr) auto; min-width: 0; overflow: hidden; border-radius: 26px; box-shadow: inset 0 0 0 1px var(--linha); }
+  .palco-arte { display: grid; place-items: center; aspect-ratio: 1.08; padding: clamp(.8rem, 3vw, 2rem); }
+  .palco-arte svg { width: min(100%, 470px); height: auto; }
+  .palco-pe { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: .6rem 1rem; padding: 1rem clamp(1rem, 2.5vw, 1.5rem); background: var(--branco); border-top: 1px solid var(--linha); }
+  .palco-pe h2 { font-size: 1.15rem; letter-spacing: -.01em; line-height: 1.2; }
+  .palco-pe p { color: var(--tinta-2); font-size: .92rem; }
+  .palco-preco { font: 800 1.6rem/1 var(--fonte); color: var(--tinta); white-space: nowrap; }
+  .palco-pe .btn { grid-column: 1 / -1; width: 100%; }
+  .palco-status { grid-column: 1 / -1; font-size: .95rem; }
+  .palco-status:empty { display: none; }
+  .na-hora { position: absolute; z-index: 1; top: 1rem; left: 1rem; padding: .35rem .8rem; border-radius: 999px; background: var(--branco); box-shadow: inset 0 0 0 1px var(--linha); color: var(--azul); font-size: .85rem; font-weight: 700; }
+  @media (max-width: 900px) {
+    .bancada-grade { grid-template-columns: minmax(0, 1fr); grid-template-areas: "texto" "palco" "campos"; }
+    .palco-arte { aspect-ratio: 1.25; }
+  }
+
+  /* faixa de fatos: azul do "W", com as bolinhas do logo separando */
+  .fita { background: var(--marinho); color: #fff; }
+  .fita .fatos { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .6rem 1.4rem; padding: 1.05rem 0; }
+  .fita .fato { grid-template-columns: 14px minmax(0, 1fr); gap: .7rem; color: #C9D6F2; }
+  .fita .fato::before { content: ""; width: 14px; height: 14px; border-radius: 50%; background: #F07A1A; align-self: start; margin-top: .2rem; }
+  .fita .fato:nth-child(2)::before { background: #3FBF64; }
+  .fita .fato:nth-child(3)::before { background: #6FA2F2; }
+  .fita .fato:nth-child(4)::before { background: #F2C230; }
+  .fita .fato strong { color: #fff; }
+  @media (max-width: 960px) { .fita .fatos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; } }
+  @media (max-width: 460px) { .fita .fatos { grid-template-columns: minmax(0, 1fr); gap: .8rem; } }
+
+  /* categorias: etiquetas com furo de pendurar */
+  .categorias { display: flex; flex-wrap: wrap; gap: .7rem; }
+  .categoria { position: relative; display: inline-flex; flex-direction: row; align-items: center; gap: .7rem; min-height: 64px; padding: .35rem 1.15rem .35rem 1.7rem; border-radius: 12px; background: var(--branco); box-shadow: inset 0 0 0 1.5px var(--linha); font-size: 1rem; transition: background-color var(--dur-ui) ease, box-shadow var(--dur-ui) ease, color var(--dur-ui) ease; }
+  .categoria::before { content: ""; position: absolute; left: .62rem; top: 50%; width: 9px; height: 9px; translate: 0 -50%; border-radius: 50%; background: var(--ceu); box-shadow: inset 0 0 0 1.5px var(--linha-forte); }
+  .categoria span:first-child { width: 48px; height: 48px; aspect-ratio: auto; border-radius: 10px; background: none; box-shadow: none; flex: none; overflow: visible; }
+  .categoria span:first-child svg, .categoria span:first-child img { display: block; width: 100%; height: 100%; padding: 0; object-fit: contain; }
+  .categoria-todos span:first-child { display: grid; place-items: center; background: none; }
+  .categoria-todos svg { width: 30px !important; height: 30px !important; }
+  @media (hover: hover) and (pointer: fine) { .categoria:hover { box-shadow: inset 0 0 0 1.5px var(--linha-forte); } .categoria:hover img { transform: none; } }
+  .categoria[aria-pressed="true"] { background: var(--azul); color: #fff; box-shadow: none; }
+  .categoria[aria-pressed="true"] span:first-child { box-shadow: none; }
+  .categoria[aria-pressed="true"]::before { background: var(--azul-2); box-shadow: none; }
+  .categoria[aria-pressed="true"] .categoria-todos svg, .categoria-todos[aria-pressed="true"] svg { stroke: #fff; }
+  @media (max-width: 860px) {
+    .categorias { flex-wrap: nowrap; }
+    .categoria { flex: none; }
+  }
+
+  /* nome para ver nos produtos */
+  .ver-nome { display: grid; justify-content: start; grid-template-columns: auto minmax(0, 18rem); align-items: center; gap: .5rem 1rem; margin: 0 0 clamp(2rem, 4vw, 2.8rem); }
+  .ver-nome label { font-weight: 700; }
+  .ver-nome input { min-height: 48px; padding: .55rem .9rem; border: 0; border-radius: 12px; background: var(--branco); box-shadow: inset 0 0 0 1.5px var(--linha-forte); color: var(--tinta); font: 600 1.05rem/1.2 var(--fonte); }
+  .ver-nome input:focus { outline: none; box-shadow: inset 0 0 0 2px var(--azul); }
+  @media (max-width: 560px) { .ver-nome { grid-template-columns: minmax(0, 1fr); } }
+
+  /* produto: mesa de corte atras, etiqueta "personalizavel" */
+  .produto { border-radius: 18px; box-shadow: 0 0 0 1px var(--linha); }
+  .produto-foto { margin: 7px 7px 0; border-radius: 13px; border-bottom: 0; overflow: hidden; }
+  .produto-foto svg { display: block; width: 100%; height: 100%; transition: transform .6s var(--ease-out); }
+  .produto-foto img { object-fit: cover; }
+  @media (hover: hover) and (pointer: fine) { .produto:hover .produto-foto svg { transform: scale(1.04); } }
+  .selo { left: auto; right: .6rem; top: .6rem; border-radius: 8px; background: var(--vermelho); }
+  .tag-gravar { position: absolute; left: .6rem; bottom: .6rem; display: inline-flex; align-items: center; gap: .3rem; padding: .22rem .6rem; border-radius: 8px; background: var(--branco); box-shadow: inset 0 0 0 1px var(--linha); color: var(--azul); font-size: .78rem; font-weight: 700; }
+  .tag-gravar svg { width: 13px; height: 13px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .produto-marca { color: var(--vermelho); }
+  @media (max-width: 560px) { .tag-gravar { display: none; } .produto .btn svg { display: none; } .produto .btn { font-size: .95rem; } }
+  .produto-preco { font-size: 1.3rem; font-weight: 800; line-height: 1.1; }
+
+  /* pagina do produto: mesa de corte e campo de gravacao */
+  .ficha-foto svg { display: block; width: 100%; height: 100%; }
+  .ficha-foto img { object-fit: cover; }
+  .ficha .campo input { font-size: 1.05rem; }
+  .ficha .letras .letra { min-height: 44px; }
+
+  /* ---------- empresas: quantidade e preco por faixa ---------- */
+  .empresas { background: var(--azul); color: #fff; padding-block: clamp(3rem, 7vw, 5.5rem); }
+  .empresas-grade { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+  .empresas h2 { color: #fff; }
+  .empresas-texto { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.3rem; }
+  .empresas-texto > p { max-width: 34rem; color: #DDF0E2; font-size: 1.1rem; }
+  .usos { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; padding: 0; list-style: none; }
+  .usos li { padding: .4rem .85rem; border-radius: 999px; background: rgba(255, 255, 255, .12); font-size: .95rem; font-weight: 600; }
+  .calculo { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.1rem; padding: clamp(1.3rem, 3vw, 1.9rem); border-radius: 22px; background: var(--branco); color: var(--tinta); }
+  .calculo h3 { font-size: clamp(1.35rem, 1.2rem + .6vw, 1.7rem); }
+  .calculo .pecas { gap: .4rem; }
+  .qtd-linha { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
+  .qtd-grande { display: inline-flex; align-items: center; border-radius: 12px; box-shadow: inset 0 0 0 1.5px var(--linha-forte); }
+  .qtd-grande button { width: 48px; height: 50px; border: 0; background: none; color: var(--tinta); font-size: 1.35rem; cursor: pointer; }
+  .qtd-grande input { width: 4.6rem; min-height: 50px; border: 0; background: none; color: var(--tinta); font: 700 1.2rem/1 var(--fonte); text-align: center; -moz-appearance: textfield; }
+  .qtd-grande input::-webkit-inner-spin-button { -webkit-appearance: none; }
+  .qtd-grande input:focus { outline: 2px solid var(--azul); outline-offset: -2px; border-radius: 8px; }
+  .atalhos { display: flex; flex-wrap: wrap; gap: .35rem; }
+  .atalhos button { min-height: 44px; padding: .3rem .8rem; border: 0; border-radius: 10px; background: var(--ceu); color: var(--tinta); font: 600 .95rem/1 var(--fonte); cursor: pointer; }
+  @media (hover: hover) and (pointer: fine) { .atalhos button:hover { background: var(--ceu-2); } }
+  .faixas { width: 100%; border-collapse: collapse; font-size: .97rem; }
+  .faixas th, .faixas td { padding: .55rem .6rem; text-align: left; border-top: 1px solid var(--linha); }
+  .faixas th { color: var(--tinta-2); font-weight: 600; font-size: .88rem; border-top: 0; }
+  .faixas td:last-child, .faixas th:last-child { text-align: right; white-space: nowrap; }
+  .faixas tr.atual td { background: var(--azul-claro); font-weight: 700; }
+  .faixas tr.atual td:first-child { border-radius: 8px 0 0 8px; }
+  .faixas tr.atual td:last-child { border-radius: 0 8px 8px 0; }
+  .total-empresa { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .3rem 1rem; padding-top: .9rem; border-top: 1px solid var(--linha); }
+  .total-empresa strong { font: 800 1.9rem/1 var(--fonte); }
+  .total-empresa span { color: var(--tinta-2); }
+  .calculo .btn { width: 100%; }
+  .calculo-nota { color: var(--tinta-2); font-size: .88rem; }
+  @media (max-width: 900px) { .empresas-grade { grid-template-columns: minmax(0, 1fr); } }
+
+  /* a loja */
+  .loja-fotos img { aspect-ratio: 4 / 5; }
+  .premio { display: inline-flex; align-items: center; gap: .6rem; justify-self: start; padding: .5rem .9rem .5rem .6rem; border-radius: 12px; background: var(--ceu); font-weight: 600; font-size: .95rem; }
+  .premio svg { width: 30px; height: 30px; flex: none; }
+  .avaliacoes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .avaliacao { background: #FBF8F3; box-shadow: inset 0 0 0 1px var(--linha); }
+  .nota-google strong { color: var(--azul); }
+  @media (max-width: 1080px) { .avaliacoes { grid-template-columns: minmax(0, 1fr); } }
+  /* carrinho: a peca aparece com o nome gravado */
+  .item-fig { grid-row: span 4; display: block; width: 68px; height: 68px; overflow: hidden; border-radius: 10px; background: #fff; box-shadow: inset 0 0 0 1px var(--linha); }
+  .item-fig svg, .item .item-fig img { display: block; width: 100%; height: 100%; object-fit: cover; box-shadow: none; border-radius: 0; }
+
+</style>
+<script>document.documentElement.classList.add("com-js");</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-sacola" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" d="M3 4h2.2l2.3 11h10.2l2-8H6.3M9.5 19.5a1 1 0 1 0 0 .01M16.5 19.5a1 1 0 1 0 0 .01"/></symbol>
+  <symbol id="i-facebook" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 21v-7.5H16l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21h3Z"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/></g><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></symbol>
+  <symbol id="i-caixa" viewBox="0 0 80 64"><path d="M58 22c14-1 15 26 0 27" fill="none" stroke="#F07A1A" stroke-width="6" stroke-linecap="round"/><rect x="14" y="14" width="46" height="44" rx="8" fill="#FBF4EC" stroke="#E7E1D8" stroke-width="2"/><ellipse cx="37" cy="14" rx="23" ry="5" fill="#F07A1A"/><circle cx="31" cy="36" r="5" fill="#2FA34F"/><circle cx="42" cy="36" r="5" fill="#1D5FC4"/></symbol>
+</svg>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topo">
+  <div class="envoltorio topo-grade">
+    <a class="marca" href="#" translate="no" aria-label="PGW Brindes e Personalizados, início">
+      <svg class="logo" viewBox="0 0 60 53" aria-hidden="true"><circle cx="19" cy="31" r="18" fill="#F07A1A"/><circle cx="40" cy="17" r="15" fill="#2FA34F"/><circle cx="43" cy="38" r="15" fill="#1D5FC4"/><circle cx="20" cy="6" r="5" fill="#1D5FC4"/><g fill="#fff" font-family="Arial Black, Arial, sans-serif" font-weight="900" text-anchor="middle"><text x="18" y="38" font-size="20">G</text><text x="40" y="23" font-size="17">P</text><text x="43" y="44" font-size="17">W</text></g></svg>
+      <span><strong>PGW</strong><small>Brindes &amp; Personalizados</small></span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Principal">
+      <a href="#personalizar">Personalizar</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#empresas">Para empresas</a>
+      <a href="#loja">A loja</a>
+      <a href="#chegar">Como chegar</a>
+    </nav>
+    <button class="sacola-botao" type="button" id="abrir-sacola" aria-haspopup="dialog">
+      <svg aria-hidden="true"><use href="#i-sacola"/></svg><span class="rotulo">Carrinho</span>
+      <span class="conta" id="sacola-conta">0</span><span class="so-leitor" id="sacola-sr">0 itens no carrinho</span>
+    </button>
+    <button class="menu-botao" type="button" id="menu-botao" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="bancada" id="personalizar" aria-labelledby="titulo">
+  <div class="envoltorio bancada-grade">
+    <div class="bancada-texto">
+      <p class="chapeu"><span class="bolinhas" aria-hidden="true"><i></i><i></i><i></i></span>Personalizados em Cravinhos</p>
+      <h1 id="titulo">Seu nome na caneca, na garrafa e no copo</h1>
+      <p>Escreva o nome ou a frase e veja como fica. Pague pelo site e retire na loja: nós gravamos e conferimos cada peça.</p>
+    </div>
+    <fieldset class="gravar">
+        <legend class="so-leitor">Monte a sua peça</legend>
+        <div>
+          <span class="rotulo-campo" id="rotulo-peca">Peça</span>
+          <div class="pecas" id="pecas" role="radiogroup" aria-labelledby="rotulo-peca"></div>
+        </div>
+        <div>
+          <label class="rotulo-campo" for="gravar-texto">Nome ou frase <small>(até 18 letras)</small></label>
+          <input class="gravar-campo" id="gravar-texto" maxlength="18" autocomplete="off" placeholder="Ex.: Rafaela" enterkeyhint="done">
+        </div>
+        <div>
+          <span class="rotulo-campo" id="rotulo-cor">Cor: <strong id="cor-nome"></strong></span>
+          <div class="cores" id="cores" role="radiogroup" aria-labelledby="rotulo-cor"></div>
+        </div>
+        <div>
+          <span class="rotulo-campo" id="rotulo-letra">Letra</span>
+          <div class="letras" id="letras" role="radiogroup" aria-labelledby="rotulo-letra"></div>
+        </div>
+    </fieldset>
+    <div class="bancada-palco">
+      <p class="na-hora">Gravação na hora</p>
+      <div class="palco-arte mesa" id="palco-arte"></div>
+      <div class="palco-pe">
+        <div><h2 id="palco-nome"></h2><p id="palco-det"></p></div>
+        <p class="palco-preco" id="palco-preco"></p>
+        <button class="btn" type="button" id="palco-add"><svg aria-hidden="true"><use href="#i-sacola"/></svg>Adicionar ao carrinho</button>
+        <p class="palco-status" id="palco-status" role="status"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="fita">
+  <ul class="envoltorio fatos">
+    <li class="fato"><span><strong>Gravação na hora</strong>Canecas, garrafas e copos</span></li>
+    <li class="fato"><span><strong>5,0 no Google</strong>144 avaliações</span></li>
+    <li class="fato"><span><strong>Retire na loja</strong>Av. Pedro Duarte Amoroso, 532</span></li>
+    <li class="fato"><span><strong>Pedidos para empresas</strong>A partir de 10 unidades</span></li>
+  </ul>
+</div>
+
+<main id="conteudo">
+  <section class="secao" id="produtos" aria-labelledby="titulo-produtos">
+    <div class="envoltorio">
+      <div class="secao-cabeca" data-revela>
+        <h2 id="titulo-produtos">Presentes personalizados</h2>
+        <p>Canecas, garrafas, copos, camisetas, cestas e buquês. Abra o produto para escolher a cor, escrever o nome e ver como fica.</p>
+      </div>
+      <div class="ver-nome" data-revela>
+        <label for="ver-nome">Ver este nome nos produtos:</label>
+        <input id="ver-nome" maxlength="18" autocomplete="off" placeholder="Ex.: Rafaela">
+      </div>
+      <div class="categorias" id="categorias" role="group" aria-label="Filtrar por categoria" data-revela></div>
+      <ul class="vitrine" id="vitrine" aria-label="Produtos"></ul>
+      <div class="procura" data-revela><h3>Tem uma ideia diferente?</h3><p>Fazemos a arte com a sua foto, frase ou logo. Conte pelo WhatsApp o que você imaginou.</p><a class="btn btn-zap" id="procura" href="https://wa.me/5516991732180" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Contar a ideia pelo WhatsApp</a></div>
+    </div>
+  </section>
+
+  <section class="empresas" id="empresas" aria-labelledby="titulo-empresas">
+    <div class="envoltorio empresas-grade">
+      <div class="empresas-texto">
+        <h2 id="titulo-empresas">Brindes com o logo da sua empresa</h2>
+        <p>Canecas, garrafas, copos e ecobags gravados com a sua marca. Escolha a peça e a quantidade para ver o preço por unidade. Quanto mais peças, menor o preço.</p>
+        <ul class="usos"><li>Fim de ano</li><li>Clientes</li><li>Equipe</li><li>Eventos e feiras</li><li>Formaturas</li></ul>
+      </div>
+      <div class="calculo" id="calculo">
+        <h3>Simule o seu pedido</h3>
+        <div>
+          <span class="rotulo-campo" id="rotulo-brinde">Peça</span>
+          <div class="pecas" id="brindes" role="radiogroup" aria-labelledby="rotulo-brinde"></div>
+        </div>
+        <div>
+          <label class="rotulo-campo" for="qtd-empresa">Quantidade</label>
+          <div class="qtd-linha">
+            <div class="qtd-grande"><button type="button" data-qtd="-1" aria-label="Diminuir quantidade">−</button><input id="qtd-empresa" type="number" inputmode="numeric" min="10" max="2000" value="50"><button type="button" data-qtd="1" aria-label="Aumentar quantidade">+</button></div>
+            <div class="atalhos" id="atalhos"></div>
+          </div>
+        </div>
+        <table class="faixas" id="faixas"></table>
+        <div class="total-empresa" aria-live="polite"><span id="total-det"></span><strong id="total-empresa"></strong></div>
+        <a class="btn btn-zap" id="orcamento" href="https://wa.me/5516991732180" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Pedir orçamento pelo WhatsApp</a>
+        <p class="calculo-nota">Valores de exemplo. O orçamento final depende da arte e do prazo; envie o logo pela conversa.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao secao-ceu" id="loja" aria-labelledby="titulo-loja">
+    <div class="envoltorio loja-grade">
+      <div class="loja-fotos" data-revela>
+        <figure><img src="img/fachada.webp" width="1080" height="813" alt="Fachada laranja e verde da PGW Brindes, na Avenida Pedro Duarte Amoroso" loading="lazy"></figure>
+        <figure><img src="img/garrafas-cores.webp" width="900" height="1083" alt="Garrafas térmicas em verde, rosa, azul e lilás no balcão da loja" loading="lazy"></figure>
+      </div>
+      <div class="loja-texto" data-revela style="--i:1">
+        <h2 id="titulo-loja">Produção própria, com capricho</h2>
+        <p>Não trabalhamos só com catálogo: nós produzimos, personalizamos, conferimos e entregamos cada pedido. Acabamento, impressão, gravação, montagem e prazo, tudo feito aqui em Cravinhos.</p>
+        <p class="premio"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="12" r="9" fill="#C9CED6"/><circle cx="16" cy="12" r="5.5" fill="#EEF0F3"/><path d="M10 19l-3 10 5-2 3 4 2-9M22 19l3 10-5-2-3 4-2-9" fill="#1D5FC4"/></svg>Prata no Prêmio LocalBest Cravinhos 2024, categoria Presentes</p>
+        <p class="nota-google"><strong>5,0</strong><span>no Google, com 144 avaliações</span></p>
+        <div class="avaliacoes">
+          <blockquote class="avaliacao"><p>“Recomendo e sempre que precisar de brindes, já sei com quem vou comprar!”</p><footer>Avaliação no Google</footer></blockquote>
+          <blockquote class="avaliacao"><p>“Tem muitas novidades para presentear.”</p><footer>Avaliação no Google</footer></blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao" id="chegar" aria-labelledby="titulo-chegar">
+    <div class="envoltorio">
+      <div class="secao-cabeca" data-revela><h2 id="titulo-chegar">Como chegar</h2></div>
+      <div class="chegar" data-revela>
+        <iframe class="chegar-mapa" title="Mapa da PGW Brindes em Cravinhos" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=PGW%20Brindes%20%26%20Personalizados%2C%20Av.%20Pedro%20Duarte%20Amoroso%2C%20532%2C%20Cravinhos%20-%20SP&amp;z=16&amp;output=embed"></iframe>
+        <div class="chegar-dados">
+          <div><h3>Endereço</h3><p>Av. Pedro Duarte Amoroso, 532<br>ao lado da Praça Itamaraty, Cravinhos (SP)</p></div>
+          <div><h3>WhatsApp</h3><a href="https://wa.me/5516991732180" target="_blank" rel="noopener">(16) 99173-2180</a></div>
+          <div><h3>Instagram</h3><a href="https://www.instagram.com/pgwbrindes" target="_blank" rel="noopener">@pgwbrindes</a></div>
+          <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=PGW%20Brindes%20%26%20Personalizados%2C%20Av.%20Pedro%20Duarte%20Amoroso%2C%20532%2C%20Cravinhos%20-%20SP" target="_blank" rel="noopener">Abrir a rota no mapa</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="envoltorio rodape-grade">
+    <a class="rodape-marca" href="#" translate="no" aria-label="PGW Brindes e Personalizados, voltar ao início">
+      <span class="rodape-nome">PGW</span>
+      <span>Brindes &amp; Personalizados, Cravinhos</span>
+    </a>
+    <p class="redes">
+      <a href="https://www.instagram.com/pgwbrindes" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a>
+    </p>
+  </div>
+</footer>
+
+<a class="flutuante" id="flutuante" href="https://wa.me/5516991732180" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp" title="Conversar no WhatsApp" tabindex="-1">
+  <svg aria-hidden="true"><use href="#i-zap"/></svg>
+</a>
+
+<dialog class="sacola" id="sacola" aria-labelledby="sacola-titulo">
+  <div class="sacola-topo">
+    <h2 id="sacola-titulo">Seu carrinho</h2>
+    <button class="fechar" type="button" data-fechar aria-label="Fechar carrinho"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
+  </div>
+  <div class="sacola-corpo" id="sacola-corpo"></div>
+  <div class="sacola-pe" id="sacola-pe"></div>
+</dialog>
+
+<dialog class="ficha" id="ficha" aria-labelledby="ficha-nome"></dialog>
+
+<script>
+/* ============================================================
+   DADOS - o que a loja muda fica aqui em cima
+   ============================================================ */
+const WHATSAPP = "5516991732180";
+const LOJA = "Av. Pedro Duarte Amoroso, 532, Cravinhos";
+/* categorias: a figura e uma peca desenhada (arte + cor) ou uma foto */
+const CATEGORIAS = [
+  ["canecas", "Canecas", { arte: "caneca", cor: "#2C6FD1" }],
+  ["garrafas", "Garrafas e copos", { arte: "garrafa", cor: "#9BCB3B" }],
+  ["vestir", "Camisetas e ecobags", { arte: "camiseta", cor: "#F07A1A" }],
+  ["presentes", "Cestas e presentes", { foto: "buque-chocolate" }],
+];
+/* arte: a peca e desenhada na tela com o nome que a pessoa escreve; cada variacao e nome + cor.
+   sem arte: a variacao e nome + foto (pasta img).
+   gravar: pede o texto da personalizacao; campo: o nome do campo; max: limite de letras.
+   PRECOS E MEDIDAS DE EXEMPLO: trocar pela tabela da loja */
+const v = (n, f, extra = {}) => ({ n, f, ...extra });
+const PRODUTOS = [
+  { id: "caneca", cat: "canecas", marca: "Cerâmica 325 ml", nome: "Caneca com nome", desc: "Alça e interior coloridos. Gravamos o nome ou a frase.", preco: 39.90, rotulo: "Cor", arte: "caneca", gravar: true, selo: "Mais pedida",
+    vars: [v("Azul", "#2C6FD1"), v("Rosa", "#E86A9C"), v("Verde", "#2FA35A"), v("Amarelo", "#F2C230"), v("Laranja", "#F07A1A"), v("Preto", "#25272D")] },
+  { id: "caneca-magica", cat: "canecas", marca: "Cerâmica 325 ml", nome: "Caneca mágica", desc: "Preta; o nome aparece com bebida quente.", preco: 54.90, rotulo: "Cor", arte: "magica", gravar: true,
+    vars: [v("Preta", "#1F2126")] },
+  { id: "caneca-arte", cat: "canecas", marca: "Arte exclusiva", nome: "Caneca com arte personalizada", desc: "Conte a ideia e a nossa equipe cria a arte da caneca.", preco: 49.90, rotulo: "Cor", gravar: true, campo: "Tema ou ideia da arte", max: 60,
+    vars: [v("", "caneca-foto")] },
+  { id: "garrafa", cat: "garrafas", marca: "Garrafa 500 ml", nome: "Garrafa térmica gravada a laser", desc: "Bebida gelada ou quente por horas. Gravação a laser.", preco: 89.90, rotulo: "Cor", arte: "garrafa", gravar: true,
+    vars: [v("Verde-limão", "#9BCB3B"), v("Rosa", "#F1A9C4"), v("Lilás", "#A693D8"), v("Azul", "#3D7DD8"), v("Preto", "#2A2C31"), v("Branco", "#F2F2EF")] },
+  { id: "garrafa-time", cat: "garrafas", marca: "Garrafa 500 ml", nome: "Garrafa com escudo do time e nome", desc: "Escudo e nome gravados a laser. Diga o time no pedido.", preco: 99.90, rotulo: "Cor", gravar: true, campo: "Time e nome", max: 40,
+    vars: [v("", "garrafa-gravada")] },
+  { id: "copo", cat: "garrafas", marca: "Copo 473 ml", nome: "Copo térmico com tampa e canudo", desc: "Parede dupla, com tampa e canudo.", preco: 69.90, rotulo: "Cor", arte: "copo", gravar: true,
+    vars: [v("Rosa", "#E98AAE"), v("Preto", "#2A2C31"), v("Branco", "#F2F2EF"), v("Verde", "#3E9C5C"), v("Lilás", "#9C87D1")] },
+  { id: "camiseta", cat: "vestir", marca: "Algodão", nome: "Camiseta com nome ou frase", desc: "Estampa na frente, do P ao GG.", rotulo: "Cor", arte: "camiseta", gravar: true,
+    tams: [["P", 39.90], ["M", 39.90], ["G", 39.90], ["GG", 44.90]],
+    vars: [v("Branca", "#F7F7F4"), v("Preta", "#25272D"), v("Azul-marinho", "#1E2F5C"), v("Verde", "#2E8B4E")] },
+  { id: "ecobag", cat: "vestir", marca: "Algodão cru", nome: "Ecobag com nome", desc: "Sacola de algodão com alça.", preco: 29.90, rotulo: "Estampa", arte: "ecobag", gravar: true,
+    vars: [v("Preta", "#25272D"), v("Verde", "#2E8B4E"), v("Laranja", "#D9601A"), v("Azul", "#1D5FC4")] },
+  { id: "buque", cat: "presentes", marca: "Presente", nome: "Buquê de chocolates com pelúcia", desc: "Chocolates sortidos e pelúcia, com cartão.", preco: 119.90, rotulo: "Cor", gravar: true, campo: "Mensagem do cartão", max: 60, selo: "Novidade",
+    vars: [v("", "buque-chocolate")] },
+  { id: "cesta", cat: "presentes", marca: "Presente", nome: "Cesta com pelúcia e chocolates", desc: "Montada no cesto, com laço e cartão.", preco: 149.90, rotulo: "Cor", gravar: true, campo: "Mensagem do cartão", max: 60,
+    vars: [v("", "cesta")] },
+  { id: "placa", cat: "presentes", marca: "Decoração", nome: "Placa com foto da família", desc: "Com suporte. A foto vai pelo WhatsApp depois do pedido.", preco: 79.90, rotulo: "Cor", gravar: true, campo: "Nomes ou frase na placa", max: 40,
+    vars: [v("", "placa-familia")] },
+];
+/* bancada do topo: as pecas que a pessoa monta ali */
+const PECAS = ["caneca", "garrafa", "copo"];
+/* letras da gravacao: nome, familia, peso e largura media da letra (para caber na peca) */
+const LETRAS = [["classica", "Clássica", "'Playfair Display', Georgia, serif", "italic 700", .5], ["manuscrita", "Manuscrita", "'Dancing Script', cursive", "700", .42], ["moderna", "Moderna", "Syne, 'Arial Black', sans-serif", "800", .82]];
+/* empresas: preco por unidade a partir de cada quantidade. VALORES DE EXEMPLO */
+const BRINDES = [
+  ["caneca", "Caneca", "canecas", "#2C6FD1", [[10, 32.90], [25, 29.90], [50, 26.90], [100, 23.90]]],
+  ["garrafa", "Garrafa", "garrafas", "#2A2C31", [[10, 74.90], [25, 69.90], [50, 64.90], [100, 59.90]]],
+  ["copo", "Copo térmico", "copos térmicos", "#3E9C5C", [[10, 58.90], [25, 54.90], [50, 49.90], [100, 45.90]]],
+  ["ecobag", "Ecobag", "ecobags", "#1D5FC4", [[10, 22.90], [25, 19.90], [50, 16.90], [100, 14.90]]],
+];
+const $ = (s, el = document) => el.querySelector(s);
+const reduzir = matchMedia("(prefers-reduced-motion: reduce)");
+const fotoP = (n) => `img/${n}.webp`;
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const ler = (k, padrao) => { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : padrao; } catch { return padrao; } };
+const gravar = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} };
+const reais = (v) => v.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+const zap = (texto) => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(texto)}`;
+const porId = (id) => PRODUTOS.find((p) => p.id === id);
+/* com tamanho, o preco e o do tamanho; sem, o do produto */
+const precoDe = (p, t) => p.tams ? p.tams[t ?? 0][1] : p.preco;
+const LETRA = Object.fromEntries(LETRAS.map(([id, n, fam, peso, fator]) => [id, { n, fam, peso, fator }]));
+const rotuloTexto = (p) => p.campo || "Nome";
+/* "Cor: Azul, nome: "Rafaela", letra manuscrita" */
+const detalhe = (p, va, t, txt, est) => [
+  va.n ? `${p.rotulo}: ${va.n}` : "",
+  p.tams && t != null ? `tamanho ${p.tams[t][0]}` : "",
+  p.gravar ? (txt ? `${rotuloTexto(p).toLowerCase()}: “${txt}”` : `${rotuloTexto(p).toLowerCase()} a combinar`) : "",
+  p.arte && txt && est ? `letra ${LETRA[est].n.toLowerCase()}` : "",
+].filter(Boolean).join(", ");
+
+/* ---------- as pecas desenhadas: o nome entra na peca no tamanho que cabe ---------- */
+const tamanhoTexto = (s, est, larg, max) => Math.max(12, Math.min(max, larg / (LETRA[est].fator * Math.max(s.length, 3))));
+const fonteTexto = (s, est, larg, max) => `${LETRA[est].peso} ${tamanhoTexto(s, est, larg, max).toFixed(1)}px ${LETRA[est].fam}`;
+function gravado(x, y, larg, max, cor, t, est) {
+  const s = t || "Seu nome";
+  return `<text class="gravado" x="${x}" y="${y}" text-anchor="middle" dominant-baseline="central" fill="${cor}" data-larg="${larg}" data-max="${max}" style="font:${fonteTexto(s, est, larg, max)}"${t ? "" : ' opacity=".5"'}>${esc(s)}</text>`;
+}
+function regravar(raiz, t, est) {
+  raiz.querySelectorAll(".gravado").forEach((el) => {
+    const s = t || "Seu nome";
+    el.textContent = s;
+    el.style.font = fonteTexto(s, est, +el.dataset.larg, +el.dataset.max);
+    if (t) el.removeAttribute("opacity"); else el.setAttribute("opacity", ".5");
+  });
+}
+/* cor clara pede gravacao escura, e o contrario */
+const clara = (hex) => { const n = parseInt(hex.slice(1), 16), r = n >> 16, g = (n >> 8) & 255, b = n & 255; return (r * 299 + g * 587 + b * 114) / 1000 > 165; };
+const sombra = `<ellipse cx="150" cy="276" rx="80" ry="8" fill="rgba(20,27,45,.10)"/>`;
+const DESENHOS = {
+  caneca: (c, t, est, corpo = "#FFFFFF", tinta = "#1F2433") => `${sombra}
+    <path d="M226 110c48-4 54 86 2 90" fill="none" stroke="${c}" stroke-width="20" stroke-linecap="round"/>
+    <path d="M50 76h180v170a24 24 0 0 1-24 24H74a24 24 0 0 1-24-24z" fill="${corpo}" stroke="rgba(20,27,45,.10)" stroke-width="2"/>
+    <path d="M51 77h24v192a24 24 0 0 1-24-23z" fill="rgba(20,27,45,.05)"/><path d="M205 77h24v169a24 24 0 0 1-24 23z" fill="rgba(20,27,45,.07)"/>
+    <ellipse cx="140" cy="76" rx="90" ry="15" fill="${c}"/><ellipse cx="140" cy="79" rx="80" ry="10" fill="rgba(0,0,0,.2)"/>
+    ${gravado(140, 176, 140, 46, tinta, t, est)}`,
+  magica: (c, t, est) => DESENHOS.caneca(c, t, est, c, "#EDE7DC"),
+  garrafa: (c, t, est) => `${sombra}
+    <path d="M180 32c26 0 26 28 0 28" fill="none" stroke="${c}" stroke-width="8"/><path d="M180 32c26 0 26 28 0 28" fill="none" stroke="rgba(0,0,0,.2)" stroke-width="8"/>
+    <path d="M132 20h36a10 10 0 0 1 10 10v34h-56V30a10 10 0 0 1 10-10z" fill="${c}"/><path d="M132 20h36a10 10 0 0 1 10 10v34h-56V30a10 10 0 0 1 10-10z" fill="rgba(0,0,0,.2)"/>
+    <path d="M124 64h52l14 20H110z" fill="${c}"/>
+    <rect x="100" y="80" width="100" height="194" rx="30" fill="${c}"/>
+    <rect x="112" y="98" width="12" height="154" rx="6" fill="rgba(255,255,255,.3)"/>
+    ${gravado(152, 178, 76, 30, clara(c) ? "#5E6470" : "#EEF1F4", t, est)}`,
+  copo: (c, t, est) => `${sombra}
+    <rect x="166" y="8" width="9" height="76" rx="4" fill="#E2DCD0" transform="rotate(10 170 46)"/>
+    <path d="M86 56h128a6 6 0 0 1 6 6v14H80V62a6 6 0 0 1 6-6z" fill="${c}"/><path d="M86 56h128a6 6 0 0 1 6 6v14H80V62a6 6 0 0 1 6-6z" fill="rgba(0,0,0,.22)"/>
+    <path d="M82 76h136l-16 186a12 12 0 0 1-12 11h-80a12 12 0 0 1-12-11z" fill="${c}"/>
+    <path d="M98 92h13l-10 160h-6z" fill="rgba(255,255,255,.28)"/>
+    ${gravado(152, 172, 96, 32, clara(c) ? "#5E6470" : "#F2F4F6", t, est)}`,
+  camiseta: (c, t, est) => `${sombra}
+    <path d="M104 40 58 62 32 118l40 17 12-24v160h132V111l12 24 40-17-26-56-46-22c-7 18-24 28-46 28s-39-10-46-28z" fill="${c}" stroke="rgba(20,27,45,.12)" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M104 40c7 18 24 28 46 28s39-10 46-28" fill="none" stroke="rgba(0,0,0,.16)" stroke-width="5"/>
+    ${gravado(150, 150, 104, 32, clara(c) ? "#1F2433" : "#FFFFFF", t, est)}`,
+  ecobag: (c, t, est) => `${sombra}
+    <path d="M112 102V76a38 38 0 0 1 76 0v26" fill="none" stroke="#D8CAAA" stroke-width="11"/>
+    <path d="M64 96h172l-8 176H72z" fill="#F1E8D4"/><path d="M64 96h172v12H64z" fill="rgba(0,0,0,.05)"/>
+    ${gravado(150, 190, 128, 40, c, t, est)}`,
+};
+const desenho = (arte, cor, t, est, nome = "") => `<svg viewBox="0 0 300 300" role="img" aria-label="${esc(nome)}">${DESENHOS[arte](cor, t, est)}</svg>`;
+/* a figura do produto: desenho com o nome, ou a foto */
+const figura = (p, k, t, est) => p.arte
+  ? desenho(p.arte, p.vars[k].f, t, est || "classica", `${p.nome}${p.vars[k].n ? `, ${p.rotulo.toLowerCase()} ${p.vars[k].n}` : ""}${t ? `, com “${t}”` : ""}`)
+  : `<img src="${fotoP(p.vars[k].f)}" width="600" height="600" alt="" loading="lazy">`;
+
+/* o nome que a pessoa escreveu no topo vale para a vitrine inteira */
+const pg = { txt: "", est: "classica" };
+
+/* ---------- movimento padrao: revela cada bloco uma vez, ao entrar na tela ---------- */
+const observador = new IntersectionObserver((itens) => {
+  itens.forEach((it) => { if (it.isIntersecting) { it.target.classList.add("visto"); observador.unobserve(it.target); } });
+}, { rootMargin: "0px 0px -8% 0px", threshold: .12 });
+document.querySelectorAll("[data-revela]").forEach((el) => observador.observe(el));
+
+/* troca de conteudo: some e reaparece rapido, para mostrar o que mudou */
+function piscar(el) {
+  if (reduzir.matches || !el || !el.animate) return;
+  el.animate([{ opacity: .35, transform: "translateY(3px)" }, { opacity: 1, transform: "none" }], { duration: 260, easing: "cubic-bezier(0.23, 1, 0.32, 1)" });
+}
+
+/* ---------- categorias, filtros e vitrine ---------- */
+const tem = (va) => !va.esgotado;
+const varInicial = (p) => { const k = p.vars.findIndex((va) => va.n === p.ini && tem(va)); return k >= 0 ? k : Math.max(0, p.vars.findIndex(tem)); };
+const precoCartao = (p) => { const ps = p.tams ? p.tams.map(([, preco]) => preco) : [p.preco], min = Math.min(...ps); return min < Math.max(...ps) ? `<small>a partir de</small> ${reais(min)}` : reais(min); };
+const iconeTodos = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h6v6H4zM14 5h6v6h-6zM4 15h6v6H4zM14 15h6v6h-6z"/></svg>`;
+const lapis = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16zM13.5 6.5l4 4"/></svg>`;
+$("#categorias").innerHTML = [["todos", "Todos"], ...CATEGORIAS].map(([id, nome, f]) => `<button class="categoria${f ? "" : " categoria-todos"}" type="button" data-cat="${id}" aria-pressed="${id === "todos"}"><span aria-hidden="true">${!f ? iconeTodos : f.arte ? `<svg viewBox="0 0 300 300">${DESENHOS[f.arte](f.cor, "", "classica").replace(/<text[^]*?<\/text>/, "")}</svg>` : `<img src="${fotoP(f.foto)}" alt="" loading="lazy" style="border-radius:8px;object-fit:cover">`}</span><span>${nome}</span></button>`).join("");
+
+const cartao = (p) => {
+  const k = varInicial(p), cores = p.vars.length > 1 ? `${p.vars.length} cores` : "";
+  const botao = !p.vars.some(tem) ? `<button class="btn" type="button" disabled>Esgotado</button>`
+    : `<button class="btn" type="button" data-abrir="${p.id}" aria-label="Personalizar ${esc(p.nome)}">${lapis.replace('aria-hidden="true"', 'aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"')}Personalizar</button>`;
+  return `
+  <li class="produto">
+    <a class="produto-foto${p.arte ? " mesa" : ""}" href="#produto-${p.id}" data-abrir="${p.id}" tabindex="-1" aria-hidden="true">${figura(p, k, pg.txt, pg.est)}${p.selo ? `<span class="selo">${p.selo}</span>` : ""}${p.gravar ? `<span class="tag-gravar">${lapis}${p.arte ? "Com o seu nome" : "Personalizável"}</span>` : ""}</a>
+    <div class="produto-info">
+      <p class="produto-marca">${esc(p.marca)}${cores ? ` · ${cores}` : ""}</p>
+      <h4><a href="#produto-${p.id}" data-abrir="${p.id}">${esc(p.nome)}</a></h4>
+      <p class="produto-desc">${esc(p.desc)}</p>
+      <p class="produto-preco">${precoCartao(p)}</p>
+      ${botao}
+    </div>
+  </li>`;
+};
+
+$("#vitrine").innerHTML = CATEGORIAS.map(([id, nome]) => {
+  const lista = PRODUTOS.filter((p) => p.cat === id);
+  return `<li class="prateleira" data-cat="${id}">
+    <div class="prateleira-topo">
+      <h3 id="fileira-${id}">${nome}</h3>
+      <button class="ver-tudo" type="button" data-ver="${id}">Ver tudo (${lista.length})</button>
+      <div class="prateleira-setas">
+        <button class="seta" type="button" data-passo="-1" aria-label="Voltar em ${nome}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="seta" type="button" data-passo="1" aria-label="Mais em ${nome}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+    <ul class="fileira" aria-labelledby="fileira-${id}">${lista.map(cartao).join("")}</ul>
+  </li>`;
+}).join("");
+$("#procura").href = zap("Olá! Vim pelo site e tenho uma ideia de presente personalizado. Posso contar?");
+
+function filtrar(cat) {
+  document.querySelectorAll("[data-cat][aria-pressed]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.cat === cat)));
+  document.querySelectorAll(".prateleira").forEach((li) => li.classList.toggle("some", cat !== "todos" && li.dataset.cat !== cat));
+  $("#vitrine").classList.toggle("filtrada", cat !== "todos");
+  setas();
+  piscar($("#vitrine"));
+}
+const rolar = (el, block = "start") => el.scrollIntoView({ behavior: reduzir.matches ? "auto" : "smooth", block });
+$("#categorias").addEventListener("click", (e) => { const b = e.target.closest("[data-cat]"); if (b) filtrar(b.dataset.cat); });
+$("#vitrine").addEventListener("click", (e) => {
+  const ver = e.target.closest("[data-ver]");
+  if (ver) { filtrar(ver.dataset.ver); rolar($("#categorias")); return; }
+  const seta = e.target.closest("[data-passo]"); if (!seta) return;
+  const fileira = $(".fileira", seta.closest(".prateleira"));
+  fileira.scrollBy({ left: seta.dataset.passo * fileira.clientWidth, behavior: reduzir.matches ? "auto" : "smooth" });
+});
+/* setas so aparecem quando a fileira passa da tela; apagam nas pontas */
+function setas() {
+  document.querySelectorAll(".prateleira").forEach((pr) => {
+    const f = $(".fileira", pr), [ant, prox] = pr.querySelectorAll("[data-passo]");
+    const sobra = f.scrollWidth - f.clientWidth;
+    $(".prateleira-setas", pr).hidden = sobra < 2;
+    ant.disabled = f.scrollLeft < 2;
+    prox.disabled = f.scrollLeft > sobra - 2;
+  });
+}
+document.querySelectorAll(".fileira").forEach((f) => f.addEventListener("scroll", setas, { passive: true }));
+addEventListener("resize", setas);
+setas();
+
+/* ---------- bancada do topo: escreve, escolhe a peca, a cor e a letra ---------- */
+const banca = { id: "caneca", k: 0 };
+const radio = (nome, valor, marcado, conteudo, cls, extra = "") => `<label class="${cls}"${extra}><input type="radio" name="${nome}" value="${valor}"${marcado ? " checked" : ""}>${conteudo}</label>`;
+const miniatura = (arte, cor) => `<svg viewBox="0 0 300 300" aria-hidden="true">${DESENHOS[arte](cor, "", "classica").replace(/<text[^]*?<\/text>/, "")}</svg>`;
+$("#pecas").innerHTML = PECAS.map((id) => { const p = porId(id); return radio("peca", id, id === banca.id, `${miniatura(p.arte, p.vars[0].f)}<span>${p.nome.split(" ")[0]}</span>`, "peca"); }).join("");
+$("#letras").innerHTML = LETRAS.map(([id, n, fam, peso]) => radio("letra", id, id === pg.est, `<span style="font:${peso} 1.15rem ${fam}">${n}</span>`, "letra")).join("");
+function desenharCores() {
+  const p = porId(banca.id);
+  $("#cores").innerHTML = p.vars.map((va, i) => radio("cor", i, i === banca.k, `<span></span>`, "cor", ` style="--c:${va.f}" title="${va.n}" aria-label="${va.n}"`)).join("");
+  $("#cores").querySelectorAll("input").forEach((r, i) => r.setAttribute("aria-label", p.vars[i].n));
+}
+function desenharPalco() {
+  const p = porId(banca.id), va = p.vars[banca.k];
+  $("#palco-arte").innerHTML = figura(p, banca.k, pg.txt, pg.est);
+  $("#palco-nome").textContent = p.nome;
+  $("#palco-det").textContent = `${p.marca}, ${va.n.toLowerCase()}`;
+  $("#palco-preco").textContent = reais(precoDe(p));
+  $("#cor-nome").textContent = va.n;
+}
+/* o texto digitado vai para o palco e para a vitrine; os dois campos ficam iguais */
+function escrever(t, origem) {
+  pg.txt = t.replace(/\s+/g, " ").trimStart();
+  [$("#gravar-texto"), $("#ver-nome")].forEach((el) => { if (el !== origem) el.value = pg.txt; });
+  regravar($("#palco-arte"), pg.txt.trim(), pg.est);
+  regravar($("#vitrine"), pg.txt.trim(), pg.est);
+  $("#palco-status").textContent = "";
+}
+$("#gravar-texto").addEventListener("input", (e) => escrever(e.target.value, e.target));
+$("#ver-nome").addEventListener("input", (e) => escrever(e.target.value, e.target));
+$("#personalizar").addEventListener("change", (e) => {
+  const { name, value } = e.target;
+  if (name === "peca") { banca.id = value; banca.k = 0; desenharCores(); desenharPalco(); piscar($("#palco-arte")); }
+  if (name === "cor") { banca.k = +value; desenharPalco(); }
+  if (name === "letra") { pg.est = value; regravar($("#palco-arte"), pg.txt.trim(), pg.est); regravar($("#vitrine"), pg.txt.trim(), pg.est); }
+  $("#palco-status").textContent = "";
+});
+$("#palco-add").addEventListener("click", (e) => {
+  const b = e.currentTarget;
+  adicionar(banca.id, banca.k, undefined, 1, pg.txt.trim(), pg.est);
+  $("#palco-status").innerHTML = `${pg.txt.trim() ? `“${esc(pg.txt.trim())}” no carrinho.` : "No carrinho. Combine o nome pelo WhatsApp."} <button class="ver-sacola" type="button" data-ver-sacola>Ver o carrinho</button>`;
+  confirmar(b);
+});
+$("#personalizar").addEventListener("click", (e) => { if (e.target.closest("[data-ver-sacola]")) abrirSacola(); });
+desenharCores(); desenharPalco();
+
+/* ---------- pagina do produto ---------- */
+const ficha = $("#ficha");
+let fichaP = null, fichaK = 0, fichaT = 0, fichaTxt = "", fichaEst = "classica", fichaFecha;
+function escolhaFicha(p) {
+  let html = "";
+  if (p.vars.length > 1) {
+    const opcoes = p.arte
+      ? `<div class="cores">${p.vars.map((va, i) => `<label class="cor" style="--c:${va.f}" title="${esc(va.n)}"><input type="radio" name="ficha-var" value="${i}" aria-label="${esc(va.n)}${tem(va) ? "" : ", sem estoque"}"${i === fichaK ? " checked" : ""}><span></span></label>`).join("")}</div>`
+      : `<div class="opcoes">${p.vars.map((va, i) => `<label class="opcao"><input type="radio" name="ficha-var" value="${i}"${i === fichaK ? " checked" : ""}><span>${esc(va.n)}${tem(va) ? "" : ", sem estoque"}</span></label>`).join("")}</div>`;
+    html += `<fieldset class="variacao"><legend>${p.rotulo}: <strong id="ficha-var-nome">${esc(p.vars[fichaK].n)}</strong></legend>${opcoes}</fieldset>`;
+  }
+  if (p.tams) {
+    const opcoes = p.tams.map(([n], i) => `<label class="opcao"><input type="radio" name="ficha-tam" value="${i}"${i === fichaT ? " checked" : ""}><span>${n}</span></label>`).join("");
+    html += `<fieldset class="variacao"><legend>Tamanho: <strong id="ficha-tam-nome">${p.tams[fichaT][0]}</strong></legend><div class="opcoes">${opcoes}</div></fieldset>`;
+  }
+  if (p.gravar) {
+    const max = p.max || 18;
+    html += `<label class="campo campo-largo"><span>${rotuloTexto(p)} <small>(até ${max} letras${p.arte ? "" : "; pode deixar para o WhatsApp"})</small></span><input id="ficha-txt" maxlength="${max}" value="${esc(fichaTxt)}" autocomplete="off"></label>`;
+    if (p.arte) html += `<fieldset class="variacao"><legend>Letra</legend><div class="letras">${LETRAS.map(([id, n, fam, peso]) => `<label class="letra"><input type="radio" name="ficha-est" value="${id}"${id === fichaEst ? " checked" : ""}><span style="font:${peso} 1.1rem ${fam}">${n}</span></label>`).join("")}</div></fieldset>`;
+  }
+  return html;
+}
+function desenharFicha() {
+  const p = fichaP;
+  ficha.innerHTML = `
+    <button class="fechar" type="button" data-fechar-ficha aria-label="Fechar"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
+    <div class="ficha-foto${p.arte ? " mesa" : ""}" id="ficha-foto"></div>
+    <div class="ficha-info">
+      <p class="produto-marca">${esc(p.marca)}</p>
+      <h2 id="ficha-nome">${esc(p.nome)}</h2>
+      <p class="ficha-preco" id="ficha-preco"></p>
+      <p class="ficha-desc">${esc(p.desc)}</p>
+      ${escolhaFicha(p)}
+      <button class="btn ficha-add" type="button" id="ficha-add"></button>
+      <p class="ficha-status" id="ficha-status" role="status"></p>
+      <ul class="ficha-entrega">
+        <li>Retirada na loja: ${LOJA}</li>
+        <li>Entrega em Cravinhos; prazo de produção combinado pelo WhatsApp</li>
+        <li>Pix ou cartão pelo site, ou dinheiro na retirada</li>
+      </ul>
+    </div>`;
+  mostrarVar();
+}
+/* trocar a cor redesenha a peca; trocar o tamanho troca o preco */
+function mostrarVar() {
+  const p = fichaP, va = p.vars[fichaK], b = $("#ficha-add");
+  $("#ficha-foto").innerHTML = figura(p, fichaK, fichaTxt.trim(), fichaEst) + (p.selo ? `<span class="selo">${p.selo}</span>` : "");
+  const img = $("#ficha-foto img"); if (img) img.alt = p.nome;
+  $("#ficha-preco").textContent = reais(precoDe(p, fichaT));
+  const nome = $("#ficha-var-nome"); if (nome) nome.textContent = va.n;
+  $("#ficha-status").textContent = "";
+  clearTimeout(b._t); b.classList.remove("adicionado");
+  b.disabled = !tem(va);
+  b.innerHTML = tem(va) ? `<svg aria-hidden="true"><use href="#i-sacola"/></svg>Adicionar ao carrinho` : "Sem estoque";
+}
+ficha.addEventListener("input", (e) => {
+  if (e.target.id !== "ficha-txt") return;
+  fichaTxt = e.target.value;
+  regravar($("#ficha-foto"), fichaTxt.trim(), fichaEst);
+  $("#ficha-status").textContent = "";
+});
+ficha.addEventListener("change", (e) => {
+  if (e.target.name === "ficha-tam") { fichaT = +e.target.value; $("#ficha-tam-nome").textContent = fichaP.tams[fichaT][0]; $("#ficha-preco").textContent = reais(precoDe(fichaP, fichaT)); piscar($("#ficha-preco")); return; }
+  if (e.target.name === "ficha-est") { fichaEst = e.target.value; regravar($("#ficha-foto"), fichaTxt.trim(), fichaEst); return; }
+  if (e.target.name !== "ficha-var") return;
+  fichaK = +e.target.value;
+  mostrarVar();
+});
+function abrirFicha(id, k, empurrar = true) {
+  const p = porId(id); if (!p) return;
+  fichaP = p; fichaK = k ?? varInicial(p); fichaT = 0;
+  /* a peca desenhada ja abre com o nome do topo; o cartao e a placa comecam em branco */
+  fichaTxt = p.arte ? pg.txt.trim() : ""; fichaEst = pg.est;
+  desenharFicha();
+  if (empurrar) history.pushState({ ficha: id }, "", `#produto-${id}`);
+  clearTimeout(fichaFecha);
+  if (!ficha.open) { ficha.showModal(); requestAnimationFrame(() => requestAnimationFrame(() => ficha.classList.add("aberta"))); }
+  else ficha.classList.add("aberta");
+  ficha.scrollTop = 0;
+}
+/* fechar volta no historico, assim o botao voltar do celular tambem fecha */
+function fecharFicha(voltar = true) {
+  if (!ficha.open) return;
+  if (voltar && history.state?.ficha) { history.back(); return; }
+  if (voltar && location.hash.startsWith("#produto-")) history.replaceState(null, "", location.pathname + location.search);
+  ficha.classList.remove("aberta");
+  fichaFecha = setTimeout(() => ficha.close(), reduzir.matches ? 200 : 280);
+}
+ficha.addEventListener("cancel", (e) => { e.preventDefault(); fecharFicha(); });
+ficha.addEventListener("click", (e) => {
+  if (e.target === ficha || e.target.closest("[data-fechar-ficha]")) { fecharFicha(); return; }
+  if (e.target.closest("[data-ver-sacola]")) { fecharFicha(); abrirSacola(); return; }
+  const b = e.target.closest("#ficha-add"); if (!b || b.disabled) return;
+  adicionar(fichaP.id, fichaK, fichaP.tams ? fichaT : undefined, 1, fichaTxt.trim(), fichaEst);
+  $("#ficha-status").innerHTML = `Adicionado ao carrinho. <button class="ver-sacola" type="button" data-ver-sacola>Ver o carrinho</button>`;
+  confirmar(b);
+});
+addEventListener("popstate", () => {
+  const m = location.hash.match(/^#produto-(.+)$/);
+  if (m && porId(m[1])) abrirFicha(m[1], undefined, false); else fecharFicha(false);
+});
+
+/* ---------- carrinho ---------- */
+let itens = ler("pgw-carrinho-1", []).filter((i) => { const va = porId(i.id)?.vars[i.v]; return va && tem(va); });
+const ck = { embalar: false, receber: "loja", pagamento: "Pix", nome: "", cep: "", rua: "", numero: "", bairro: "", cidade: "", compl: "" };
+const produtoDe = (i) => porId(i.id);
+const varDe = (i) => produtoDe(i).vars[i.v];
+const precoItem = (i) => precoDe(produtoDe(i), i.t);
+function salvar() { gravar("pgw-carrinho-1", itens); contar(); }
+function contar() {
+  const n = itens.reduce((s, i) => s + i.qtd, 0);
+  $("#sacola-conta").textContent = n;
+  $("#sacola-sr").textContent = n === 1 ? "1 item no carrinho" : `${n} itens no carrinho`;
+}
+/* o mesmo produto com outro nome e outra linha do carrinho */
+function adicionar(id, k, t, qtd = 1, txt = "", est = "classica") {
+  const p = porId(id), tam = p.tams ? (t ?? 0) : undefined, e = p.arte ? est : undefined;
+  const achado = itens.find((i) => i.id === id && i.v === k && i.t === tam && i.txt === txt && i.est === e);
+  if (achado) achado.qtd += qtd; else itens.push({ id, v: k, t: tam, qtd, txt, est: e });
+  salvar();
+  piscar($("#abrir-sacola"));
+}
+/* o botao confirma o que aconteceu e volta ao normal */
+function confirmar(b) {
+  const texto = b.innerHTML;
+  b.classList.add("adicionado");
+  b.textContent = "No carrinho";
+  clearTimeout(b._t);
+  b._t = setTimeout(() => { b.classList.remove("adicionado"); b.innerHTML = texto; }, 1400);
+}
+document.addEventListener("click", (e) => {
+  const abrir = e.target.closest("[data-abrir]");
+  if (abrir) { e.preventDefault(); abrirFicha(abrir.dataset.abrir); }
+});
+
+const sacola = $("#sacola");
+let sacolaFecha;
+function abrirSacola() {
+  clearTimeout(sacolaFecha);
+  desenharSacola();
+  if (!sacola.open) sacola.showModal();
+  requestAnimationFrame(() => requestAnimationFrame(() => sacola.classList.add("aberta")));
+}
+function fecharSacola() {
+  sacola.classList.remove("aberta");
+  parar();
+  if (etapa !== "sacola") { etapa = "sacola"; pedido = null; }
+  sacolaFecha = setTimeout(() => sacola.close(), reduzir.matches ? 200 : 340);
+}
+$("#abrir-sacola").addEventListener("click", abrirSacola);
+sacola.addEventListener("cancel", (e) => { e.preventDefault(); fecharSacola(); });
+sacola.addEventListener("click", (e) => {
+  if (e.target === sacola || e.target.closest("[data-fechar]")) { fecharSacola(); return; }
+  if (e.target.closest("#pagar")) { pagar(e.target.closest("#pagar")); return; }
+  if (e.target.closest("#voltar")) { parar(); etapa = "sacola"; desenharSacola(); return; }
+  const copiar = e.target.closest("#copiar");
+  if (copiar) {
+    const campoPix = copiar.previousElementSibling;
+    (navigator.clipboard ? navigator.clipboard.writeText(campoPix.value) : Promise.reject()).catch(() => { campoPix.select(); document.execCommand("copy"); });
+    copiar.textContent = "Copiado"; depois(1600, () => { copiar.textContent = "Copiar"; });
+    return;
+  }
+  const b = e.target.closest("button[data-acao]"); if (!b) return;
+  const k = +b.dataset.i, i = itens[k];
+  if (b.dataset.acao === "mais") i.qtd++;
+  if (b.dataset.acao === "menos") i.qtd = Math.max(1, i.qtd - 1);
+  if (b.dataset.acao === "remover") itens.splice(k, 1);
+  salvar();
+  desenharSacola(b.dataset.acao === "remover" ? null : `button[data-acao="${b.dataset.acao}"][data-i="${k}"]`);
+});
+
+/* pagamento simulado: nada e cobrado nem enviado; os dados do cartao ficam so na tela */
+let etapa = "sacola", pedido = null, timers = [];
+const pagCartao = { numero: "", nome: "", validade: "", cvv: "", parcelas: "1" };
+const totalSacola = () => itens.reduce((t, i) => t + precoItem(i) * i.qtd, 0);
+const parar = () => { timers.forEach(clearTimeout); timers = []; };
+const depois = (ms, fn) => timers.push(setTimeout(fn, ms));
+const comEndereco = () => ck.receber !== "loja";
+
+const escolha = (nome, valor, titulo, det) => `<label class="escolha"><input type="radio" name="${nome}" value="${valor}"${ck[nome] === valor ? " checked" : ""}><strong>${titulo}</strong><small>${det}</small></label>`;
+const pilula = (nome, valor, desligada = false) => `<label class="pilula"><input type="radio" name="${nome}" value="${valor}"${ck[nome] === valor ? " checked" : ""}${desligada ? " disabled" : ""}><span>${valor}</span></label>`;
+const campo = (k, rotulo, attrs = "", largo = false) => `<label class="campo${largo ? " campo-largo" : ""}"><span>${rotulo}</span><input data-k="${k}" value="${esc(ck[k])}" ${attrs}></label>`;
+const campoCartao = (k, rotulo, attrs = "", largo = false) => `<label class="campo${largo ? " campo-largo" : ""}"><span>${rotulo}</span><input data-c="${k}" value="${esc(pagCartao[k])}" autocomplete="off" ${attrs}></label>`;
+const vazioIcone = `<svg viewBox="0 0 80 64" aria-hidden="true"><use href="#i-caixa"/></svg>`;
+
+function desenharSacola(focar) {
+  const corpo = $("#sacola-corpo"), pe = $("#sacola-pe");
+  if (etapa === "pix") return desenharPix();
+  if (etapa === "aprovado") return desenharAprovado();
+  if (!itens.length) {
+    corpo.innerHTML = `<div class="vazia">${vazioIcone}<p>Seu carrinho está vazio.</p><a class="btn btn-linha" href="#personalizar" data-fechar>Personalizar uma peça</a></div>`;
+    pe.innerHTML = "";
+    return;
+  }
+  if (ck.receber !== "loja" && ck.pagamento === "Dinheiro") ck.pagamento = "Pix";
+  corpo.innerHTML = `
+    <ul class="itens">${itens.map((i, k) => { const p = produtoDe(i), va = varDe(i), d = detalhe(p, va, i.t, i.txt, i.est); return `
+      <li class="item">
+        <span class="item-fig${p.arte ? " mesa" : ""}">${figura(p, i.v, i.txt, i.est)}</span>
+        <h3>${esc(p.nome)}</h3>
+        ${d ? `<p class="item-var">${esc(d)}</p>` : ""}
+        <div class="item-linha">
+          <div class="qtd"><button type="button" data-acao="menos" data-i="${k}" aria-label="Diminuir quantidade">−</button><output aria-live="polite">${i.qtd}</output><button type="button" data-acao="mais" data-i="${k}" aria-label="Aumentar quantidade">+</button></div>
+          <strong class="item-preco">${reais(precoItem(i) * i.qtd)}</strong>
+          <button class="remover" type="button" data-acao="remover" data-i="${k}">Remover</button>
+        </div>
+      </li>`; }).join("")}</ul>
+    <label class="embalar"><input type="checkbox" name="embalar"${ck.embalar ? " checked" : ""}><strong>É para presente: quero embalagem</strong><small>A loja confirma pelo WhatsApp.</small></label>
+    <fieldset class="bloco">
+      <legend>Como você quer receber</legend>
+      <div class="escolhas">
+        ${escolha("receber", "loja", "Retirar na loja", esc(LOJA))}
+        ${escolha("receber", "entrega", "Entrega em Cravinhos", "A taxa é informada pelo WhatsApp")}
+      </div>
+    </fieldset>
+    <div class="campos" id="endereco"${comEndereco() ? "" : " hidden"}>
+      ${campo("cep", "CEP <small>(preenche a rua)</small>", 'inputmode="numeric" autocomplete="postal-code" maxlength="9" placeholder="14140-000"')}
+      ${campo("numero", "Número", 'autocomplete="address-line2" maxlength="10"')}
+      ${campo("rua", "Rua", 'autocomplete="address-line1" maxlength="80"', true)}
+      ${campo("bairro", "Bairro", 'maxlength="50"')}
+      ${campo("cidade", "Cidade", 'autocomplete="address-level2" maxlength="50"')}
+      ${campo("compl", "Complemento <small>(opcional)</small>", 'maxlength="40"', true)}
+    </div>
+    <fieldset class="bloco">
+      <legend>Forma de pagamento</legend>
+      <div class="pilulas">${["Pix", "Cartão", "Dinheiro"].map((v) => pilula("pagamento", v, v === "Dinheiro" && ck.receber !== "loja")).join("")}</div>
+      <p class="nota"${ck.receber === "loja" ? " hidden" : ""}>Pagamento em dinheiro só na retirada na loja.</p>
+      <div class="campos cartao-campos" id="cartao"${ck.pagamento === "Cartão" ? "" : " hidden"}>
+        <label class="campo campo-largo campo-cartao"><span>Número do cartão</span><input data-c="numero" value="${esc(pagCartao.numero)}" autocomplete="off" inputmode="numeric" maxlength="23" placeholder="0000 0000 0000 0000"><span class="bandeira" id="bandeira" aria-live="polite">${bandeira(pagCartao.numero)}</span></label>
+        ${campoCartao("nome", "Nome impresso no cartão", 'maxlength="40"', true)}
+        ${campoCartao("validade", "Validade", 'inputmode="numeric" maxlength="5" placeholder="MM/AA"')}
+        ${campoCartao("cvv", "CVV", 'inputmode="numeric" maxlength="4" placeholder="123"')}
+        <label class="campo campo-largo"><span>Parcelas</span><select data-c="parcelas">${[1, 2, 3, 4].map((n) => `<option value="${n}"${pagCartao.parcelas == n ? " selected" : ""}>${n}x de ${reais(totalSacola() / n)} sem juros</option>`).join("")}</select></label>
+      </div>
+      <div class="campos" style="margin-top:.4rem">${campo("nome", "Seu nome", 'autocomplete="name" maxlength="60"', true)}</div>
+    </fieldset>
+    <details class="previa-caixa"><summary>Ver a mensagem do pedido</summary><div class="previa" id="previa" aria-live="polite"></div></details>`;
+  rodape();
+  if (focar) sacola.querySelector(focar)?.focus();
+}
+
+/* o rodape muda com a forma de pagamento: Pix e cartao pagam no site, dinheiro vai pelo WhatsApp */
+function rodape() {
+  const total = totalSacola(), pe = $("#sacola-pe");
+  const acao = ck.pagamento === "Dinheiro"
+    ? `<a class="btn btn-zap" id="enviar" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Enviar pedido pelo WhatsApp</a>
+       <p>Você paga em dinheiro na retirada.</p>`
+    : `<button class="btn" type="button" id="pagar">${ck.pagamento === "Pix" ? `Pagar ${reais(total)} com Pix` : `Pagar ${reais(total)} no cartão`}</button>
+       <p class="erro" id="erro-pagar" role="alert" hidden></p>
+       <p>Demonstração: nenhum valor é cobrado.${ck.receber === "loja" ? "" : " A taxa de entrega é combinada depois."}</p>`;
+  pe.innerHTML = `<p class="subtotal"><span>Subtotal</span><strong>${reais(total)}</strong></p>${acao}`;
+  mensagem();
+}
+
+function bandeira(n) {
+  n = n.replace(/\D/g, "");
+  if (/^(4011|4312|4389|4514|4576|5041|5066|5067|6277|6362|6363|6504|6505|6516)/.test(n)) return "Elo";
+  if (/^3[47]/.test(n)) return "Amex";
+  if (/^(5[1-5]|2[2-7])/.test(n)) return "Mastercard";
+  if (/^4/.test(n)) return "Visa";
+  return "";
+}
+
+/* o que falta para pagar: devolve [campo, mensagem] ou nada */
+function falta() {
+  if (comEndereco() && !ck.rua.trim()) return ['[data-k="rua"]', "Informe a rua."];
+  if (comEndereco() && !ck.numero.trim()) return ['[data-k="numero"]', "Informe o número."];
+  if (!ck.nome.trim()) return ['[data-k="nome"]', "Informe o seu nome."];
+  if (ck.pagamento !== "Cartão") return;
+  const num = pagCartao.numero.replace(/\D/g, ""), [mm, aa] = pagCartao.validade.split("/").map(Number);
+  const hoje = new Date(), venc = new Date(2000 + (aa || 0), mm || 0, 1);
+  if (num.length < 13) return ['[data-c="numero"]', "Confira o número do cartão."];
+  if (!pagCartao.nome.trim()) return ['[data-c="nome"]', "Informe o nome impresso no cartão."];
+  if (!(mm >= 1 && mm <= 12) || venc <= hoje) return ['[data-c="validade"]', "Confira a validade do cartão."];
+  if (pagCartao.cvv.length < 3) return ['[data-c="cvv"]', "Confira o CVV."];
+}
+
+function pagar(botao) {
+  const f = falta(), erro = $("#erro-pagar");
+  if (f) { erro.textContent = f[1]; erro.hidden = false; piscar(erro); sacola.querySelector(f[0])?.focus(); return; }
+  erro.hidden = true;
+  pedido = { numero: "P" + Math.floor(1000 + Math.random() * 9000), total: totalSacola(), forma: ck.pagamento, parcelas: +pagCartao.parcelas };
+  if (ck.pagamento === "Pix") { etapa = "pix"; desenharPix(); $("#sacola-corpo").scrollTop = 0; return; }
+  botao.disabled = true;
+  botao.classList.add("girando");
+  botao.textContent = "Processando pagamento…";
+  depois(1800, aprovar);
+}
+
+/* QR Code de enfeite (nao le em banco nenhum): grade com os tres quadrados de canto */
+function qrFalso(semente) {
+  const t = 25; let x = semente, quad = "";
+  const rnd = () => (x = (x * 9301 + 49297) % 233280) / 233280;
+  const canto = (cx, cy) => `<path d="M${cx} ${cy}h7v7h-7zM${cx + 1} ${cy + 1}v5h5v-5z" fill-rule="evenodd"/><rect x="${cx + 2}" y="${cy + 2}" width="3" height="3"/>`;
+  for (let i = 0; i < t; i++) for (let j = 0; j < t; j++) {
+    const noCanto = (i < 8 && j < 8) || (i < 8 && j > t - 9) || (i > t - 9 && j < 8);
+    if (!noCanto && rnd() > .52) quad += `<rect x="${j}" y="${i}" width="1" height="1"/>`;
+  }
+  return `<svg viewBox="0 0 ${t} ${t}" shape-rendering="crispEdges" fill="#102A5C" role="img" aria-label="QR Code do Pix (demonstração)">${canto(0, 0)}${canto(t - 7, 0)}${canto(0, t - 7)}${quad}</svg>`;
+}
+
+function desenharPix() {
+  const codigo = `00020126580014br.gov.bcb.pix0136pgwbrindes-demo52040000530398${pedido.total.toFixed(2).length}${pedido.total.toFixed(2)}5802BR5911PGW BRINDES6009CRAVINHOS62070503${pedido.numero}6304DEMO`;
+  $("#sacola-corpo").innerHTML = `<div class="pagar">
+    <span class="demo">Demonstração</span>
+    <h3>Pague com Pix</h3>
+    <p>Abra o app do seu banco, escolha Pix e leia o QR Code ou cole o código.</p>
+    <div class="qr">${qrFalso(+pedido.numero.slice(1))}</div>
+    <p class="valor">${reais(pedido.total)}</p>
+    <div class="copia"><input value="${codigo}" readonly aria-label="Código Pix copia e cola"><button class="btn btn-linha" type="button" id="copiar">Copiar</button></div>
+    <p class="status" id="status-pix" aria-live="polite"><span class="pulso" aria-hidden="true"></span><span>Aguardando o pagamento, expira em <span id="expira">10:00</span></span></p>
+  </div>`;
+  $("#sacola-pe").innerHTML = `<button class="btn btn-linha" type="button" id="voltar">Voltar para o carrinho</button>`;
+  let resta = 600;
+  const conta = () => { resta--; const el = $("#expira"); if (el) el.textContent = `${Math.floor(resta / 60)}:${String(resta % 60).padStart(2, "0")}`; if (resta > 0 && etapa === "pix") depois(1000, conta); };
+  depois(1000, conta);
+  /* na demonstracao o banco "confirma" sozinho depois de alguns segundos */
+  depois(7000, () => {
+    if (etapa !== "pix") return;
+    const st = $("#status-pix");
+    st.classList.add("pago");
+    st.lastElementChild.textContent = "Pagamento recebido!";
+    depois(1100, aprovar);
+  });
+}
+
+function aprovar() {
+  parar();
+  pedido.texto = textoPedido(true);
+  pedido.receber = ck.receber;
+  itens = []; salvar();
+  etapa = "aprovado";
+  desenharAprovado();
+}
+
+function desenharAprovado() {
+  const forma = pedido.forma === "Pix" ? "no Pix" : `no cartão${pedido.parcelas > 1 ? ` em ${pedido.parcelas}x` : ""}`;
+  const combinar = { loja: "o prazo e a retirada na loja", entrega: "o prazo e a entrega" }[pedido.receber];
+  $("#sacola-corpo").innerHTML = `<div class="aprovado">
+    <svg viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="42"/><path d="M27 43l10 10 20-21"/></svg>
+    <h3>Pagamento aprovado</h3>
+    <p><span class="numero">Pedido ${pedido.numero}</span><br>${reais(pedido.total)} ${forma}</p>
+    <p>Envie o pedido para a nossa equipe pelo WhatsApp para confirmar a personalização e combinar ${combinar}.</p>
+    <span class="demo">Demonstração: nenhum valor foi cobrado</span>
+  </div>`;
+  $("#sacola-pe").innerHTML = `<a class="btn btn-zap" href="${zap(pedido.texto)}" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Enviar pedido pelo WhatsApp</a>
+    <button class="btn btn-linha" type="button" data-fechar>Continuar comprando</button>`;
+  $("#sacola-corpo").scrollTop = 0;
+}
+
+function textoPedido(pago) {
+  const linhas = [pago ? `Olá! Fiz o pedido ${pedido.numero} pelo site:` : "Olá! Gostaria de fazer um pedido pelo site:"];
+  itens.forEach((i) => { const p = produtoDe(i), d = detalhe(p, varDe(i), i.t, i.txt, i.est); linhas.push(`- ${i.qtd}x ${p.nome}${d ? ` (${d})` : ""}: ${reais(precoItem(i) * i.qtd)}`); });
+  linhas.push(`Subtotal: ${reais(totalSacola())}`);
+  if (ck.embalar) linhas.push("É para presente: poderiam embalar, por favor?");
+  if (comEndereco()) {
+    const n = ck.numero.trim(), ruaNum = ck.rua.trim() ? `${ck.rua.trim()}${n ? ", " + n : ""}` : (n ? `nº ${n}` : "");
+    const partes = [ruaNum, ck.compl.trim(), ck.bairro.trim(), ck.cidade.trim()].filter(Boolean);
+    const end = partes.length ? partes.join(", ") : "endereço a combinar";
+    linhas.push(`Entrega em: ${end}${ck.cep.trim() ? ` (CEP ${ck.cep.trim()})` : ""}`);
+  } else linhas.push(`Vou retirar na loja: ${LOJA}`);
+  if (pago) linhas.push(`Pagamento: ${pedido.forma === "Pix" ? "Pix" : `cartão${pedido.parcelas > 1 ? ` em ${pedido.parcelas}x` : ""}`}, aprovado no site`);
+  else linhas.push(`Pagamento: ${ck.pagamento === "Dinheiro" ? "dinheiro, na retirada" : ck.pagamento}`);
+  if (ck.nome.trim()) linhas.push(`Meu nome é ${ck.nome.trim()}.`);
+  linhas.push(ck.receber === "entrega" ? "Poderiam confirmar o pedido, o prazo e a taxa de entrega?" : "Poderiam confirmar o pedido e o prazo?");
+  return linhas.join("\n");
+}
+function mensagem() {
+  const texto = textoPedido(false);
+  const previa = $("#previa"); if (previa) previa.textContent = texto;
+  const enviar = $("#enviar"); if (enviar) enviar.href = zap(texto);
+}
+
+let ultimoCep = "";
+async function buscarCep() {
+  const n = ck.cep.replace(/\D/g, "");
+  if (n.length !== 8 || n === ultimoCep) return;
+  ultimoCep = n;
+  try {
+    const r = await fetch(`https://viacep.com.br/ws/${n}/json/`);
+    const d = await r.json();
+    if (d.erro) return;
+    Object.assign(ck, { rua: d.logradouro || ck.rua, bairro: d.bairro || ck.bairro, cidade: d.localidade ? `${d.localidade} (${d.uf})` : ck.cidade });
+    ["rua", "bairro", "cidade"].forEach((k) => { const el = sacola.querySelector(`[data-k="${k}"]`); if (el) { el.value = ck[k]; piscar(el); } });
+    mensagem();
+  } catch {}
+}
+sacola.addEventListener("input", (e) => {
+  const t = e.target;
+  if (t.dataset.k) {
+    if (t.dataset.k === "cep") { t.value = t.value.replace(/\D/g, "").replace(/^(\d{5})(\d)/, "$1-$2").slice(0, 9); }
+    ck[t.dataset.k] = t.value;
+    if (t.dataset.k === "cep") buscarCep();
+  }
+  if (t.dataset.c && t.tagName === "INPUT") {
+    const d = t.value.replace(/\D/g, "");
+    if (t.dataset.c === "numero") { t.value = d.slice(0, 19).replace(/(\d{4})(?=\d)/g, "$1 "); $("#bandeira").textContent = bandeira(d); }
+    if (t.dataset.c === "validade") t.value = d.slice(0, 4).replace(/^(\d{2})(\d)/, "$1/$2");
+    if (t.dataset.c === "cvv") t.value = d.slice(0, 4);
+    pagCartao[t.dataset.c] = t.value;
+  }
+  const erro = $("#erro-pagar"); if (erro) erro.hidden = true;
+  mensagem();
+});
+sacola.addEventListener("change", (e) => {
+  const t = e.target;
+  if (t.dataset.c === "parcelas") { pagCartao.parcelas = t.value; return; }
+  if (t.name === "embalar") { ck.embalar = t.checked; mensagem(); piscar($("#previa")); return; }
+  if (t.name !== "receber" && t.name !== "pagamento") return;
+  const eraCartao = ck.pagamento === "Cartão", eraEndereco = comEndereco();
+  ck[t.name] = t.value;
+  desenharSacola(`input[name="${t.name}"][value="${ck[t.name]}"]`);
+  if (ck.pagamento === "Cartão" && !eraCartao) piscar($("#cartao"));
+  if (comEndereco() && !eraEndereco) piscar($("#endereco"));
+  piscar($("#previa"));
+});
+contar();
+
+/* ---------- empresas: quantidade, faixa de preco e orcamento ---------- */
+const emp = { id: "caneca", qtd: 50 };
+const FAIXAS = ["10 a 24", "25 a 49", "50 a 99", "100 ou mais"];
+const brinde = () => BRINDES.find(([id]) => id === emp.id);
+$("#brindes").innerHTML = BRINDES.map(([id, n, , cor]) => radio("brinde", id, id === emp.id, `${miniatura(id, cor)}<span>${n}</span>`, "peca")).join("");
+$("#atalhos").innerHTML = [10, 25, 50, 100, 200].map((n) => `<button type="button" data-n="${n}">${n}</button>`).join("");
+function calcular() {
+  const [, n, plural, , tabela] = brinde(), q = emp.qtd;
+  const faixa = tabela.reduce((f, [min], i) => (q >= min ? i : f), 0), unit = tabela[faixa][1];
+  $("#faixas").innerHTML = `<thead><tr><th scope="col">Quantidade</th><th scope="col">Preço por unidade</th></tr></thead><tbody>${tabela.map(([, preco], i) => `<tr${i === faixa ? ' class="atual"' : ""}><td>${FAIXAS[i]}</td><td>${reais(preco)}</td></tr>`).join("")}</tbody>`;
+  $("#total-det").textContent = `${q} ${q === 1 ? n.toLowerCase() : plural} × ${reais(unit)}`;
+  $("#total-empresa").textContent = reais(unit * q);
+  $("#orcamento").href = zap(`Olá! Vim pelo site e gostaria de um orçamento para a minha empresa: ${q} ${plural} com o nosso logo. Pela simulação do site, ficaria ${reais(unit)} por unidade (${reais(unit * q)}). Posso enviar o logo por aqui?`);
+}
+const qtdCampo = $("#qtd-empresa");
+const mudarQtd = (n) => { emp.qtd = Math.min(2000, Math.max(10, Math.round(n) || 10)); qtdCampo.value = emp.qtd; calcular(); };
+$("#calculo").addEventListener("change", (e) => {
+  if (e.target.name === "brinde") { emp.id = e.target.value; calcular(); piscar($("#faixas")); }
+  if (e.target === qtdCampo) mudarQtd(+qtdCampo.value);
+});
+qtdCampo.addEventListener("input", () => { const n = +qtdCampo.value; if (n >= 10 && n <= 2000) { emp.qtd = n; calcular(); } });
+$("#calculo").addEventListener("click", (e) => {
+  const passo = e.target.closest("[data-qtd]"); if (passo) mudarQtd(emp.qtd + +passo.dataset.qtd * (emp.qtd >= 100 ? 10 : 5));
+  const atalho = e.target.closest("[data-n]"); if (atalho) { mudarQtd(+atalho.dataset.n); piscar($("#total-empresa")); }
+});
+calcular();
+
+/* ---------- botao do canto: aparece depois da abertura e sai no rodape ---------- */
+const flutuante = $("#flutuante");
+flutuante.href = zap("Olá! Vim pelo site da PGW Brindes e gostaria de atendimento.");
+function mostrarFlutuante() {
+  const passou = $(".fita").getBoundingClientRect().bottom < 0 && $(".rodape").getBoundingClientRect().top > innerHeight;
+  flutuante.classList.toggle("visivel", passou);
+  flutuante.tabIndex = passou ? 0 : -1;
+}
+addEventListener("scroll", mostrarFlutuante, { passive: true });
+
+/* ---------- menu do celular ---------- */
+const topo = $(".topo"), menuBotao = $("#menu-botao");
+function menu(abrir) {
+  topo.classList.toggle("menu-aberto", abrir);
+  menuBotao.setAttribute("aria-expanded", String(abrir));
+  menuBotao.setAttribute("aria-label", abrir ? "Fechar menu" : "Abrir menu");
+}
+menuBotao.addEventListener("click", () => menu(!topo.classList.contains("menu-aberto")));
+$("#menu").addEventListener("click", (e) => { if (e.target.closest("a")) menu(false); });
+document.addEventListener("click", (e) => { if (!topo.contains(e.target)) menu(false); });
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && topo.classList.contains("menu-aberto")) { menu(false); menuBotao.focus(); }
+});
+matchMedia("(min-width: 60.01em)").addEventListener("change", (m) => { if (m.matches) menu(false); });
+
+mostrarFlutuante();
+const pedidoNoLink = location.hash.match(/^#produto-(.+)$/);
+if (pedidoNoLink && porId(pedidoNoLink[1])) abrirFicha(pedidoNoLink[1], undefined, false);
+</script>
+</body>
+</html>
