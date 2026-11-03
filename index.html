@@ -59,7 +59,7 @@
 
     --fonte: "Manrope", "Manrope reserva", Arial, sans-serif;
     --fonte-titulo: "Syne", "Syne reserva", "Arial Black", Arial, sans-serif;
-    --largura: 1240px;
+    --largura: 1440px;
     --margem: clamp(16px, 4vw, 40px);
   }
   @font-face { font-family: "Manrope reserva"; src: local("Arial"); size-adjust: 102%; }
@@ -122,7 +122,7 @@
   .menu { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0 1.4rem; align-items: center; margin-left: auto; }
   .menu a { color: var(--tinta); text-decoration: none; padding: .55rem 0; white-space: nowrap; font-weight: 500; font-size: .98rem; }
   .menu a:hover { color: var(--azul); text-decoration: underline; }
-  .sacola-botao { position: relative; display: inline-flex; align-items: center; gap: .45rem; flex: none; min-height: 48px; padding: .45rem 1rem; border: 0; border-radius: 12px; background: var(--azul); color: #fff; font: 650 1rem/1 var(--fonte); cursor: pointer; transition: background-color var(--dur-ui) ease; }
+  .sacola-botao { position: relative; display: inline-flex; align-items: center; gap: .45rem; flex: none; min-height: 48px; padding: .45rem 1rem; border: 0; border-radius: 12px; background: var(--azul); color: #fff; font: 650 1rem/1 var(--fonte); white-space: nowrap; cursor: pointer; transition: background-color var(--dur-ui) ease; }
   .sacola-botao:hover { background: var(--azul-2); }
   .sacola-botao svg { width: 22px; height: 22px; }
   .sacola-botao .conta { display: inline-grid; place-items: center; min-width: 1.55rem; height: 1.55rem; padding: 0 .35rem; border-radius: 999px; background: var(--vermelho); color: #fff; font-size: .82rem; }
@@ -157,55 +157,13 @@
   }
   @media (prefers-reduced-motion: reduce) { .menu-botao span, .menu { transition: none !important; } }
 
-  /* ---------- abertura: carrossel de campanhas ---------- */
-  .destaques-secao { padding-block: clamp(.9rem, 2vw, 1.4rem) 0; }
-  .destaques { position: relative; container-type: inline-size; }
-  .destaques-trilho { display: grid; grid-auto-flow: column; grid-auto-columns: 100%; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; margin: 0; padding: 0; list-style: none; border-radius: 22px; }
-  .destaques-trilho::-webkit-scrollbar { display: none; }
-  .destaque { scroll-snap-align: start; position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); align-items: center; min-height: clamp(360px, 44vw, 460px); background: var(--cor); overflow: hidden; }
-  .destaque-texto { position: relative; z-index: 1; display: grid; justify-items: start; align-content: center; gap: .9rem; padding: clamp(1.8rem, 4vw, 3rem) 1rem clamp(3.4rem, 5vw, 3.6rem) clamp(4.2rem, 7vw, 5.5rem); min-width: 0; }
-  .destaque-texto > * { max-width: 100%; }
-  .destaque-chapeu { color: var(--azul); font-weight: 650; font-size: .98rem; }
-  .destaque h2 { font-size: clamp(2rem, 1.2rem + 2.6vw, 3.4rem); line-height: .98; max-width: 10em; }
-  .destaque-texto > p:not(.destaque-chapeu) { max-width: 27rem; color: var(--tinta-2); font-size: 1.05rem; line-height: 1.5; }
-  .destaque-foto { align-self: stretch; display: grid; place-items: center; padding: 1rem clamp(3.6rem, 6vw, 5rem) 1rem 0; min-width: 0; }
-  /* fotos de produto tem fundo branco: multiply deixa o fundo da cor do banner */
-  .destaque-foto img { display: block; width: 100%; max-width: 560px; height: auto; mix-blend-mode: multiply; }
-  /* o ultimo banner e a propria loja: agua funda com a fachada de verdade */
-  .destaque-escuro { color: #fff; }
-  .destaque-escuro h2 { color: #fff; }
-  .destaque-escuro .destaque-chapeu { color: #A9BCFF; }
-  .destaque-escuro .destaque-texto > p:not(.destaque-chapeu) { color: #D5DDF5; }
-  .destaque-escuro .destaque-foto { padding: 0; }
-  .destaque-escuro .destaque-foto img { max-width: none; height: 100%; object-fit: cover; object-position: 50% 30%; mix-blend-mode: normal; -webkit-mask-image: linear-gradient(90deg, transparent, #000 22%); mask-image: linear-gradient(90deg, transparent, #000 22%); }
-  .destaques .seta { position: absolute; top: 50%; translate: 0 -50%; z-index: 2; box-shadow: 0 6px 18px -8px rgba(16, 42, 92, .5); }
-  .destaques .seta-ant { left: .9rem; }
-  .destaques .seta-prox { right: .9rem; }
-  .destaques .pontos { position: absolute; left: 50%; bottom: .35rem; translate: -50% 0; z-index: 2; }
+  /* setas das fileiras */
   .seta { width: 46px; height: 46px; border: 0; border-radius: 50%; background: var(--branco); color: var(--tinta); display: grid; place-items: center; cursor: pointer; transition: background-color var(--dur-ui) ease, transform .12s var(--ease-out); }
   @media (hover: hover) and (pointer: fine) { .seta:hover { background: var(--ceu); } }
   .seta:active { transform: scale(.94); }
   .seta svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
-  .pontos { display: flex; gap: 0; }
-  .ponto { width: 36px; height: 40px; padding: 0; border: 0; background: none; cursor: pointer; display: grid; place-items: center; }
-  .ponto::before { content: ""; width: 10px; height: 10px; border-radius: 999px; background: rgba(18, 35, 58, .25); transition: width var(--dur-ui) var(--ease-out), background-color var(--dur-ui) ease; }
-  .ponto[aria-current="true"]::before { width: 26px; background: var(--tinta); }
-  .no-escuro .ponto::before { background: rgba(255, 255, 255, .4); }
-  .no-escuro .ponto[aria-current="true"]::before { background: #fff; }
-  @media (max-width: 760px) {
-    .destaque { grid-template-columns: minmax(0, 1fr); align-items: start; min-height: 0; }
-    .destaque-foto { order: -1; aspect-ratio: 6 / 5; padding: 1rem 3.4rem .2rem; }
-    .destaque-foto { min-height: 0; overflow: hidden; }
-    .destaque-foto img { width: 100%; height: 100%; max-width: none; object-fit: contain; }
-    .destaque-escuro .destaque-foto img { width: 100%; height: 100%; max-height: none; -webkit-mask-image: linear-gradient(180deg, #000 70%, transparent); mask-image: linear-gradient(180deg, #000 70%, transparent); }
-    .destaque-texto { padding: .4rem var(--margem) 3.4rem; gap: .7rem; }
-    .destaque h2 { font-size: clamp(1.75rem, 1.3rem + 2.4vw, 2.4rem); }
-    .destaques .seta { top: calc(50cqw * 5 / 6); width: 42px; height: 42px; }
-    .destaques .seta-ant { left: .5rem; }
-    .destaques .seta-prox { right: .5rem; }
-  }
 
-  /* faixa de fatos logo abaixo do carrossel */
+  /* faixa de fatos */
   .fatos { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .5rem 1.5rem; margin: 0; padding: 1.2rem 0 .4rem; list-style: none; }
   .fato { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: .7rem; align-items: center; font-size: .93rem; line-height: 1.35; color: var(--tinta-2); }
   .fato svg { width: 34px; height: 34px; fill: none; stroke: var(--azul); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
@@ -236,12 +194,12 @@
   .vitrine { display: grid; gap: clamp(2.4rem, 4vw, 3.4rem); padding: 0; margin: 0; list-style: none; }
   .prateleira { min-width: 0; }
   .prateleira.some { display: none; }
-  .prateleira-topo { display: flex; align-items: center; gap: .5rem 1rem; margin-bottom: 1rem; }
-  .prateleira-topo h3 { margin-right: auto; font-size: clamp(1.35rem, 1.15rem + .7vw, 1.75rem); }
+  .prateleira-topo { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; margin-bottom: 1rem; }
+  .prateleira-topo h3 { flex: 1 1 12rem; font-size: min(clamp(1.35rem, 1.15rem + .7vw, 1.75rem), 10vw); }
   .ver-tudo { min-height: 44px; padding: 0; border: 0; background: none; color: var(--azul); font: 600 1rem/1.2 var(--fonte); text-decoration: underline; text-underline-offset: .18em; cursor: pointer; }
   .prateleira-setas { display: flex; gap: .4rem; }
   .prateleira-setas .seta { box-shadow: inset 0 0 0 1px var(--linha); }
-  .prateleira-setas .seta:disabled { opacity: .35; cursor: default; }
+  .prateleira-setas .seta:disabled { background: var(--ceu); color: var(--linha-forte); box-shadow: none; cursor: default; }
   .fileira { --col: 5; --vao: 1.1rem; position: relative; display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - (var(--col) - 1) * var(--vao)) / var(--col)); gap: var(--vao); overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding: 0; margin: 0; list-style: none; }
   .fileira::-webkit-scrollbar { display: none; }
   .fileira > li { scroll-snap-align: start; }
@@ -262,21 +220,52 @@
   .selo { position: absolute; left: .7rem; top: .7rem; padding: .25rem .65rem; border-radius: 999px; background: var(--vermelho); color: #fff; font-size: .8rem; font-weight: 650; }
   .produto-info { display: flex; flex-direction: column; gap: .35rem; min-width: 0; padding: .85rem .9rem .95rem; }
   .produto-marca { color: var(--azul); font-size: .86rem; font-weight: 650; }
-  .produto h4 { margin: 0; font-size: 1rem; font-weight: 600; line-height: 1.3; }
-  .produto h4, .produto-desc { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; min-height: 2lh; }
+  .produto-nome { margin: 0; font-family: inherit; font-size: 1rem; font-weight: 600; line-height: 1.3; letter-spacing: inherit; }
+  .produto-nome, .produto-desc { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; min-height: 2lh; }
   .produto-desc { color: var(--tinta-2); font-size: .9rem; line-height: 1.45; }
-  .produto h4 a { color: inherit; text-decoration: none; }
-  @media (hover: hover) and (pointer: fine) { .produto h4 a:hover { text-decoration: underline; text-underline-offset: 3px; } }
+  .produto-nome a { color: inherit; text-decoration: none; }
+  @media (hover: hover) and (pointer: fine) { .produto-nome a:hover { text-decoration: underline; text-underline-offset: 3px; } }
   .produto-preco { font-weight: 700; font-size: 1.15rem; }
   .produto-preco small { font-size: .8rem; font-weight: 500; color: var(--tinta-2); }
   .produto .btn { width: 100%; min-height: 46px; padding-inline: .8rem; margin-top: auto; }
   .btn.adicionado { background: var(--marinho); color: #fff; }
-  .procura { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: .4rem 1.5rem; margin-top: clamp(3rem, 2rem + 3vw, 4.5rem); padding: 1.4rem 1.6rem; border-radius: var(--raio); background: var(--branco); box-shadow: 0 0 0 1px var(--linha); }
-  .procura h3 { font-size: 1.4rem; }
-  .procura p { color: var(--tinta-2); }
-  .procura .btn { grid-column: 2; grid-row: 1 / span 2; }
-  @media (max-width: 640px) { .procura { grid-template-columns: minmax(0, 1fr); } .procura .btn { grid-column: auto; grid-row: auto; justify-self: start; margin-top: .4rem; } }
-  @media (max-width: 560px) { .produto-desc { display: none; } .produto-info { padding: .7rem .7rem .8rem; } .produto h4 { font-size: .95rem; } }
+  /* etiqueta do fim da fileira: o tamanho de um cartao no celular, o resto da fileira no computador */
+  .fim { position: relative; display: grid; grid-template-rows: auto 1fr; overflow: hidden; min-width: 0; border-radius: 18px; scroll-snap-align: start; }
+  .fim-texto { display: flex; flex-direction: column; gap: .5rem; min-width: 0; padding: 1.05rem 1.05rem 1.15rem; font-size: .93rem; line-height: 1.45; }
+  .fim-titulo { font-family: var(--fonte-titulo); font-size: 1.35rem; font-weight: 800; line-height: 1.05; letter-spacing: -.02em; overflow-wrap: normal; }
+  .fim .btn { align-self: stretch; min-height: 46px; margin-top: auto; padding-inline: .8rem; overflow-wrap: normal; }
+  .fim-extra { display: none; }
+  .fim-arte { display: grid; place-items: center; aspect-ratio: 4 / 3; padding: .8rem; }
+  .fim-arte svg { width: auto; height: 100%; max-width: 100%; }
+  .fim-foto { display: block; width: 100%; aspect-ratio: 4 / 3; height: auto; object-fit: cover; }
+  /* empresas: o azul do W, com a caneca da marca na mesa de corte */
+  .fim-empresa { background: var(--marinho); color: #C9D6F2; }
+  .fim-empresa .fim-titulo { color: #fff; }
+  .fim-empresa .fim-arte { margin: .7rem .7rem 0; border-radius: 12px; }
+  /* gravacao: o creme da bancada com a garrafa gravada */
+  .fim-laser { background: var(--azul-claro); color: var(--tinta-2); }
+  .fim-laser .fim-titulo { color: var(--tinta); }
+  .fim-laser .fim-arte { margin: .7rem .7rem 0; border-radius: 12px; }
+  /* ideia propria: o laranja do G */
+  .fim-ideia { background: var(--vermelho); color: #fff; }
+  .fim-ideia .fim-titulo { color: #fff; }
+  .fim-ideia .fim-arte { margin: .7rem .7rem 0; border-radius: 12px; }
+  .fim-ideia .btn svg { color: #12803B; }
+  .fim-loja { background: var(--ceu); color: var(--tinta-2); box-shadow: inset 0 0 0 1px var(--linha); }
+  .fim-loja .fim-titulo { color: var(--tinta); }
+  @media (min-width: 1101px) {
+    .fileira .fim[data-falta] { grid-column: span var(--falta); grid-template-rows: none; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: stretch; }
+    .fileira .fim[data-falta] .fim-texto { justify-content: center; padding: 1.6rem 1.6rem 1.7rem; }
+    .fileira .fim[data-falta] .fim-titulo { font-size: 1.75rem; }
+    .fileira .fim[data-falta] .btn { align-self: start; margin-top: .5rem; }
+    .fileira .fim[data-falta] .fim-foto { aspect-ratio: auto; height: 100%; }
+    .fileira .fim[data-falta] .fim-arte { aspect-ratio: auto; margin: .8rem 0 .8rem .8rem; padding: 1.2rem; }
+    .fileira .fim[data-falta] .fim-arte svg { height: auto; width: min(100%, 260px); }
+    .vitrine:not(.filtrada) .fim[data-falta] .fim-extra { display: inline; }
+  }
+  .filtrada .fim { grid-column: auto !important; grid-template-columns: none !important; }
+  @media (max-width: 560px) { .fim-titulo { font-size: 1.15rem; } .fim-texto { padding: .85rem .85rem .95rem; } .fim .btn svg { display: none; } }
+  @media (max-width: 560px) { .produto-desc { display: none; } .produto-info { padding: .7rem .7rem .8rem; } .produto-nome { font-size: .95rem; } }
 
   /* ---------- presente certo: a faixa azul, com as sugestoes num cartao amarrado pela fita ---------- */
   .presente { background: var(--azul); color: #fff; padding-block: clamp(3rem, 7vw, 5.5rem); }
@@ -314,7 +303,7 @@
   .lista-mais { justify-self: start; }
   .lista-botoes { display: grid; gap: .55rem; }
   .lista-botoes .btn { width: 100%; }
-  .lista-status { font-size: .95rem; }
+  .lista-status { font-size: .95rem; font-variant-numeric: tabular-nums; }
   .lista-status:empty { display: none; }
   .lista-nota { color: var(--tinta-2); font-size: .88rem; }
   /* embalagem para presente, no carrinho */
@@ -329,14 +318,29 @@
   .loja-fotos img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--raio); }
   .loja-fotos figure:last-child { margin-top: clamp(1.5rem, 4vw, 3rem); }
   .loja-texto { display: grid; grid-template-columns: minmax(0, 1fr); gap: .9rem; }
-  .loja-texto > p:not(.nota-google) { font-size: 1.1rem; color: var(--tinta-2); max-width: 36rem; }
-  .nota-google { display: flex; flex-wrap: wrap; align-items: baseline; gap: .3rem .7rem; margin-top: .3rem; }
-  .nota-google strong { font-family: var(--fonte-titulo); font-size: 2.4rem; font-weight: 800; line-height: 1; color: var(--azul); }
-  .avaliacoes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .75rem; }
-  .avaliacao { display: flex; flex-direction: column; padding: .95rem 1rem; border-radius: var(--raio); background: var(--ceu); }
-  .avaliacao p { font-size: .95rem; line-height: 1.4; font-weight: 500; }
-  .avaliacao footer { margin-top: auto; padding-top: .5rem; color: var(--tinta-2); font-size: .82rem; }
-  @media (max-width: 1080px) { .avaliacoes { grid-template-columns: minmax(0, 1fr); } }
+  .loja-texto > p { font-size: 1.1rem; color: var(--tinta-2); max-width: 36rem; }
+  /* avaliacoes no Google: a nota na plaqueta azul com as tres bolinhas do logo e tres avaliacoes com nome e data, como no Google */
+  .google { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 3fr); gap: 1.1rem; margin-top: clamp(3rem, 6vw, 4.5rem); scroll-margin-top: 100px; }
+  .google-nota { display: grid; justify-items: start; align-content: start; gap: .5rem; padding: 1.5rem 1.6rem 1.7rem; border-radius: 22px; background: var(--marinho); color: #C9D6F2; }
+  .google-nota .bolinhas { margin-bottom: .4rem; }
+  .google-marca { display: inline-flex; align-items: center; gap: .55rem; font-size: .95rem; font-weight: 500; }
+  .google-marca .g-logo { width: 28px; height: 28px; padding: 4px; border-radius: 50%; background: #fff; }
+  .google-numero { margin-top: .3rem; font-family: var(--fonte-titulo); font-size: 4.4rem; font-weight: 800; line-height: .9; letter-spacing: -.03em; color: #fff; font-variant-numeric: tabular-nums; }
+  .google-nota .estrelas { font-size: 1.25rem; color: #F2C230; }
+  .google-nota .btn { margin-top: .6rem; min-height: 48px; }
+  .estrelas { display: inline-flex; gap: 1px; color: #E8A100; }
+  .estrelas svg { width: 1.05em; height: 1.05em; fill: currentColor; }
+  .depoimentos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.1rem; margin: 0; padding: 0; list-style: none; }
+  .depoimentos li { display: flex; flex-direction: column; gap: .75rem; min-width: 0; padding: 1.35rem 1.4rem 1.5rem; border-radius: 22px; background: var(--branco); box-shadow: inset 0 0 0 1px var(--linha); }
+  .dep-autor { display: grid; grid-template-columns: 40px minmax(0, 1fr) 18px; align-items: center; gap: .75rem; }
+  .dep-avatar { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--av); color: #fff; font: 800 1.05rem/1 var(--fonte-titulo); }
+  .dep-autor p { min-width: 0; line-height: 1.3; }
+  .dep-autor strong { display: block; font-weight: 700; }
+  .dep-autor p span { color: var(--tinta-2); font-size: .86rem; }
+  .dep-autor .g-logo { width: 18px; height: 18px; align-self: start; }
+  .depoimentos blockquote { margin: 0; font-size: 1.02rem; line-height: 1.55; }
+  @media (max-width: 1100px) { .google { grid-template-columns: minmax(0, 1fr); } .google-nota { grid-template-columns: auto minmax(0, 1fr); align-items: center; column-gap: 1.2rem; } .google-nota .bolinhas, .google-marca, .google-nota .btn { grid-column: 1 / -1; } .google-numero { grid-row: span 2; margin: 0; } }
+  @media (max-width: 860px) { .depoimentos { grid-template-columns: minmax(0, 1fr); } }
   @media (max-width: 860px) { .loja-grade { grid-template-columns: minmax(0, 1fr); } .loja-fotos { max-width: 560px; } }
 
   /* ---------- como chegar ---------- */
@@ -365,23 +369,6 @@
   @media (hover: hover) and (pointer: fine) { .redes a:hover { background: var(--vermelho); color: #fff; } }
   @media (max-width: 700px) { .rodape-grade { flex-direction: column; align-items: flex-start; gap: .6rem; } }
 
-  /* ---------- pagina do produto: abre por cima da vitrine e tem endereco proprio (#produto-id) ---------- */
-  .ficha {
-    position: fixed; width: min(100% - 2rem, 980px); max-width: none; max-height: min(92dvh, 740px); margin: auto; padding: 0; border: 0;
-    border-radius: 22px; background: var(--branco); color: var(--tinta); overflow: auto; overscroll-behavior: contain;
-    opacity: 0; transform: translateY(14px) scale(.98); transition: opacity .28s var(--ease-out), transform .28s var(--ease-out);
-  }
-  .ficha[open] { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); }
-  .ficha.aberta { opacity: 1; transform: none; }
-  .ficha::backdrop { background: rgba(16, 42, 92, .55); opacity: 0; transition: opacity .28s ease; }
-  .ficha.aberta::backdrop { opacity: 1; }
-  .ficha > .fechar { position: absolute; top: .8rem; right: .8rem; z-index: 2; }
-  .ficha-foto { position: relative; align-self: start; aspect-ratio: 1; border-right: 1px solid var(--linha); }
-  .ficha-foto img { display: block; width: 100%; height: 100%; object-fit: contain; }
-  .ficha-info { display: flex; flex-direction: column; gap: .85rem; min-width: 0; padding: clamp(1.4rem, 3vw, 2.4rem); }
-  .ficha-info h2 { padding-right: 2.6rem; font-size: clamp(1.45rem, 1.2rem + .9vw, 1.9rem); line-height: 1.12; }
-  .ficha-preco { font-size: 1.6rem; font-weight: 700; }
-  .ficha-desc { color: var(--tinta-2); }
   .variacao { min-width: 0; margin: .2rem 0 0; padding: 0; border: 0; }
   .variacao legend { padding: 0; margin-bottom: .45rem; color: var(--tinta-2); font-size: .95rem; }
   .variacao legend strong { color: var(--tinta); font-weight: 600; }
@@ -392,19 +379,94 @@
   @media (hover: hover) and (pointer: fine) { .opcao:hover span { box-shadow: inset 0 0 0 1.5px var(--linha-forte); } }
   .opcao input:checked + span { background: var(--marinho); color: #fff; box-shadow: none; }
   .opcao input:focus-visible + span { outline: 3px solid var(--azul); outline-offset: 3px; }
-  .ficha-add { width: 100%; min-height: 52px; margin-top: .3rem; }
-  .ficha-status { min-height: 1.5em; margin-top: -.3rem; font-size: .95rem; }
-  .ficha-status:empty { display: none; }
   .ver-sacola { padding: 0; border: 0; background: none; color: var(--azul); font: 600 .95rem/1.5 var(--fonte); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
-  .ficha-entrega { display: grid; gap: .35rem; margin: .3rem 0 0; padding: 1rem 0 0; border-top: 1px solid var(--linha); color: var(--tinta-2); font-size: .92rem; list-style: none; }
-  .ficha-entrega li { display: flex; gap: .55rem; }
-  .ficha-entrega li::before { content: ""; flex: none; width: 6px; height: 6px; margin-top: .55em; border-radius: 50%; background: var(--azul); }
-  @media (max-width: 760px) {
-    .ficha { width: 100%; max-height: 94dvh; margin: auto 0 0; border-radius: 22px 22px 0 0; transform: translateY(40px); }
-    .ficha[open] { grid-template-columns: minmax(0, 1fr); }
-    .ficha-foto { aspect-ratio: 4 / 3; border-right: 0; border-bottom: 1px solid var(--linha); }
+  /* ---------- pagina do produto: endereco proprio (?produto=id); a vitrine sai e a pagina entra ---------- */
+  .pp { padding-block: clamp(.6rem, 2vw, 1.2rem) 0; }
+  .trilha ol { display: flex; flex-wrap: wrap; align-items: center; gap: 0 .55rem; margin: 0 0 clamp(.4rem, 1.5vw, 1rem); padding: 0; list-style: none; color: var(--tinta-2); font-size: .92rem; }
+  .trilha li { display: inline-flex; align-items: center; gap: .55rem; min-width: 0; }
+  .trilha li + li::before { content: ""; flex: none; width: 6px; height: 6px; border: solid var(--linha-forte); border-width: 1.5px 1.5px 0 0; transform: rotate(45deg); }
+  .trilha a { display: inline-flex; align-items: center; min-height: 44px; color: var(--tinta-2); text-decoration: none; }
+  @media (hover: hover) and (pointer: fine) { .trilha a:hover { color: var(--azul); text-decoration: underline; } }
+  .trilha [aria-current] { color: var(--tinta); font-weight: 600; }
+  .pp-grade { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 4rem); align-items: start; }
+  .pp-galeria { position: sticky; top: 92px; min-width: 0; }
+  /* a peca na mesa de corte da bancada: o desenho muda enquanto a pessoa escreve */
+  .pp-foto { position: relative; display: grid; place-items: center; margin: 0; overflow: hidden; aspect-ratio: 1; border-radius: 26px; background: var(--branco); box-shadow: inset 0 0 0 1px var(--linha); }
+  .pp-foto.mesa { padding: clamp(1rem, 4vw, 2.8rem); }
+  .pp-foto svg { display: block; width: min(100%, 520px); height: auto; }
+  .pp-foto img { display: block; width: 100%; height: 100%; object-fit: cover; transform-origin: var(--zx, 50%) var(--zy, 50%); transition: transform .3s var(--ease-out); }
+  @media (hover: hover) and (pointer: fine) { .pp-foto:has(img) { cursor: zoom-in; } .pp-foto.zoom img { transform: scale(2.1); } }
+  .pp-foto .selo { z-index: 1; right: 1rem; top: 1rem; }
+  .pp-foto .tag-gravar { left: 1rem; bottom: 1rem; z-index: 1; }
+  .pp-foto-nota { margin-top: .75rem; color: var(--tinta-2); font-size: .92rem; }
+  .pp-info { display: flex; flex-direction: column; gap: 1rem; min-width: 0; }
+  .pp-info .produto-marca { font-size: .95rem; font-weight: 700; }
+  .pp-info h1 { margin-top: -.55rem; font-size: clamp(1.8rem, 1.25rem + 1.6vw, 2.6rem); line-height: 1.04; overflow-wrap: break-word; }
+  .pp-info h1:focus { outline: 0; }
+  .pp-nota { display: inline-flex; flex-wrap: wrap; align-items: center; gap: .1rem .5rem; align-self: start; min-height: 44px; margin-top: -.6rem; color: var(--tinta-2); font-size: .95rem; text-decoration: none; }
+  @media (hover: hover) and (pointer: fine) { .pp-nota:hover { color: var(--tinta); text-decoration: underline; text-underline-offset: 3px; } }
+  .pp-preco { display: grid; grid-template-columns: minmax(0, 1fr); gap: .2rem; padding-top: .9rem; border-top: 1px solid var(--linha); }
+  .pp-preco strong { font: 800 clamp(2.1rem, 1.7rem + 1.1vw, 2.7rem)/1 var(--fonte); letter-spacing: -.02em; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+  .pp-preco span { color: var(--tinta-2); }
+  .pp-desc { color: var(--tinta-2); }
+  .pp-compra { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .6rem; margin-top: .2rem; }
+  .pp-compra .qtd { min-height: 54px; }
+  .pp-compra .btn { min-height: 54px; }
+  .pp-compra .btn-linha { grid-column: 1 / -1; }
+  .pp-compra .btn:disabled, .pp-barra .btn:disabled { background: var(--ceu); color: var(--tinta-2); box-shadow: inset 0 0 0 1px var(--linha); cursor: not-allowed; }
+  .pp-status { font-variant-numeric: tabular-nums; min-height: 1.5em; margin-top: -.4rem; font-size: .95rem; }
+  .pp-status:empty { display: none; }
+  .pp-empresas { display: flex; flex-wrap: wrap; align-items: center; gap: .2rem .6rem; padding: .8rem 1rem; border-radius: 14px; background: var(--azul-claro); color: var(--tinta); font-size: .95rem; }
+  .pp-empresas a { font-weight: 700; }
+  /* receber e pagar: o cartao creme com a faixa azul das bolinhas, como a fita de fatos */
+  .pp-receber { display: grid; grid-template-columns: minmax(0, 1fr); gap: .85rem; margin-top: .4rem; padding: 0 1.45rem 1.5rem; overflow: hidden; border-radius: 20px; background: var(--ceu); }
+  .pp-receber h2 { display: flex; align-items: center; gap: .65rem; margin: 0 -1.45rem .2rem; padding: .85rem 1.45rem; background: var(--marinho); color: #fff; font-size: min(1.15rem, 7vw); letter-spacing: -.01em; }
+  .pp-cep { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .5rem; }
+  .pp-cep input { width: 100%; min-width: 0; min-height: 50px; padding: .5rem .95rem; border: 0; border-radius: 12px; background: #fff; box-shadow: inset 0 0 0 1.5px var(--linha-forte); color: var(--tinta); font: 400 1rem/1.2 var(--fonte); }
+  .pp-cep input:focus { outline: none; box-shadow: inset 0 0 0 2px var(--azul); }
+  .pp-cep .btn { min-height: 50px; }
+  .pp-cep-res { margin-top: -.2rem; padding: .75rem .9rem; border-radius: 12px; background: var(--branco); font-size: .95rem; }
+  .pp-cep-res:empty { display: none; }
+  .pp-modos { display: grid; gap: .7rem; margin: 0; padding: .3rem 0 0; list-style: none; color: var(--tinta-2); font-size: .95rem; line-height: 1.4; }
+  .pp-modos li { display: grid; grid-template-columns: 14px minmax(0, 1fr); gap: .75rem; align-items: start; }
+  .pp-modos li::before { content: ""; width: 14px; height: 14px; margin-top: .2rem; border-radius: 50%; background: #F07A1A; }
+  .pp-modos li:nth-child(2)::before { background: #2FA34F; }
+  .pp-modos li:nth-child(3)::before { background: #1D5FC4; }
+  .pp-modos li:nth-child(4)::before { background: #F2C230; }
+  .pp-modos strong { display: block; color: var(--tinta); font-weight: 700; }
+  .pp-zap { display: inline-flex; align-items: center; gap: .5rem; justify-self: start; min-height: 44px; color: var(--tinta); font-weight: 700; text-underline-offset: 3px; overflow-wrap: anywhere; }
+  .pp-zap svg { width: 22px; height: 22px; flex: none; color: #12803B; }
+  /* descricao, personalizacao e detalhes em acordeao */
+  .pp-sobre { max-width: 54rem; margin-top: clamp(2.5rem, 5vw, 4rem); border-top: 1px solid var(--linha); }
+  .pp-sobre details { border-bottom: 1px solid var(--linha); }
+  .pp-sobre summary { display: flex; justify-content: space-between; align-items: center; gap: 1rem; min-height: 64px; cursor: pointer; list-style: none; font: 800 min(1.2rem, 7.5vw)/1.2 var(--fonte-titulo); letter-spacing: -.01em; }
+  .pp-sobre summary::-webkit-details-marker { display: none; }
+  .pp-sobre summary::after { content: ""; flex: none; width: 10px; height: 10px; margin-right: .3rem; border: solid var(--azul); border-width: 0 2.5px 2.5px 0; transform: translateY(-3px) rotate(45deg); transition: transform var(--dur-ui) var(--ease-out); }
+  .pp-sobre details[open] summary::after { transform: translateY(2px) rotate(225deg); }
+  .pp-sobre details > div { display: grid; gap: .7rem; padding-bottom: 1.5rem; color: var(--tinta-2); }
+  .pp-detalhes { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: .45rem 1.75rem; margin: 0; }
+  .pp-detalhes dt { color: var(--tinta); font-weight: 700; }
+  .pp-detalhes dd { margin: 0; overflow-wrap: anywhere; }
+  .pp-mais { padding-block: clamp(2.2rem, 5vw, 3.5rem) clamp(3.5rem, 7vw, 5.5rem); margin-top: clamp(3rem, 6vw, 5rem); }
+  .pp-mais .prateleira-topo h2 { margin-right: auto; font-size: min(clamp(1.5rem, 1.2rem + 1.1vw, 2.1rem), 10vw); }
+  .pp-barra { display: none; }
+  @media (max-width: 860px) {
+    .pp-grade { grid-template-columns: minmax(0, 1fr); }
+    .pp-galeria { position: static; }
+    .pp-foto { border-radius: 20px; }
+    .trilha li:last-child { display: none; } /* o nome ja vem logo abaixo da foto */
+    .pp-barra {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 25; display: flex; align-items: center; gap: .9rem;
+      padding: .7rem var(--margem) calc(.7rem + env(safe-area-inset-bottom)); background: var(--branco); border-top: 1px solid var(--linha);
+      box-shadow: 0 -12px 28px -20px rgba(16, 42, 92, .45); transform: translateY(105%); transition: transform .3s var(--ease-out);
+    }
+    .pp-barra.visivel { transform: none; }
+    .pp-barra strong { font: 800 1.35rem/1 var(--fonte); white-space: nowrap; }
+    .pp-barra .btn { flex: 1; min-width: 0; min-height: 50px; padding-inline: .8rem; }
+    .pp-mais { padding-bottom: 6rem; }
   }
-  @media (prefers-reduced-motion: reduce) { .ficha { transform: none; transition: opacity .2s ease; } }
+  @media (max-width: 420px) { .pp-cep { grid-template-columns: minmax(0, 1fr); } .pp-detalhes { grid-template-columns: minmax(0, 1fr); row-gap: .15rem; } .pp-detalhes dd + dt { margin-top: .5rem; } .pp-receber { padding-inline: 1.1rem; } .pp-receber h2 { margin-inline: -1.1rem; padding-inline: 1.1rem; } }
+  @media (prefers-reduced-motion: reduce) { .pp-barra, .pp-foto img, .pp-sobre summary::after { transition: none; } }
   html:has(dialog[open]) { overflow: hidden; }
 
   /* ---------- carrinho: gaveta que entra pela direita ---------- */
@@ -509,12 +571,12 @@
   .flutuante {
     display: grid; place-items: center; position: fixed; z-index: 25;
     right: max(clamp(16px, 2vw, 28px), env(safe-area-inset-right)); bottom: calc(clamp(16px, 2vw, 28px) + env(safe-area-inset-bottom));
-    width: 62px; height: 62px; border-radius: 50%; background: #179A48; color: #fff;
-    box-shadow: 0 10px 28px -10px rgba(23, 154, 72, .7), 0 2px 6px rgba(16, 42, 92, .2);
+    width: 62px; height: 62px; border-radius: 50%; background: #12803B; color: #fff;
+    box-shadow: 0 10px 28px -10px rgba(18, 128, 59, .6), 0 2px 6px rgba(16, 42, 92, .2);
     opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity .25s var(--ease-out), transform .25s var(--ease-out), background-color .2s;
   }
   .flutuante.visivel { opacity: 1; transform: none; pointer-events: auto; }
-  .flutuante:hover { background: #12803B; }
+  .flutuante:hover { background: #0E6A31; }
   .flutuante svg { width: 30px; height: 30px; }
   @media (max-width: 600px) { .flutuante { width: 56px; height: 56px; } .flutuante svg { width: 27px; height: 27px; } }
   @media (prefers-reduced-motion: reduce) { .flutuante { transition: none; transform: none; } }
@@ -549,7 +611,6 @@
   .gravar { grid-area: campos; }
   .bancada-palco { grid-area: palco; align-self: center; }
   .bancada-texto { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.15rem; min-width: 0; }
-  .chapeu { display: inline-flex; align-items: center; gap: .5rem; justify-self: start; color: var(--vermelho); font-weight: 700; font-size: .98rem; }
   .bolinhas { display: inline-flex; gap: 4px; }
   .bolinhas i { width: 10px; height: 10px; border-radius: 50%; background: #F07A1A; }
   .bolinhas i:nth-child(2) { background: #2FA34F; }
@@ -586,7 +647,7 @@
   .palco-pe p { color: var(--tinta-2); font-size: .92rem; }
   .palco-preco { font: 800 1.6rem/1 var(--fonte); color: var(--tinta); white-space: nowrap; }
   .palco-pe .btn { grid-column: 1 / -1; width: 100%; }
-  .palco-status { grid-column: 1 / -1; font-size: .95rem; }
+  .palco-status { grid-column: 1 / -1; font-size: .95rem; font-variant-numeric: tabular-nums; }
   .palco-status:empty { display: none; }
   .na-hora { position: absolute; z-index: 1; top: 1rem; left: 1rem; padding: .35rem .8rem; border-radius: 999px; background: var(--branco); box-shadow: inset 0 0 0 1px var(--linha); color: var(--azul); font-size: .85rem; font-weight: 700; }
   @media (max-width: 900px) {
@@ -644,11 +705,9 @@
   @media (max-width: 560px) { .tag-gravar { display: none; } .produto .btn svg { display: none; } .produto .btn { font-size: .95rem; } }
   .produto-preco { font-size: 1.3rem; font-weight: 800; line-height: 1.1; }
 
-  /* pagina do produto: mesa de corte e campo de gravacao */
-  .ficha-foto svg { display: block; width: 100%; height: 100%; }
-  .ficha-foto img { object-fit: cover; }
-  .ficha .campo input { font-size: 1.05rem; }
-  .ficha .letras .letra { min-height: 44px; }
+  /* pagina do produto: campo de gravacao */
+  .pp .campo input { font-size: 1.05rem; }
+  .pp .letras .letra { min-height: 44px; }
 
   /* ---------- empresas: quantidade e preco por faixa ---------- */
   .empresas { background: var(--azul); color: #fff; padding-block: clamp(3rem, 7vw, 5.5rem); }
@@ -657,7 +716,7 @@
   .empresas-texto { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.3rem; }
   .empresas-texto > p { max-width: 34rem; color: #DDF0E2; font-size: 1.1rem; }
   .usos { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; padding: 0; list-style: none; }
-  .usos li { padding: .4rem .85rem; border-radius: 999px; background: rgba(255, 255, 255, .12); font-size: .95rem; font-weight: 600; }
+  .usos li { padding: .4rem .85rem; border-radius: 999px; background: rgba(0, 0, 0, .16); font-size: .95rem; font-weight: 600; }
   .calculo { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.1rem; padding: clamp(1.3rem, 3vw, 1.9rem); border-radius: 22px; background: var(--branco); color: var(--tinta); }
   .calculo h3 { font-size: clamp(1.35rem, 1.2rem + .6vw, 1.7rem); }
   .calculo .pecas { gap: .4rem; }
@@ -673,12 +732,14 @@
   .faixas { width: 100%; border-collapse: collapse; font-size: .97rem; }
   .faixas th, .faixas td { padding: .55rem .6rem; text-align: left; border-top: 1px solid var(--linha); }
   .faixas th { color: var(--tinta-2); font-weight: 600; font-size: .88rem; border-top: 0; }
-  .faixas td:last-child, .faixas th:last-child { text-align: right; white-space: nowrap; }
+  .faixas td:last-child, .faixas th:last-child { text-align: right; }
+  .faixas td:last-child { white-space: nowrap; }
+  @media (max-width: 420px) { .faixas { font-size: .9rem; } .faixas th, .faixas td { padding-inline: .3rem; } .faixas th { overflow-wrap: anywhere; } }
   .faixas tr.atual td { background: var(--azul-claro); font-weight: 700; }
   .faixas tr.atual td:first-child { border-radius: 8px 0 0 8px; }
   .faixas tr.atual td:last-child { border-radius: 0 8px 8px 0; }
   .total-empresa { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .3rem 1rem; padding-top: .9rem; border-top: 1px solid var(--linha); }
-  .total-empresa strong { font: 800 1.9rem/1 var(--fonte); }
+  .total-empresa strong { font: 800 min(1.9rem, 9vw)/1 var(--fonte); font-variant-numeric: tabular-nums; white-space: nowrap; }
   .total-empresa span { color: var(--tinta-2); }
   .calculo .btn { width: 100%; }
   .calculo-nota { color: var(--tinta-2); font-size: .88rem; }
@@ -688,10 +749,6 @@
   .loja-fotos img { aspect-ratio: 4 / 5; }
   .premio { display: inline-flex; align-items: center; gap: .6rem; justify-self: start; padding: .5rem .9rem .5rem .6rem; border-radius: 12px; background: var(--ceu); font-weight: 600; font-size: .95rem; }
   .premio svg { width: 30px; height: 30px; flex: none; }
-  .avaliacoes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .avaliacao { background: #FBF8F3; box-shadow: inset 0 0 0 1px var(--linha); }
-  .nota-google strong { color: var(--azul); }
-  @media (max-width: 1080px) { .avaliacoes { grid-template-columns: minmax(0, 1fr); } }
   /* carrinho: a peca aparece com o nome gravado */
   .item-fig { grid-row: span 4; display: block; width: 68px; height: 68px; overflow: hidden; border-radius: 10px; background: #fff; box-shadow: inset 0 0 0 1px var(--linha); }
   .item-fig svg, .item .item-fig img { display: block; width: 100%; height: 100%; object-fit: cover; box-shadow: none; border-radius: 0; }
@@ -728,6 +785,7 @@
   <symbol id="i-sacola" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" d="M3 4h2.2l2.3 11h10.2l2-8H6.3M9.5 19.5a1 1 0 1 0 0 .01M16.5 19.5a1 1 0 1 0 0 .01"/></symbol>
   <symbol id="i-facebook" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 21v-7.5H16l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21h3Z"/></symbol>
   <symbol id="i-instagram" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/></g><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></symbol>
+  <symbol id="i-estrela" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9Z"/></symbol>
   <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
   <symbol id="i-zap" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></symbol>
   <symbol id="i-caixa" viewBox="0 0 80 64"><path d="M58 22c14-1 15 26 0 27" fill="none" stroke="#F07A1A" stroke-width="6" stroke-linecap="round"/><rect x="14" y="14" width="46" height="44" rx="8" fill="#FBF4EC" stroke="#E7E1D8" stroke-width="2"/><ellipse cx="37" cy="14" rx="23" ry="5" fill="#F07A1A"/><circle cx="31" cy="36" r="5" fill="#2FA34F"/><circle cx="42" cy="36" r="5" fill="#1D5FC4"/></symbol>
@@ -736,7 +794,7 @@
 
 <header class="topo">
   <div class="envoltorio topo-grade">
-    <a class="marca" href="#" translate="no" aria-label="PGW Brindes e Personalizados, início">
+    <a class="marca" href="#" translate="no">
       <svg class="logo" viewBox="0 0 60 53" aria-hidden="true"><circle cx="19" cy="31" r="18" fill="#F07A1A"/><circle cx="40" cy="17" r="15" fill="#2FA34F"/><circle cx="43" cy="38" r="15" fill="#1D5FC4"/><circle cx="20" cy="6" r="5" fill="#1D5FC4"/><g fill="#fff" font-family="Arial Black, Arial, sans-serif" font-weight="900" text-anchor="middle"><text x="18" y="38" font-size="20">G</text><text x="40" y="23" font-size="17">P</text><text x="43" y="44" font-size="17">W</text></g></svg>
       <span><strong>PGW</strong><small>Brindes &amp; Personalizados</small></span>
     </a>
@@ -758,9 +816,8 @@
 <section class="bancada" id="personalizar" aria-labelledby="titulo">
   <div class="envoltorio bancada-grade">
     <div class="bancada-texto">
-      <p class="chapeu"><span class="bolinhas" aria-hidden="true"><i></i><i></i><i></i></span>Personalizados em Cravinhos</p>
-      <h1 id="titulo">Seu nome na caneca, na garrafa e no copo</h1>
-      <p>Escreva o nome ou a frase e veja como fica. Pague pelo site e retire na loja: nós gravamos e conferimos cada peça.</p>
+      <h1 id="titulo">Seu nome na caneca, garrafa e copo</h1>
+      <p>Escreva o nome, veja na peça e retire na loja.</p>
     </div>
     <fieldset class="gravar">
         <legend class="so-leitor">Monte a sua peça</legend>
@@ -816,7 +873,6 @@
       </div>
       <div class="categorias" id="categorias" role="group" aria-label="Filtrar por categoria" data-revela></div>
       <ul class="vitrine" id="vitrine" aria-label="Produtos"></ul>
-      <div class="procura" data-revela><h3>Tem uma ideia diferente?</h3><p>Fazemos a arte com a sua foto, frase ou logo. Conte pelo WhatsApp o que você imaginou.</p><a class="btn btn-zap" id="procura" href="https://wa.me/5516991732180" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Contar a ideia pelo WhatsApp</a></div>
     </div>
   </section>
 
@@ -858,12 +914,34 @@
         <h2 id="titulo-loja">Produção própria, com capricho</h2>
         <p>Não trabalhamos só com catálogo: nós produzimos, personalizamos, conferimos e entregamos cada pedido. Acabamento, impressão, gravação, montagem e prazo, tudo feito aqui em Cravinhos.</p>
         <p class="premio"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="12" r="9" fill="#C9CED6"/><circle cx="16" cy="12" r="5.5" fill="#EEF0F3"/><path d="M10 19l-3 10 5-2 3 4 2-9M22 19l3 10-5-2-3 4-2-9" fill="#1D5FC4"/></svg>Prata no Prêmio LocalBest Cravinhos 2024, categoria Presentes</p>
-        <p class="nota-google"><strong>5,0</strong><span>no Google, com 144 avaliações</span></p>
-        <div class="avaliacoes">
-          <blockquote class="avaliacao"><p>“Recomendo e sempre que precisar de brindes, já sei com quem vou comprar!”</p><footer>Avaliação no Google</footer></blockquote>
-          <blockquote class="avaliacao"><p>“Tem muitas novidades para presentear.”</p><footer>Avaliação no Google</footer></blockquote>
-        </div>
       </div>
+    </div>
+    <div class="envoltorio google" id="avaliacoes">
+      <div class="google-nota" data-revela>
+        <span class="bolinhas" aria-hidden="true"><i></i><i></i><i></i></span>
+        <p class="google-marca"><svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8a10 10 0 0 1-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-7.1-5.5c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.8-12.2-9H4.5v5.7A22 22 0 0 0 24 46z"/><path fill="#FBBC05" d="M11.8 28.3a13.2 13.2 0 0 1 0-8.6v-5.7H4.5a22 22 0 0 0 0 20z"/><path fill="#EA4335" d="M24 10.7c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3A22 22 0 0 0 4.5 14l7.3 5.7c1.7-5.2 6.5-9 12.2-9z"/></svg>Avaliações no Google</p>
+        <p class="google-numero">5,0</p>
+        <span class="estrelas" role="img" aria-label="Nota 5,0 de 5"><svg aria-hidden="true"><use href="#i-estrela"/></svg><svg aria-hidden="true"><use href="#i-estrela"/></svg><svg aria-hidden="true"><use href="#i-estrela"/></svg><svg aria-hidden="true"><use href="#i-estrela"/></svg><svg aria-hidden="true"><use href="#i-estrela"/></svg></span>
+        <p class="google-texto">144 avaliações de clientes da loja</p>
+        <a class="btn btn-branco" href="https://www.google.com/maps?cid=4250982567176522581" target="_blank" rel="noopener">Ver todas no Google</a>
+      </div>
+      <ul class="depoimentos" data-revela style="--i:1">
+          <li>
+            <div class="dep-autor"><span class="dep-avatar" style="--av:#BF4E0A" aria-hidden="true">G</span><p><strong>Gabriela de S. S.</strong><span>outubro de 2026</span></p><svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8a10 10 0 0 1-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-7.1-5.5c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.8-12.2-9H4.5v5.7A22 22 0 0 0 24 46z"/><path fill="#FBBC05" d="M11.8 28.3a13.2 13.2 0 0 1 0-8.6v-5.7H4.5a22 22 0 0 0 0 20z"/><path fill="#EA4335" d="M24 10.7c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3A22 22 0 0 0 4.5 14l7.3 5.7c1.7-5.2 6.5-9 12.2-9z"/></svg></div>
+            <span class="estrelas" role="img" aria-label="5 de 5 estrelas"><svg aria-hidden="true"><use href="#i-estrela"/></svg><svg aria-hidden="true"><use href="#i-estrela"/></svg><svg aria-hidden="true"><use href="#i-estrela"/></svg><svg aria-hidden="true"><use href="#i-estrela"/></svg><svg aria-hidden="true"><use href="#i-estrela"/></svg></span>
+            <blockquote>“Sempre muito atenciosos e caprichosos com os meus pedidos!! Já comprei 3 vezes com eles e vou continuar comprando!”</blockquote>
+          </li>
+          <li>
+            <div class="dep-autor"><span class="dep-avatar" style="--av:#1B7A3A" aria-hidden="true">V</span><p><strong>Vanessa C.</strong><span>setembro de 2026</span></p><svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8a10 10 0 0 1-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-7.1-5.5c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.8-12.2-9H4.5v5.7A22 22 0 0 0 24 46z"/><path fill="#FBBC05" d="M11.8 28.3a13.2 13.2 0 0 1 0-8.6v-5.7H4.5a22 22 0 0 0 0 20z"/><path fill="#EA4335" d="M24 10.7c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3A22 22 0 0 0 4.5 14l7.3 5.7c1.7-5.2 6.5-9 12.2-9z"/></svg></div>
+            <span class="estrelas" role="img" aria-label="5 de 5 estrelas"><svg aria-hidden="true"><use href="#i-estrela"/></svg><svg aria-hidden="true"><use href="#i-estrela"/></svg><svg aria-hidden="true"><use href="#i-estrela"/></svg><svg aria-hidden="true"><use href="#i-estrela"/></svg><svg aria-hidden="true"><use href="#i-estrela"/></svg></span>
+            <blockquote>“Os personalizados da PGW BRINDES possui uma qualidade surreal, a sublimação sem igual. Fora o atendimento, são super atenciosos um amor de pessoa. Super recomendo!”</blockquote>
+          </li>
+          <li>
+            <div class="dep-autor"><span class="dep-avatar" style="--av:#1D5FC4" aria-hidden="true">R</span><p><strong>Rafael D.</strong><span>dezembro de 2023</span></p><svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8a10 10 0 0 1-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-7.1-5.5c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.8-12.2-9H4.5v5.7A22 22 0 0 0 24 46z"/><path fill="#FBBC05" d="M11.8 28.3a13.2 13.2 0 0 1 0-8.6v-5.7H4.5a22 22 0 0 0 0 20z"/><path fill="#EA4335" d="M24 10.7c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3A22 22 0 0 0 4.5 14l7.3 5.7c1.7-5.2 6.5-9 12.2-9z"/></svg></div>
+            <span class="estrelas" role="img" aria-label="5 de 5 estrelas"><svg aria-hidden="true"><use href="#i-estrela"/></svg><svg aria-hidden="true"><use href="#i-estrela"/></svg><svg aria-hidden="true"><use href="#i-estrela"/></svg><svg aria-hidden="true"><use href="#i-estrela"/></svg><svg aria-hidden="true"><use href="#i-estrela"/></svg></span>
+            <blockquote>“Produtos de qualidade! Atendimento nota 1000! Customizações, ideias e o produto final ficou impressionante! Recomendo e sempre que precisar de brindes, já sei com quem vou comprar! Parabéns!”</blockquote>
+          </li>
+      </ul>
     </div>
   </section>
 
@@ -882,10 +960,11 @@
     </div>
   </section>
 </main>
+<main class="pp" id="pagina-produto" hidden></main>
 
 <footer class="rodape">
   <div class="envoltorio rodape-grade">
-    <a class="rodape-marca" href="#" translate="no" aria-label="PGW Brindes e Personalizados, voltar ao início">
+    <a class="rodape-marca" href="#" translate="no">
       <span class="rodape-nome">PGW</span>
       <span>Brindes &amp; Personalizados, Cravinhos</span>
     </a>
@@ -908,7 +987,6 @@
   <div class="sacola-pe" id="sacola-pe"></div>
 </dialog>
 
-<dialog class="ficha" id="ficha" aria-labelledby="ficha-nome"></dialog>
 
 <script>
 /* ============================================================
@@ -1062,16 +1140,16 @@ const iconeTodos = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h6v
 const lapis = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16zM13.5 6.5l4 4"/></svg>`;
 $("#categorias").innerHTML = [["todos", "Todos"], ...CATEGORIAS].map(([id, nome, f]) => `<button class="categoria${f ? "" : " categoria-todos"}" type="button" data-cat="${id}" aria-pressed="${id === "todos"}"><span aria-hidden="true">${!f ? iconeTodos : f.arte ? `<svg viewBox="0 0 300 300">${DESENHOS[f.arte](f.cor, "", "classica").replace(/<text[^]*?<\/text>/, "")}</svg>` : `<img src="${fotoP(f.foto)}" alt="" loading="lazy" style="border-radius:8px;object-fit:cover">`}</span><span>${nome}</span></button>`).join("");
 
-const cartao = (p) => {
+const cartao = (p, nivel = 4) => {
   const k = varInicial(p), cores = p.vars.length > 1 ? `${p.vars.length} cores` : "";
   const botao = !p.vars.some(tem) ? `<button class="btn" type="button" disabled>Esgotado</button>`
     : `<button class="btn" type="button" data-abrir="${p.id}" aria-label="Personalizar ${esc(p.nome)}">${lapis.replace('aria-hidden="true"', 'aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"')}Personalizar</button>`;
   return `
   <li class="produto">
-    <a class="produto-foto${p.arte ? " mesa" : ""}" href="#produto-${p.id}" data-abrir="${p.id}" tabindex="-1" aria-hidden="true">${figura(p, k, pg.txt, pg.est)}${p.selo ? `<span class="selo">${p.selo}</span>` : ""}${p.gravar ? `<span class="tag-gravar">${lapis}${p.arte ? "Com o seu nome" : "Personalizável"}</span>` : ""}</a>
+    <a class="produto-foto${p.arte ? " mesa" : ""}" href="?produto=${p.id}" data-abrir="${p.id}" tabindex="-1" aria-hidden="true">${figura(p, k, pg.txt, pg.est)}${p.selo ? `<span class="selo">${p.selo}</span>` : ""}${p.gravar ? `<span class="tag-gravar">${lapis}${p.arte ? "Com o seu nome" : "Personalizável"}</span>` : ""}</a>
     <div class="produto-info">
       <p class="produto-marca">${esc(p.marca)}${cores ? ` · ${cores}` : ""}</p>
-      <h4><a href="#produto-${p.id}" data-abrir="${p.id}">${esc(p.nome)}</a></h4>
+      <h${nivel} class="produto-nome"><a href="?produto=${p.id}" data-abrir="${p.id}">${esc(p.nome)}</a></h${nivel}>
       <p class="produto-desc">${esc(p.desc)}</p>
       <p class="produto-preco">${precoCartao(p)}</p>
       ${botao}
@@ -1079,6 +1157,23 @@ const cartao = (p) => {
   </li>`;
 };
 
+/* as fileiras curtas terminam numa etiqueta: empresas, gravacao na hora, ideia propria e a loja */
+const fixo = (svg) => svg.replace(/class="gravado"/g, 'class="gravado-fixo"'); /* o nome do topo nao entra nestes desenhos */
+const FIM = {
+  canecas: { classe: "fim-empresa", titulo: "Com o logo da empresa", texto: "Canecas, garrafas, copos e ecobags a partir de 10 unidades.",
+    figura: () => fixo(desenho("caneca", "#2C6FD1", "Sua marca", "moderna")), botao: `<a class="btn btn-branco" href="#empresas"><span>Simular<span class="fim-extra"> o preço</span></span></a>` },
+  garrafas: { classe: "fim-laser", titulo: "Gravação na hora", texto: "Canecas, garrafas e copos com nome, gravados aqui em Cravinhos.",
+    figura: () => desenho("garrafa", "#1D5FC4", pg.txt, pg.est), botao: `<button class="btn" type="button" data-escrever><span>Escrever<span class="fim-extra"> o nome</span></span></button>` },
+  vestir: { classe: "fim-ideia", titulo: "Tem outra ideia?", texto: "Fazemos a arte com a sua foto, frase ou logo.",
+    figura: () => fixo(desenho("camiseta", "#F2C230", "Sua ideia", "manuscrita")), botao: `<a class="btn btn-branco" href="${zap("Olá! Vim pelo site e tenho uma ideia de presente personalizado. Posso contar?")}" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg><span>Contar<span class="fim-extra"> pelo WhatsApp</span></span></a>` },
+  presentes: { classe: "fim-loja", titulo: "Veja as peças na loja", texto: "Av. Pedro Duarte Amoroso, 532, ao lado da Praça Itamaraty.",
+    foto: ["img/fachada.webp", "Fachada laranja e verde da PGW Brindes"], botao: `<a class="btn" href="#chegar">Como chegar</a>` },
+};
+const fimFileira = (id, n) => {
+  const c = FIM[id]; if (!c) return "";
+  const arte = c.foto ? `<img class="fim-foto" src="${c.foto[0]}" width="600" height="450" alt="${c.foto[1]}" loading="lazy">` : `<div class="fim-arte mesa" aria-hidden="true">${c.figura()}</div>`;
+  return `<li class="fim ${c.classe}"${n < 4 ? ` data-falta style="--falta:${5 - n}"` : ""}>${arte}<div class="fim-texto"><p class="fim-titulo">${c.titulo}</p><p>${c.texto}</p>${c.botao}</div></li>`;
+};
 $("#vitrine").innerHTML = CATEGORIAS.map(([id, nome]) => {
   const lista = PRODUTOS.filter((p) => p.cat === id);
   return `<li class="prateleira" data-cat="${id}">
@@ -1090,10 +1185,9 @@ $("#vitrine").innerHTML = CATEGORIAS.map(([id, nome]) => {
         <button class="seta" type="button" data-passo="1" aria-label="Mais em ${nome}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
       </div>
     </div>
-    <ul class="fileira" aria-labelledby="fileira-${id}">${lista.map(cartao).join("")}</ul>
+    <ul class="fileira" aria-labelledby="fileira-${id}">${lista.map((p) => cartao(p)).join("")}${fimFileira(id, lista.length)}</ul>
   </li>`;
 }).join("");
-$("#procura").href = zap("Olá! Vim pelo site e tenho uma ideia de presente personalizado. Posso contar?");
 
 function filtrar(cat) {
   document.querySelectorAll("[data-cat][aria-pressed]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.cat === cat)));
@@ -1171,105 +1265,238 @@ $("#personalizar").addEventListener("click", (e) => { if (e.target.closest("[dat
 desenharCores(); desenharPalco();
 
 /* ---------- pagina do produto ---------- */
-const ficha = $("#ficha");
-let fichaP = null, fichaK = 0, fichaT = 0, fichaTxt = "", fichaEst = "classica", fichaFecha;
-function escolhaFicha(p) {
+const TITULO = document.title;
+const pp = $("#pagina-produto");
+let ppP = null, ppK = 0, ppT = 0, ppQtd = 1, ppTxt = "", ppEst = "classica";
+/* ?produto=caneca&cor=Rosa, ?produto=camiseta&cor=Preta&tamanho=g */
+const chaveVar = (p) => (p.rotulo || "opcao").toLowerCase();
+const urlProduto = (p, k, t) => `?produto=${p.id}${p.vars.length > 1 ? `&${chaveVar(p)}=${encodeURIComponent(p.vars[k].n)}` : ""}${p.tams?.length > 1 ? `&tamanho=${p.tams[t][0].toLowerCase()}` : ""}`;
+const varDaUrl = (p, q) => { const k = p.vars.findIndex((va) => va.n === q.get(chaveVar(p))); return k >= 0 ? k : undefined; };
+const tamDaUrl = (p, q) => { const t = p.tams ? p.tams.findIndex(([n]) => n.toLowerCase() === q.get("tamanho")) : -1; return t >= 0 ? t : undefined; };
+const nomeCat = (id) => CATEGORIAS.find((c) => c[0] === id)[1];
+const naHora = (p) => p.arte && (p.cat === "canecas" || p.cat === "garrafas");
+const BOLINHAS = `<span class="bolinhas" aria-hidden="true"><i></i><i></i><i></i></span>`;
+
+function escolhaPagina(p) {
   let html = "";
   if (p.vars.length > 1) {
     const opcoes = p.arte
-      ? `<div class="cores">${p.vars.map((va, i) => `<label class="cor" style="--c:${va.f}" title="${esc(va.n)}"><input type="radio" name="ficha-var" value="${i}" aria-label="${esc(va.n)}${tem(va) ? "" : ", sem estoque"}"${i === fichaK ? " checked" : ""}><span></span></label>`).join("")}</div>`
-      : `<div class="opcoes">${p.vars.map((va, i) => `<label class="opcao"><input type="radio" name="ficha-var" value="${i}"${i === fichaK ? " checked" : ""}><span>${esc(va.n)}${tem(va) ? "" : ", sem estoque"}</span></label>`).join("")}</div>`;
-    html += `<fieldset class="variacao"><legend>${p.rotulo}: <strong id="ficha-var-nome">${esc(p.vars[fichaK].n)}</strong></legend>${opcoes}</fieldset>`;
+      ? `<div class="cores">${p.vars.map((va, i) => `<label class="cor" style="--c:${va.f}" title="${esc(va.n)}"><input type="radio" name="pp-var" value="${i}" aria-label="${esc(va.n)}${tem(va) ? "" : ", sem estoque"}"${i === ppK ? " checked" : ""}${tem(va) ? "" : " disabled"}><span></span></label>`).join("")}</div>`
+      : `<div class="opcoes">${p.vars.map((va, i) => `<label class="opcao"><input type="radio" name="pp-var" value="${i}"${i === ppK ? " checked" : ""}${tem(va) ? "" : " disabled"}><span>${esc(va.n)}${tem(va) ? "" : ", sem estoque"}</span></label>`).join("")}</div>`;
+    html += `<fieldset class="variacao"><legend>${p.rotulo}: <strong id="pp-var-nome">${esc(p.vars[ppK].n)}</strong></legend>${opcoes}</fieldset>`;
   }
   if (p.tams) {
-    const opcoes = p.tams.map(([n], i) => `<label class="opcao"><input type="radio" name="ficha-tam" value="${i}"${i === fichaT ? " checked" : ""}><span>${n}</span></label>`).join("");
-    html += `<fieldset class="variacao"><legend>Tamanho: <strong id="ficha-tam-nome">${p.tams[fichaT][0]}</strong></legend><div class="opcoes">${opcoes}</div></fieldset>`;
+    const opcoes = p.tams.map(([n], i) => `<label class="opcao"><input type="radio" name="pp-tam" value="${i}"${i === ppT ? " checked" : ""}><span>${n}</span></label>`).join("");
+    html += `<fieldset class="variacao"><legend>Tamanho: <strong id="pp-tam-nome">${p.tams[ppT][0]}</strong></legend><div class="opcoes">${opcoes}</div></fieldset>`;
   }
   if (p.gravar) {
     const max = p.max || 18;
-    html += `<label class="campo campo-largo"><span>${rotuloTexto(p)} <small>(até ${max} letras${p.arte ? "" : "; pode deixar para o WhatsApp"})</small></span><input id="ficha-txt" maxlength="${max}" value="${esc(fichaTxt)}" autocomplete="off"></label>`;
-    if (p.arte) html += `<fieldset class="variacao"><legend>Letra</legend><div class="letras">${LETRAS.map(([id, n, fam, peso]) => `<label class="letra"><input type="radio" name="ficha-est" value="${id}"${id === fichaEst ? " checked" : ""}><span style="font:${peso} 1.1rem ${fam}">${n}</span></label>`).join("")}</div></fieldset>`;
+    html += `<label class="campo campo-largo"><span>${rotuloTexto(p)} <small>(até ${max} letras${p.arte ? "" : "; pode deixar para o WhatsApp"})</small></span><input id="pp-txt" maxlength="${max}" value="${esc(ppTxt)}" autocomplete="off"${p.arte ? ' placeholder="Ex.: Rafaela"' : ""}></label>`;
+    if (p.arte) html += `<fieldset class="variacao"><legend>Letra</legend><div class="letras">${LETRAS.map(([id, n, fam, peso]) => `<label class="letra"><input type="radio" name="pp-est" value="${id}"${id === ppEst ? " checked" : ""}><span style="font:${peso} 1.1rem ${fam}">${n}</span></label>`).join("")}</div></fieldset>`;
   }
   return html;
 }
-function desenharFicha() {
-  const p = fichaP;
-  ficha.innerHTML = `
-    <button class="fechar" type="button" data-fechar-ficha aria-label="Fechar"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
-    <div class="ficha-foto${p.arte ? " mesa" : ""}" id="ficha-foto"></div>
-    <div class="ficha-info">
-      <p class="produto-marca">${esc(p.marca)}</p>
-      <h2 id="ficha-nome">${esc(p.nome)}</h2>
-      <p class="ficha-preco" id="ficha-preco"></p>
-      <p class="ficha-desc">${esc(p.desc)}</p>
-      ${escolhaFicha(p)}
-      <button class="btn ficha-add" type="button" id="ficha-add"></button>
-      <p class="ficha-status" id="ficha-status" role="status"></p>
-      <ul class="ficha-entrega">
-        <li>Retirada na loja: ${LOJA}</li>
-        <li>Entrega em Cravinhos; prazo de produção combinado pelo WhatsApp</li>
-        <li>Pix ou cartão pelo site, ou dinheiro na retirada</li>
-      </ul>
-    </div>`;
-  mostrarVar();
+const comoPersonalizar = (p) => p.arte
+  ? `<p>Escreva ${rotuloTexto(p).toLowerCase()} com até ${p.max || 18} letras e escolha a letra: clássica, manuscrita ou moderna. A prévia mostra como fica na peça.</p><p>A cor da gravação acompanha a peça: escura nas cores claras e clara nas cores escuras.</p><p>Antes de gravar, conferimos o texto com você pelo WhatsApp.</p>`
+  : `<p>Escreva ${rotuloTexto(p).toLowerCase()} no campo ou deixe para depois. Após o pedido, combinamos a arte pelo WhatsApp e enviamos a prévia para você aprovar.</p>`;
+
+function desenharProduto() {
+  const p = ppP, sem = p.vars.filter((va) => !tem(va)).length;
+  const mesma = PRODUTOS.filter((o) => o.cat === p.cat && o.id !== p.id);
+  const mais = [...mesma, ...PRODUTOS.filter((o) => o.cat !== p.cat)].slice(0, 6);
+  const detalhes = [["Modelo", p.marca], ["Categoria", nomeCat(p.cat)],
+    p.vars.length > 1 && ["Cores", `${p.vars.length - sem} disponíveis${sem ? ` (${sem} sem estoque no momento)` : ""}`],
+    p.tams && ["Tamanhos", p.tams.map(([n]) => n).join(", ")],
+    p.gravar && ["Personalização", `${rotuloTexto(p)}, até ${p.max || 18} letras`]].filter(Boolean);
+  const empresa = BRINDES.some((b) => b[0] === p.id);
+  pp.innerHTML = `
+  <div class="envoltorio">
+    <nav class="trilha" aria-label="Você está em"><ol>
+      <li><a href="#">Início</a></li>
+      <li><a href="#produtos" data-ir="${p.cat}">${nomeCat(p.cat)}</a></li>
+      <li><span aria-current="page">${esc(p.nome)}</span></li>
+    </ol></nav>
+    <div class="pp-grade">
+      <div class="pp-galeria">
+        <figure class="pp-foto${p.arte ? " mesa" : ""}" id="pp-foto"></figure>
+        <p class="pp-foto-nota">${p.arte ? "A prévia mostra a posição do texto. Nós gravamos e conferimos cada peça." : (p.cat === "presentes" ? "Foto de um pedido montado pela loja." : "Foto ilustrativa. A arte é combinada com você pelo WhatsApp.")}</p>
+      </div>
+      <div class="pp-info">
+        <p class="produto-marca">${esc(p.marca)}</p>
+        <h1 id="pp-titulo" tabindex="-1">${esc(p.nome)}</h1>
+        <a class="pp-nota" href="#avaliacoes"><span class="estrelas" aria-hidden="true">${'<svg><use href="#i-estrela"/></svg>'.repeat(5)}</span><span>Loja com nota 5,0 no Google, em 144 avaliações</span></a>
+        <div class="pp-preco"><strong id="pp-preco"></strong><span id="pp-parcela"></span></div>
+        <p class="pp-desc">${esc(p.desc)}</p>
+        ${escolhaPagina(p)}
+        <div class="pp-compra">
+          <div class="qtd" role="group" aria-label="Quantidade"><button type="button" data-pp-qtd="-1" aria-label="Diminuir quantidade">−</button><output id="pp-qtd" aria-live="polite">1</output><button type="button" data-pp-qtd="1" aria-label="Aumentar quantidade">+</button></div>
+          <button class="btn" type="button" id="pp-add" data-pp-add></button>
+          <button class="btn btn-linha" type="button" id="pp-comprar">Comprar agora</button>
+        </div>
+        <p class="pp-status" id="pp-status" role="status"></p>
+        ${empresa ? `<p class="pp-empresas">Para empresas, a partir de 10 unidades: <a href="#empresas">simular o preço com o logo</a></p>` : ""}
+        <section class="pp-receber" aria-labelledby="pp-receber-titulo">
+          <h2 id="pp-receber-titulo">${BOLINHAS}Receber e pagar</h2>
+          <form class="pp-cep" id="pp-cep"><label class="so-leitor" for="pp-cep-campo">CEP</label><input id="pp-cep-campo" inputmode="numeric" autocomplete="postal-code" maxlength="9" placeholder="Informe o seu CEP"><button class="btn" type="submit">Consultar</button></form>
+          <p class="pp-cep-res" id="pp-cep-res" role="status"></p>
+          <ul class="pp-modos">
+            <li><span><strong>${naHora(p) ? "Gravação na hora" : "Prazo de produção"}</strong>${naHora(p) ? "Para canecas, garrafas e copos com nome" : "Combinado pelo WhatsApp depois do pedido"}</span></li>
+            <li><span><strong>Retirada na loja, sem custo</strong>${esc(LOJA)}</span></li>
+            <li><span><strong>Entrega em Cravinhos</strong>A taxa é informada pelo WhatsApp</span></li>
+            <li><span><strong>Pix ou cartão em até 4x sem juros</strong>Dinheiro somente na retirada</span></li>
+          </ul>
+          <a class="pp-zap" href="${zap(`Olá! Vim pelo site e tenho uma dúvida sobre ${p.nome}.`)}" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Dúvidas sobre a personalização? Fale conosco</a>
+        </section>
+      </div>
+    </div>
+    <div class="pp-sobre">
+      <details open><summary>Descrição</summary><div><p>${esc(p.desc)}</p><p>Produzido, personalizado e entregue pela PGW Brindes, em Cravinhos.</p></div></details>
+      ${p.gravar ? `<details><summary>Como personalizar</summary><div>${comoPersonalizar(p)}</div></details>` : ""}
+      <details><summary>Detalhes do produto</summary><div><dl class="pp-detalhes">${detalhes.map(([t, d]) => `<dt>${t}</dt><dd>${esc(d)}</dd>`).join("")}</dl></div></details>
+    </div>
+  </div>
+  <section class="pp-mais secao-ceu" aria-labelledby="pp-mais-titulo">
+    <div class="envoltorio prateleira">
+      <div class="prateleira-topo">
+        <h2 id="pp-mais-titulo">${mais.some((o) => o.cat !== p.cat) ? "Você também pode gostar" : `Mais em ${nomeCat(p.cat).toLowerCase()}`}</h2>
+        <div class="prateleira-setas">
+          <button class="seta" type="button" data-passo="-1" aria-label="Voltar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button class="seta" type="button" data-passo="1" aria-label="Mais produtos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+      </div>
+      <ul class="fileira">${mais.map((o) => cartao(o, 3)).join("")}</ul>
+    </div>
+  </section>
+  <div class="pp-barra" id="pp-barra" inert><strong id="pp-barra-preco"></strong><button class="btn" type="button" id="pp-barra-add" data-pp-add></button></div>`;
+  $(".pp-mais .fileira", pp).addEventListener("scroll", setas, { passive: true });
+  mostrarOpcao();
+  barraCompra();
+  setas();
 }
+/* a barra de baixo so aparece no celular, depois que o botao principal passou para baixo do topo */
+function barraCompra() {
+  const barra = $("#pp-barra"); if (!barra || pp.hidden) return;
+  const ver = $("#pp-add").getBoundingClientRect().bottom < $(".topo").getBoundingClientRect().bottom;
+  if (barra.classList.contains("visivel") === ver) return;
+  barra.classList.toggle("visivel", ver); barra.inert = !ver;
+}
+addEventListener("scroll", barraCompra, { passive: true });
+
 /* trocar a cor redesenha a peca; trocar o tamanho troca o preco */
-function mostrarVar() {
-  const p = fichaP, va = p.vars[fichaK], b = $("#ficha-add");
-  $("#ficha-foto").innerHTML = figura(p, fichaK, fichaTxt.trim(), fichaEst) + (p.selo ? `<span class="selo">${p.selo}</span>` : "");
-  const img = $("#ficha-foto img"); if (img) img.alt = p.nome;
-  $("#ficha-preco").textContent = reais(precoDe(p, fichaT));
-  const nome = $("#ficha-var-nome"); if (nome) nome.textContent = va.n;
-  $("#ficha-status").textContent = "";
-  clearTimeout(b._t); b.classList.remove("adicionado");
-  b.disabled = !tem(va);
-  b.innerHTML = tem(va) ? `<svg aria-hidden="true"><use href="#i-sacola"/></svg>Adicionar ao carrinho` : "Sem estoque";
+function mostrarOpcao() {
+  const p = ppP, va = p.vars[ppK], preco = precoDe(p, ppT), foto = $("#pp-foto");
+  foto.innerHTML = figura(p, ppK, ppTxt.trim(), ppEst) + (p.selo ? `<span class="selo">${p.selo}</span>` : "") + (p.arte ? `<span class="tag-gravar">${lapis}Prévia da gravação</span>` : "");
+  const img = $("img", foto); if (img) { img.alt = p.nome; img.removeAttribute("loading"); }
+  $("#pp-preco").textContent = reais(preco);
+  $("#pp-barra-preco").textContent = reais(preco);
+  $("#pp-parcela").textContent = preco >= 80 ? `à vista no Pix ou em até 4x de ${reais(preco / 4)} sem juros no cartão` : "à vista no Pix ou no cartão";
+  const nome = $("#pp-var-nome"); if (nome) nome.textContent = va.n;
+  const tam = $("#pp-tam-nome"); if (tam) tam.textContent = p.tams[ppT][0];
+  $("#pp-status").textContent = "";
+  ["#pp-add", "#pp-barra-add"].forEach((sel) => {
+    const b = $(sel); clearTimeout(b._t); b.classList.remove("adicionado");
+    b.disabled = !tem(va);
+    b.innerHTML = tem(va) ? `<svg aria-hidden="true"><use href="#i-sacola"/></svg>Adicionar ao carrinho` : "Sem estoque";
+  });
+  $("#pp-comprar").disabled = !tem(va);
 }
-ficha.addEventListener("input", (e) => {
-  if (e.target.id !== "ficha-txt") return;
-  fichaTxt = e.target.value;
-  regravar($("#ficha-foto"), fichaTxt.trim(), fichaEst);
-  $("#ficha-status").textContent = "";
-});
-ficha.addEventListener("change", (e) => {
-  if (e.target.name === "ficha-tam") { fichaT = +e.target.value; $("#ficha-tam-nome").textContent = fichaP.tams[fichaT][0]; $("#ficha-preco").textContent = reais(precoDe(fichaP, fichaT)); piscar($("#ficha-preco")); return; }
-  if (e.target.name === "ficha-est") { fichaEst = e.target.value; regravar($("#ficha-foto"), fichaTxt.trim(), fichaEst); return; }
-  if (e.target.name !== "ficha-var") return;
-  fichaK = +e.target.value;
-  mostrarVar();
-});
-function abrirFicha(id, k, empurrar = true) {
+
+function modoProduto(ligar) {
+  [".bancada", ".fita", "#conteudo"].forEach((sel) => { $(sel).hidden = ligar; });
+  pp.hidden = !ligar;
+}
+function abrirProduto(id, k, empurrar = true, t) {
   const p = porId(id); if (!p) return;
-  fichaP = p; fichaK = k ?? varInicial(p); fichaT = 0;
-  /* a peca desenhada ja abre com o nome do topo; o cartao e a placa comecam em branco */
-  fichaTxt = p.arte ? pg.txt.trim() : ""; fichaEst = pg.est;
-  desenharFicha();
-  if (empurrar) history.pushState({ ficha: id }, "", `#produto-${id}`);
-  clearTimeout(fichaFecha);
-  if (!ficha.open) { ficha.showModal(); requestAnimationFrame(() => requestAnimationFrame(() => ficha.classList.add("aberta"))); }
-  else ficha.classList.add("aberta");
-  ficha.scrollTop = 0;
+  ppP = p; ppK = k ?? varInicial(p); ppT = p.tams ? (t ?? 0) : 0; ppQtd = 1;
+  /* a peca desenhada ja abre com o nome escrito no topo; o cartao e a placa comecam em branco */
+  ppTxt = p.arte ? pg.txt.trim() : ""; ppEst = pg.est;
+  if (empurrar) {
+    /* guarda onde a pessoa estava na vitrine, para o voltar devolver ao mesmo ponto */
+    if (pp.hidden) history.replaceState({ ...history.state, rolagem: scrollY }, "");
+    history.pushState({ produto: id }, "", urlProduto(p, ppK, ppT));
+  }
+  desenharProduto();
+  modoProduto(true);
+  document.title = `${p.nome} | PGW Brindes`;
+  scrollTo({ top: 0, behavior: "instant" });
+  $("#pp-titulo").focus({ preventScroll: true });
 }
-/* fechar volta no historico, assim o botao voltar do celular tambem fecha */
-function fecharFicha(voltar = true) {
-  if (!ficha.open) return;
-  if (voltar && history.state?.ficha) { history.back(); return; }
-  if (voltar && location.hash.startsWith("#produto-")) history.replaceState(null, "", location.pathname + location.search);
-  ficha.classList.remove("aberta");
-  fichaFecha = setTimeout(() => ficha.close(), reduzir.matches ? 200 : 280);
+function voltarLoja(rolagem) {
+  if (pp.hidden) return;
+  modoProduto(false); ppP = null; pp.innerHTML = "";
+  document.title = TITULO;
+  setas(); mostrarFlutuante();
+  if (rolagem != null) scrollTo({ top: rolagem, behavior: "instant" });
 }
-ficha.addEventListener("cancel", (e) => { e.preventDefault(); fecharFicha(); });
-ficha.addEventListener("click", (e) => {
-  if (e.target === ficha || e.target.closest("[data-fechar-ficha]")) { fecharFicha(); return; }
-  if (e.target.closest("[data-ver-sacola]")) { fecharFicha(); abrirSacola(); return; }
-  const b = e.target.closest("#ficha-add"); if (!b || b.disabled) return;
-  adicionar(fichaP.id, fichaK, fichaP.tams ? fichaT : undefined, 1, fichaTxt.trim(), fichaEst);
-  $("#ficha-status").innerHTML = `Adicionado ao carrinho. <button class="ver-sacola" type="button" data-ver-sacola>Ver o carrinho</button>`;
-  confirmar(b);
+addEventListener("popstate", (e) => {
+  const q = new URLSearchParams(location.search), p = porId(q.get("produto"));
+  if (p) { abrirProduto(p.id, varDaUrl(p, q), false, tamDaUrl(p, q)); return; }
+  voltarLoja(e.state?.rolagem ?? 0);
 });
-addEventListener("popstate", () => {
-  const m = location.hash.match(/^#produto-(.+)$/);
-  if (m && porId(m[1])) abrirFicha(m[1], undefined, false); else fecharFicha(false);
+/* links internos (#produtos, #empresas, logo) dentro da pagina do produto voltam para a vitrine */
+document.addEventListener("click", (e) => {
+  const a = e.target.closest('a[href^="#"]');
+  if (!a || pp.hidden || a.closest("#sacola")) return;
+  e.preventDefault();
+  const alvo = a.getAttribute("href");
+  history.pushState(null, "", location.pathname + (alvo.length > 1 ? alvo : ""));
+  voltarLoja();
+  const el = alvo.length > 1 && document.querySelector(alvo);
+  if (el) el.scrollIntoView({ behavior: "instant" }); else scrollTo({ top: 0, behavior: "instant" });
+}, true);
+
+pp.addEventListener("change", (e) => {
+  if (e.target.name === "pp-tam") { ppT = +e.target.value; mostrarOpcao(); piscar($("#pp-preco")); }
+  else if (e.target.name === "pp-var") { ppK = +e.target.value; mostrarOpcao(); }
+  else if (e.target.name === "pp-est") { ppEst = e.target.value; regravar($("#pp-foto"), ppTxt.trim(), ppEst); return; }
+  else return;
+  history.replaceState(history.state, "", urlProduto(ppP, ppK, ppT));
+});
+pp.addEventListener("input", (e) => {
+  if (e.target.id === "pp-txt") { ppTxt = e.target.value; regravar($("#pp-foto"), ppTxt.trim(), ppEst); $("#pp-status").textContent = ""; }
+  if (e.target.id === "pp-cep-campo") e.target.value = e.target.value.replace(/\D/g, "").replace(/^(\d{5})(\d)/, "$1-$2").slice(0, 9);
+});
+pp.addEventListener("click", (e) => {
+  const q = e.target.closest("[data-pp-qtd]");
+  if (q) { ppQtd = Math.min(20, Math.max(1, ppQtd + +q.dataset.ppQtd)); $("#pp-qtd").textContent = ppQtd; return; }
+  const add = e.target.closest("[data-pp-add]");
+  if (add && !add.disabled) {
+    const txt = ppTxt.trim();
+    adicionar(ppP.id, ppK, ppP.tams ? ppT : undefined, ppQtd, txt, ppEst);
+    $("#pp-status").innerHTML = `${ppQtd > 1 ? `${ppQtd} unidades no carrinho` : "No carrinho"}${txt ? ` com “${esc(txt)}”` : ""}. <button class="ver-sacola" type="button" data-ver-sacola>Ver o carrinho</button>`;
+    confirmar(add); return;
+  }
+  if (e.target.closest("#pp-comprar")) { adicionar(ppP.id, ppK, ppP.tams ? ppT : undefined, ppQtd, ppTxt.trim(), ppEst); abrirSacola(); return; }
+  if (e.target.closest("[data-ver-sacola]")) { abrirSacola(); return; }
+  const seta = e.target.closest("[data-passo]");
+  if (seta) { const f = $(".fileira", seta.closest(".prateleira")); f.scrollBy({ left: seta.dataset.passo * f.clientWidth, behavior: reduzir.matches ? "auto" : "smooth" }); }
+});
+/* lupa da foto (as pecas desenhadas nao precisam) */
+pp.addEventListener("pointermove", (e) => {
+  const f = e.target.closest("#pp-foto"); if (!f || e.pointerType !== "mouse" || !$("img", f)) return;
+  const r = f.getBoundingClientRect();
+  f.style.setProperty("--zx", `${((e.clientX - r.left) / r.width) * 100}%`);
+  f.style.setProperty("--zy", `${((e.clientY - r.top) / r.height) * 100}%`);
+  f.classList.add("zoom");
+});
+pp.addEventListener("pointerout", (e) => { const f = e.target.closest("#pp-foto"); if (f && !f.contains(e.relatedTarget)) f.classList.remove("zoom"); });
+/* consulta pelo CEP: a entrega e so em Cravinhos */
+pp.addEventListener("submit", async (e) => {
+  if (e.target.id !== "pp-cep") return;
+  e.preventDefault();
+  const n = $("#pp-cep-campo").value.replace(/\D/g, ""), res = $("#pp-cep-res");
+  if (n.length !== 8) { res.textContent = "Informe os 8 números do CEP."; return; }
+  res.textContent = "Consultando…";
+  try {
+    const d = await (await fetch(`https://viacep.com.br/ws/${n}/json/`)).json();
+    if (d.erro) { res.textContent = "CEP não encontrado. Confira os números."; return; }
+    if (d.localidade.toLowerCase() === "cravinhos") {
+      /* o carrinho ja abre com a entrega e o endereco preenchidos */
+      Object.assign(ck, { receber: "entrega", cep: `${n.slice(0, 5)}-${n.slice(5)}`, rua: d.logradouro || ck.rua, bairro: d.bairro || ck.bairro, cidade: `${d.localidade} (${d.uf})` }); ultimoCep = n;
+      res.innerHTML = `<strong>Entregamos no seu endereço${d.logradouro ? `, ${esc(d.logradouro)}` : ""}.</strong> A taxa é informada pela nossa equipe no WhatsApp. Se preferir, retire na loja sem custo.`;
+    } else res.innerHTML = `<strong>${esc(d.localidade)} (${esc(d.uf)}):</strong> a entrega é feita em Cravinhos. Para outras cidades, fale com a nossa equipe pelo WhatsApp ou retire o pedido na loja.`;
+    piscar(res);
+  } catch { res.textContent = "Não foi possível consultar agora. Tente de novo em instantes."; }
 });
 
 /* ---------- carrinho ---------- */
@@ -1302,7 +1529,12 @@ function confirmar(b) {
 }
 document.addEventListener("click", (e) => {
   const abrir = e.target.closest("[data-abrir]");
-  if (abrir) { e.preventDefault(); abrirFicha(abrir.dataset.abrir); }
+  /* ctrl/cmd + clique abre o produto em outra aba, como qualquer link */
+  if (abrir) { if (e.ctrlKey || e.metaKey || e.shiftKey || e.button) return; e.preventDefault(); abrirProduto(abrir.dataset.abrir, abrir.dataset.var ? +abrir.dataset.var : undefined); return; }
+  /* trilha da pagina do produto e etiquetas das fileiras filtram a vitrine */
+  if (e.target.closest("[data-escrever]")) { const c = $("#ver-nome"); rolar(c, "center"); c.focus({ preventScroll: true }); return; }
+  const ir = e.target.closest("[data-ir]");
+  if (ir) { filtrar(ir.dataset.ir); rolar($("#categorias")); }
 });
 
 const sacola = $("#sacola");
@@ -1641,8 +1873,15 @@ document.addEventListener("keydown", (e) => {
 matchMedia("(min-width: 60.01em)").addEventListener("change", (m) => { if (m.matches) menu(false); });
 
 mostrarFlutuante();
-const pedidoNoLink = location.hash.match(/^#produto-(.+)$/);
-if (pedidoNoLink && porId(pedidoNoLink[1])) abrirFicha(pedidoNoLink[1], undefined, false);
+/* endereco do produto: ?produto=id (os links antigos #produto-id continuam funcionando) */
+{
+  const q = new URLSearchParams(location.search), antigo = location.hash.match(/^#produto-(.+)$/);
+  const p = porId(q.get("produto") || antigo?.[1]);
+  if (p) {
+    if (antigo) history.replaceState(null, "", urlProduto(p, varInicial(p), 0));
+    abrirProduto(p.id, varDaUrl(p, q), false, tamDaUrl(p, q));
+  }
+}
 </script>
 </body>
 </html>
