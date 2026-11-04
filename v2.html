@@ -1,0 +1,1850 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="only light">
+<meta name="theme-color" content="#14663A">
+<!-- o site e sempre claro: a extensao Dark Reader nao mexe -->
+<meta name="darkreader-lock">
+<title>PGW Brindes | Presentes que encantam, em Cravinhos</title>
+<meta name="description" content="Buquês, cestas, caixas de presente, canecas, garrafas térmicas e brindes para empresas na PGW Brindes, em Cravinhos. Compre pelo site e retire na loja.">
+<!-- DEMO: remover a linha abaixo quando publicar no dominio definitivo do cliente -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="img/icone.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Nunito+Sans:opsz,wght@6..12,400..800&family=Dancing+Script:wght@700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "PGW Brindes & Personalizados",
+  "telephone": "+55-16-99173-2180",
+  "image": "img/fachada.webp",
+  "address": { "@type": "PostalAddress", "streetAddress": "Av. Pedro Duarte Amoroso, 532", "addressLocality": "Cravinhos", "addressRegion": "SP", "postalCode": "14140-000", "addressCountry": "BR" },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "144" },
+  "sameAs": ["https://www.instagram.com/pgwbrindes"]
+}
+</script>
+<style>
+  /* ============================================================
+     PGW BRINDES - as tres bolinhas do logo: G laranja, P verde, W azul.
+     Verde nos botoes e na faixa "Para empresas", laranja nos selos,
+     azul escuro na faixa de fatos e no rodape. Fundo creme claro.
+     ============================================================ */
+  :root {
+    /* "only light": o site e sempre claro e o navegador nao escurece sozinho */
+    color-scheme: only light;
+    --branco:   #FFFFFF;
+    --ceu:      #FBF4EC;   /* creme claro das faixas */
+    --ceu-2:    #F4E6D6;
+    --azul:     #1B7A3A;   /* o verde do "P": botoes, links e a faixa das empresas. 5.4:1 no branco */
+    --azul-2:   #145C2B;
+    --azul-claro: #E2F2E6;
+    --vermelho: #BF4E0A;   /* o laranja do "G", escurecido para o texto branco: 4.6:1 */
+    --vermelho-2: #9A3E07;
+    --marinho:  #102A5C;   /* o azul do "W": faixa de fatos, rodape e botao selecionado */
+    --marinho-2:#1A3A78;
+    --tinta:    #141B2D;
+    --tinta-2:  #4E566A;   /* 7.3:1 no branco */
+    --linha:    #E7E1D8;
+    --linha-forte: #857F77;/* contorno de controle: 3.8:1 no branco */
+    --raio:     16px;
+
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-gaveta: cubic-bezier(0.32, 0.72, 0, 1);
+    --dur-entra: .7s;
+    --dur-ui: .22s;
+
+    --fonte: "Manrope", "Manrope reserva", Arial, sans-serif;
+    --fonte-titulo: "Syne", "Syne reserva", "Arial Black", Arial, sans-serif;
+    --largura: 1440px;
+    --margem: clamp(16px, 4vw, 40px);
+  }
+  @font-face { font-family: "Manrope reserva"; src: local("Arial"); size-adjust: 102%; }
+  @font-face { font-family: "Syne reserva"; src: local("Arial Bold"); size-adjust: 104%; }
+
+  /* ---------- base ---------- */
+  *, *::before, *::after { box-sizing: border-box; }
+  html { background: #FFFFFF; scrollbar-color: #B9B0A4 #FFFFFF; scroll-behavior: smooth; scroll-padding-top: 90px; -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { overflow-x: clip; margin: 0; background: var(--branco); color: var(--tinta); font: 400 1.0625rem/1.6 var(--fonte); -webkit-tap-highlight-color: transparent; }
+  img, svg { max-width: 100%; }
+  img { height: auto; }
+  [hidden] { display: none !important; }
+  figure, blockquote { margin: 0; }
+  a { color: var(--azul); text-underline-offset: .18em; }
+  a, button, input, select, label { touch-action: manipulation; }
+  :focus-visible { outline: 3px solid var(--azul); outline-offset: 3px; }
+  h1, h2, h3 { font-family: var(--fonte-titulo); font-weight: 750; line-height: 1.05; margin: 0; letter-spacing: -.02em; text-wrap: balance; overflow-wrap: break-word; color: var(--tinta); }
+  h2 { font-size: clamp(1.9rem, 1.35rem + 2.2vw, 2.9rem); }
+  h3 { font-size: 1.2rem; }
+  p { margin: 0; }
+  p, li, label, small, legend, .btn { overflow-wrap: anywhere; }
+  .envoltorio { max-width: var(--largura); margin-inline: auto; padding-inline: var(--margem); }
+  .so-leitor { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .pular { position: absolute; left: 1rem; top: -5rem; z-index: 60; padding: .8rem 1rem; background: var(--branco); color: var(--tinta); }
+  .pular:focus { top: 1rem; }
+
+  /* movimento padrao: revela ao rolar (uma vez) */
+  .com-js [data-revela] { opacity: 0; transform: translateY(16px); transition: opacity var(--dur-entra) var(--ease-out), transform var(--dur-entra) var(--ease-out); transition-delay: calc(var(--i, 0) * 70ms); }
+  .com-js [data-revela].visto { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .com-js [data-revela] { transform: none; transition: opacity .3s ease; transition-delay: 0s; } }
+
+  /* botoes */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem; max-width: 100%;
+    min-height: 52px; padding: .75rem 1.4rem; border: 0; border-radius: 12px;
+    background: var(--azul); color: #fff; font: 650 1rem/1.2 var(--fonte); text-decoration: none; text-align: center; cursor: pointer;
+    transition: background-color var(--dur-ui) ease, box-shadow var(--dur-ui) ease, color var(--dur-ui) ease, transform .12s var(--ease-out);
+  }
+  .btn:hover { background: var(--azul-2); }
+  .btn:active { transform: scale(.97); }
+  .btn svg { width: 1.25em; height: 1.25em; flex: none; }
+  .btn-branco { background: var(--branco); color: var(--tinta); }
+  .btn-branco:hover { background: var(--ceu); }
+  .btn-linha { background: var(--branco); color: var(--tinta); box-shadow: inset 0 0 0 1.5px var(--linha-forte); }
+  .btn-linha:hover { background: var(--branco); box-shadow: inset 0 0 0 1.5px var(--tinta); }
+  .btn-zap { background: #12803B; color: #fff; }
+  .btn-zap:hover { background: #0E6A31; }
+  @media (prefers-reduced-motion: reduce) { .btn { transition: none; } .btn:active { transform: none; } }
+
+  /* ---------- topo ---------- */
+  .topo { position: sticky; top: 0; z-index: 30; background: var(--branco); border-bottom: 1px solid var(--linha); }
+  .topo-grade { display: flex; align-items: center; justify-content: space-between; gap: .75rem 1.5rem; padding-block: .55rem; }
+  .marca { display: inline-flex; align-items: center; gap: .7rem; min-width: 0; min-height: 44px; color: var(--tinta-2); text-decoration: none; }
+  .marca img { width: 50px; height: 50px; flex: none; }
+  .marca span { display: grid; line-height: 1.1; }
+  .marca strong { font-family: var(--fonte-titulo); font-size: 1.45rem; font-weight: 800; font-style: italic; letter-spacing: -.02em; color: var(--azul); }
+  .marca strong b, .rodape-nome b { margin-inline: .06em; color: var(--vermelho); }
+  .marca small { font-size: .82rem; }
+  .menu { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0 1.4rem; align-items: center; margin-left: auto; }
+  .menu a { color: var(--tinta); text-decoration: none; padding: .55rem 0; white-space: nowrap; font-weight: 500; font-size: .98rem; }
+  .menu a:hover { color: var(--azul); text-decoration: underline; }
+  .sacola-botao { position: relative; display: inline-flex; align-items: center; gap: .45rem; flex: none; min-height: 48px; padding: .45rem 1rem; border: 0; border-radius: 12px; background: var(--azul); color: #fff; font: 650 1rem/1 var(--fonte); white-space: nowrap; cursor: pointer; transition: background-color var(--dur-ui) ease; }
+  .sacola-botao:hover { background: var(--azul-2); }
+  .sacola-botao svg { width: 22px; height: 22px; }
+  .sacola-botao .conta { display: inline-grid; place-items: center; min-width: 1.55rem; height: 1.55rem; padding: 0 .35rem; border-radius: 999px; background: var(--vermelho); color: #fff; font-size: .82rem; }
+  .menu-botao { display: none; }
+  @media (max-width: 60em) {
+    .menu-botao {
+      display: grid; align-content: center; justify-items: center; gap: 5px; flex: none; width: 52px; height: 52px; margin-right: -8px; padding: 0;
+      border: 0; border-radius: var(--raio); background: none; cursor: pointer;
+    }
+    .menu-botao span { display: block; width: 28px; height: 4px; border-radius: 4px; background: var(--tinta); transition: transform .25s var(--ease-out), opacity .2s; }
+    .menu-aberto .menu-botao span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+    .menu-aberto .menu-botao span:nth-child(2) { opacity: 0; }
+    .menu-aberto .menu-botao span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+    .menu {
+      display: grid; position: absolute; top: 100%; left: 0; right: 0; margin: 0;
+      grid-template-columns: minmax(0, 1fr); gap: 0; padding: .5rem var(--margem) 1.25rem;
+      background: var(--branco); border-bottom: 1px solid var(--linha); box-shadow: 0 18px 30px -22px rgba(16, 42, 92, .5);
+      opacity: 0; visibility: hidden; transform: translateY(-6px);
+      transition: opacity var(--dur-ui) var(--ease-out), transform var(--dur-ui) var(--ease-out), visibility 0s linear var(--dur-ui);
+    }
+    .menu-aberto .menu { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+    .menu a { display: flex; align-items: center; min-height: 52px; padding: 0; border-bottom: 1px solid var(--linha); font-size: 1.05rem; }
+    .menu a:last-child { border-bottom: 0; }
+    .sacola-botao { margin-left: auto; }
+  }
+  @media (max-width: 480px) {
+    .sacola-botao .rotulo { display: none; }
+    .sacola-botao { padding: .45rem .8rem; }
+    .marca img { width: 42px; height: 42px; }
+    .marca strong { font-size: 1.2rem; }
+    .marca small { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) { .menu-botao span, .menu { transition: none !important; } }
+
+  /* setas das fileiras */
+  .seta { width: 46px; height: 46px; border: 0; border-radius: 50%; background: var(--branco); color: var(--tinta); display: grid; place-items: center; cursor: pointer; transition: background-color var(--dur-ui) ease, transform .12s var(--ease-out); }
+  @media (hover: hover) and (pointer: fine) { .seta:hover { background: var(--ceu); } }
+  .seta:active { transform: scale(.94); }
+  .seta svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* faixa de fatos */
+  .fatos { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .5rem 1.5rem; margin: 0; padding: 1.2rem 0 .4rem; list-style: none; }
+  .fato { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: .7rem; align-items: center; font-size: .93rem; line-height: 1.35; color: var(--tinta-2); }
+  .fato svg { width: 34px; height: 34px; fill: none; stroke: var(--azul); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  .fato strong { display: block; color: var(--tinta); font-weight: 650; }
+  @media (max-width: 960px) { .fatos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; } }
+  @media (max-width: 460px) { .fatos { grid-template-columns: minmax(0, 1fr); gap: .8rem; } }
+
+  .secao { padding-block: clamp(3.5rem, 7vw, 5.5rem); }
+  .secao-ceu { background: var(--ceu); }
+  .secao-cabeca { display: grid; grid-template-columns: minmax(0, 1fr); gap: .8rem; max-width: 44rem; margin-bottom: clamp(1.75rem, 4vw, 2.75rem); }
+  .secao-cabeca p { color: var(--tinta-2); font-size: 1.08rem; }
+
+  /* categorias: bolhas com foto */
+  .categorias { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 1rem; margin-bottom: clamp(2.5rem, 5vw, 3.5rem); }
+  .categoria { display: grid; justify-items: center; align-content: start; gap: .7rem; padding: 0; border: 0; background: none; color: var(--tinta); font: 600 1rem/1.2 var(--fonte); text-align: center; cursor: pointer; }
+  .categoria span:first-child { display: block; width: min(100%, 136px); aspect-ratio: 1; border-radius: 50%; overflow: hidden; background: var(--branco); box-shadow: 0 0 0 0 var(--azul); transition: box-shadow var(--dur-ui) var(--ease-out); }
+  .categoria img { display: block; width: 100%; height: 100%; object-fit: contain; padding: 14%; transition: transform .5s var(--ease-out); }
+  .categoria-todos span:first-child { display: grid; place-items: center; background: var(--azul-claro); }
+  .categoria-todos svg { width: 46%; height: 46%; fill: none; stroke: var(--azul); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .categoria[aria-pressed="true"] span:first-child { box-shadow: 0 0 0 4px var(--tinta); }
+  @media (hover: hover) and (pointer: fine) { .categoria:hover img { transform: scale(1.05); } }
+  @media (max-width: 860px) {
+    .categorias { display: flex; gap: .9rem; overflow-x: auto; scroll-snap-type: x mandatory; margin-inline: calc(var(--margem) * -1); padding: 4px var(--margem) .5rem; scrollbar-width: none; }
+    .categorias::-webkit-scrollbar { display: none; }
+    .categoria { flex: 0 0 100px; scroll-snap-align: start; font-size: .95rem; }
+  }
+
+  /* vitrine: prateleiras que rolam de lado */
+  .vitrine { display: grid; gap: clamp(2.4rem, 4vw, 3.4rem); padding: 0; margin: 0; list-style: none; }
+  .prateleira { min-width: 0; }
+  .prateleira.some { display: none; }
+  .prateleira-topo { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; margin-bottom: 1rem; }
+  .prateleira-topo h3 { flex: 1 1 12rem; font-size: min(clamp(1.35rem, 1.15rem + .7vw, 1.75rem), 10vw); }
+  .ver-tudo { min-height: 44px; padding: 0; border: 0; background: none; color: var(--azul); font: 600 1rem/1.2 var(--fonte); text-decoration: underline; text-underline-offset: .18em; cursor: pointer; }
+  .prateleira-setas { display: flex; gap: .4rem; }
+  .prateleira-setas .seta { box-shadow: inset 0 0 0 1px var(--linha); }
+  .prateleira-setas .seta:disabled { background: var(--ceu); color: var(--linha-forte); box-shadow: none; cursor: default; }
+  .fileira { --col: 5; --vao: 1.1rem; position: relative; display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - (var(--col) - 1) * var(--vao)) / var(--col)); gap: var(--vao); overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding: 0; margin: 0; list-style: none; }
+  .fileira::-webkit-scrollbar { display: none; }
+  .fileira > li { scroll-snap-align: start; }
+  .filtrada .prateleira-topo { display: none; }
+  .filtrada .fileira { grid-auto-flow: row; grid-template-columns: repeat(var(--col), minmax(0, 1fr)); grid-auto-rows: 1fr; row-gap: clamp(1.4rem, 3vw, 2rem); overflow: visible; }
+  @media (max-width: 1100px) { .fileira { --col: 4; } }
+  @media (max-width: 860px) { .fileira { --col: 3; } }
+  @media (max-width: 560px) {
+    .fileira { --col: 2; --vao: .75rem; grid-auto-columns: 46%; margin-inline: calc(var(--margem) * -1); padding-inline: var(--margem); scroll-padding-inline: var(--margem); }
+    .filtrada .fileira { margin-inline: 0; padding-inline: 0; }
+    .prateleira-setas { display: none; }
+  }
+  /* cartao: branco sobre a nevoa, todos do mesmo tamanho */
+  .produto { display: grid; grid-template-rows: auto 1fr; overflow: hidden; min-width: 0; border-radius: var(--raio); background: var(--branco); box-shadow: 0 0 0 1px var(--linha); }
+  .produto-foto { position: relative; display: block; aspect-ratio: 1; background: var(--branco); border-bottom: 1px solid var(--linha); }
+  .produto-foto img { display: block; width: 100%; height: 100%; object-fit: contain; transition: transform .6s var(--ease-out); }
+  @media (hover: hover) and (pointer: fine) { .produto:hover .produto-foto img { transform: scale(1.04); } }
+  .selo { position: absolute; left: .7rem; top: .7rem; padding: .25rem .65rem; border-radius: 999px; background: var(--vermelho); color: #fff; font-size: .8rem; font-weight: 650; }
+  .produto-info { display: flex; flex-direction: column; gap: .35rem; min-width: 0; padding: .85rem .9rem .95rem; }
+  .produto-marca { color: var(--azul); font-size: .86rem; font-weight: 650; }
+  .produto-nome { margin: 0; font-family: inherit; font-size: 1rem; font-weight: 600; line-height: 1.3; letter-spacing: inherit; }
+  .produto-nome, .produto-desc { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; min-height: 2lh; }
+  .produto-desc { color: var(--tinta-2); font-size: .9rem; line-height: 1.45; }
+  .produto-nome a { color: inherit; text-decoration: none; }
+  @media (hover: hover) and (pointer: fine) { .produto-nome a:hover { text-decoration: underline; text-underline-offset: 3px; } }
+  .produto-preco { font-weight: 700; font-size: 1.15rem; }
+  .produto-preco small { font-size: .8rem; font-weight: 500; color: var(--tinta-2); }
+  .produto .btn { width: 100%; min-height: 46px; padding-inline: .8rem; margin-top: auto; }
+  .btn.adicionado { background: var(--marinho); color: #fff; }
+  /* ---------- presente certo: a faixa azul, com as sugestoes num cartao amarrado pela fita ---------- */
+  .presente { background: var(--azul); color: #fff; padding-block: clamp(3rem, 7vw, 5.5rem); }
+  .presente-grade { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+  .presente h2 { color: #fff; font-size: clamp(2.1rem, 1.4rem + 2.6vw, 3.4rem); }
+  .presente-texto { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.6rem; }
+  .presente-texto > p { font-size: 1.1rem; max-width: 34rem; color: #DCE4FA; }
+  .passo { display: grid; grid-template-columns: minmax(0, 1fr); gap: .8rem; margin: 0; padding: 0; border: 0; min-width: 0; }
+  .passo legend { display: flex; align-items: baseline; gap: .7rem; max-width: 100%; padding: 0; margin-bottom: .8rem; font-weight: 650; font-size: 1.08rem; }
+  .passo legend b { display: inline-grid; place-items: center; flex: none; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--vermelho); color: #fff; font: 800 1rem/1 var(--fonte-titulo); }
+  .idades, .valores { display: grid; gap: .55rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 8.5rem), 1fr)); }
+  .cartela { position: relative; display: grid; align-content: center; min-height: 52px; padding: .7rem .95rem; border-radius: 12px; background: var(--azul-2); color: #fff; box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, .45); cursor: pointer; transition: background-color var(--dur-ui) ease, color var(--dur-ui) ease; }
+  .cartela input { position: absolute; inset: 0; margin: 0; opacity: 0; cursor: pointer; }
+  .cartela strong { font-weight: 650; }
+  @media (hover: hover) and (pointer: fine) { .cartela:hover { background: var(--marinho-2); } }
+  .cartela:has(input:checked) { background: #fff; color: var(--azul); box-shadow: none; }
+  .cartela:has(input:focus-visible) { outline: 3px solid #fff; outline-offset: 2px; }
+  /* as sugestoes: cartao branco com a fita vermelha por cima e o laco, como a caixa de presente */
+  .lista { position: relative; display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; margin-top: 18px; padding: calc(clamp(1.3rem, 3vw, 1.9rem) + 14px) clamp(1.3rem, 3vw, 1.9rem) clamp(1.3rem, 3vw, 1.9rem); border-radius: 20px; background: var(--branco); color: var(--tinta); }
+  .lista::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 14px; border-radius: 20px 20px 0 0; background: var(--vermelho); }
+  .laco { position: absolute; left: 50%; top: -24px; width: 76px; height: 44px; translate: -50% 0; }
+  .lista > * { position: relative; }
+  .lista > .laco { position: absolute; }
+  .lista h3 { font-size: clamp(1.4rem, 1.2rem + .7vw, 1.8rem); }
+  .lista ul { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
+  .lista li { display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; gap: .15rem .85rem; align-items: center; padding: .6rem 0; border-top: 1px solid var(--linha); }
+  .lista li:first-child { border-top: 0; }
+  .lista li img { grid-row: span 2; width: 64px; aspect-ratio: 1; object-fit: contain; border-radius: 10px; box-shadow: inset 0 0 0 1px var(--linha); }
+  .lista li a { color: var(--tinta); font-weight: 600; line-height: 1.3; text-decoration: none; }
+  @media (hover: hover) and (pointer: fine) { .lista li a:hover { text-decoration: underline; } }
+  .lista li small { grid-column: 2; color: var(--tinta-2); font-size: .88rem; }
+  .lista li strong { grid-column: 3; grid-row: 1; white-space: nowrap; text-align: right; }
+  .lista li .mini { grid-column: 3; grid-row: 2; justify-self: end; min-height: 40px; padding: .35rem .8rem; font-size: .9rem; }
+  .lista-vazia { color: var(--tinta-2); }
+  .lista-mais { justify-self: start; }
+  .lista-botoes { display: grid; gap: .55rem; }
+  .lista-botoes .btn { width: 100%; }
+  .lista-status { font-size: .95rem; font-variant-numeric: tabular-nums; }
+  .lista-status:empty { display: none; }
+  .lista-nota { color: var(--tinta-2); font-size: .88rem; }
+  /* embalagem para presente, no carrinho */
+  .embalar { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .1rem .7rem; align-items: start; padding: .85rem 1rem; border-radius: 12px; background: var(--ceu); cursor: pointer; }
+  .embalar input { grid-row: span 2; width: 22px; height: 22px; margin: .1rem 0 0; accent-color: var(--azul); }
+  .embalar small { color: var(--tinta-2); font-size: .86rem; }
+  @media (max-width: 900px) { .presente-grade { grid-template-columns: minmax(0, 1fr); } }
+  @media (max-width: 420px) { .lista li { grid-template-columns: 52px minmax(0, 1fr); } .lista li img { width: 52px; grid-row: span 3; } .lista li strong, .lista li .mini { grid-column: 2; grid-row: auto; justify-self: start; text-align: left; } }
+  /* ---------- a loja ---------- */
+  .loja-grade { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: clamp(2rem, 4vw, 3.5rem); align-items: center; }
+  .loja-fotos { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(.75rem, 1.6vw, 1.2rem); }
+  .loja-fotos img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--raio); }
+  .loja-fotos figure:last-child { margin-top: clamp(1.5rem, 4vw, 3rem); }
+  .loja-texto { display: grid; grid-template-columns: minmax(0, 1fr); gap: .9rem; }
+  .loja-texto > p { font-size: 1.1rem; color: var(--tinta-2); max-width: 36rem; }
+  /* avaliacoes no Google: a nota na plaqueta azul com as tres bolinhas do logo e tres avaliacoes com nome e data, como no Google */
+  .google { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 3fr); gap: 1.1rem; margin-top: clamp(3rem, 6vw, 4.5rem); scroll-margin-top: 100px; }
+  .google-nota { display: grid; justify-items: start; align-content: start; gap: .5rem; padding: 1.5rem 1.6rem 1.7rem; border-radius: 22px; background: var(--marinho); color: #C9D6F2; }
+  .google-nota .bolinhas { margin-bottom: .4rem; }
+  .google-marca { display: inline-flex; align-items: center; gap: .55rem; font-size: .95rem; font-weight: 500; }
+  .google-marca .g-logo { width: 28px; height: 28px; padding: 4px; border-radius: 50%; background: #fff; }
+  .google-numero { margin-top: .3rem; font-family: var(--fonte-titulo); font-size: 4.4rem; font-weight: 800; line-height: .9; letter-spacing: -.03em; color: #fff; font-variant-numeric: tabular-nums; }
+  .google-nota .estrelas { font-size: 1.25rem; color: #F2C230; }
+  .google-nota .btn { margin-top: .6rem; min-height: 48px; }
+  .estrelas { display: inline-flex; gap: 1px; color: #E8A100; }
+  .estrelas svg { width: 1.05em; height: 1.05em; fill: currentColor; }
+  .depoimentos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.1rem; margin: 0; padding: 0; list-style: none; }
+  .depoimentos li { display: flex; flex-direction: column; gap: .75rem; min-width: 0; padding: 1.35rem 1.4rem 1.5rem; border-radius: 22px; background: var(--branco); box-shadow: inset 0 0 0 1px var(--linha); }
+  .dep-autor { display: grid; grid-template-columns: 40px minmax(0, 1fr) 18px; align-items: center; gap: .75rem; }
+  .dep-avatar { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--av); color: #fff; font: 800 1.05rem/1 var(--fonte-titulo); }
+  .dep-autor p { min-width: 0; line-height: 1.3; }
+  .dep-autor strong { display: block; font-weight: 700; }
+  .dep-autor p span { color: var(--tinta-2); font-size: .86rem; }
+  .dep-autor .g-logo { width: 18px; height: 18px; align-self: start; }
+  .depoimentos blockquote { margin: 0; font-size: 1.02rem; line-height: 1.55; }
+  @media (max-width: 1100px) { .google { grid-template-columns: minmax(0, 1fr); } .google-nota { grid-template-columns: auto minmax(0, 1fr); align-items: center; column-gap: 1.2rem; } .google-nota .bolinhas, .google-marca, .google-nota .btn { grid-column: 1 / -1; } .google-numero { grid-row: span 2; margin: 0; } }
+  @media (max-width: 860px) { .depoimentos { grid-template-columns: minmax(0, 1fr); } }
+  @media (max-width: 860px) { .loja-grade { grid-template-columns: minmax(0, 1fr); } .loja-fotos { max-width: 560px; } }
+
+  /* ---------- como chegar ---------- */
+  .chegar { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); overflow: hidden; border-radius: 20px; background: var(--branco); box-shadow: 0 0 0 1px var(--linha); }
+  .chegar-mapa { display: block; width: 100%; height: 100%; min-height: 280px; border: 0; background: var(--ceu-2); }
+  .chegar-dados { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.1rem; align-content: center; padding: clamp(1.4rem, 3vw, 2.2rem); }
+  .chegar-dados h3 { font: 600 .95rem/1.3 var(--fonte); color: var(--tinta-2); margin-bottom: .1rem; }
+  .chegar-dados p, .chegar-dados a { font-family: var(--fonte-titulo); font-size: clamp(1.15rem, 1rem + .5vw, 1.4rem); font-weight: 700; line-height: 1.3; }
+  .chegar-dados a:not(.btn) { display: inline-block; max-width: 100%; padding-block: .4rem; text-decoration: none; overflow-wrap: anywhere; }
+  @media (hover: hover) and (pointer: fine) { .chegar-dados a:hover { text-decoration: underline; text-underline-offset: 4px; } }
+  .chegar-dados .btn { justify-self: start; font-family: var(--fonte); font-size: 1rem; font-weight: 600; }
+  @media (max-width: 760px) { .chegar { grid-template-columns: minmax(0, 1fr); } .chegar-mapa { height: 260px; } }
+
+  /* ---------- rodape ---------- */
+  .rodape { background: var(--marinho); color: #CBD5F0; padding: 1.1rem 0 calc(1.1rem + env(safe-area-inset-bottom)); font-size: .92rem; }
+  .rodape-grade { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem 2.5rem; }
+  .rodape-grade > * { min-width: 0; max-width: 100%; }
+  .rodape-marca { display: inline-flex; align-items: center; gap: .8rem; color: #fff; text-decoration: none; }
+  .rodape-marca { flex-wrap: wrap; gap: .2rem .8rem; }
+  .rodape-nome { font-family: var(--fonte-titulo); font-size: 1.25rem; font-weight: 800; font-style: italic; }
+  .rodape-nome b { color: #FF8A8E; }
+  .rodape a { color: #fff; }
+  .redes { display: flex; gap: .4rem; }
+  .redes a { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: rgba(255, 255, 255, .08); transition: background-color var(--dur-ui) ease; }
+  .redes svg { width: 22px; height: 22px; }
+  @media (hover: hover) and (pointer: fine) { .redes a:hover { background: var(--vermelho); color: #fff; } }
+  @media (max-width: 700px) { .rodape-grade { flex-direction: column; align-items: flex-start; gap: .6rem; } }
+
+  .variacao { min-width: 0; margin: .2rem 0 0; padding: 0; border: 0; }
+  .variacao legend { padding: 0; margin-bottom: .45rem; color: var(--tinta-2); font-size: .95rem; }
+  .variacao legend strong { color: var(--tinta); font-weight: 600; }
+  .opcoes { display: flex; flex-wrap: wrap; gap: .45rem; }
+  .opcao { position: relative; display: flex; }
+  .opcao input { position: absolute; inset: 0; margin: 0; opacity: 0; cursor: pointer; }
+  .opcao span { display: inline-flex; align-items: center; min-height: 44px; padding: .45rem .95rem; border-radius: 10px; box-shadow: inset 0 0 0 1.5px var(--linha); font-size: .95rem; cursor: pointer; transition: background-color var(--dur-ui) ease, color var(--dur-ui) ease, box-shadow var(--dur-ui) ease; }
+  @media (hover: hover) and (pointer: fine) { .opcao:hover span { box-shadow: inset 0 0 0 1.5px var(--linha-forte); } }
+  .opcao input:checked + span { background: var(--marinho); color: #fff; box-shadow: none; }
+  .opcao input:focus-visible + span { outline: 3px solid var(--azul); outline-offset: 3px; }
+  .ver-sacola { padding: 0; border: 0; background: none; color: var(--azul); font: 600 .95rem/1.5 var(--fonte); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+  /* ---------- pagina do produto: endereco proprio (?produto=id); a vitrine sai e a pagina entra ---------- */
+  .pp { padding-block: clamp(.6rem, 2vw, 1.2rem) 0; }
+  .trilha ol { display: flex; flex-wrap: wrap; align-items: center; gap: 0 .55rem; margin: 0 0 clamp(.4rem, 1.5vw, 1rem); padding: 0; list-style: none; color: var(--tinta-2); font-size: .92rem; }
+  .trilha li { display: inline-flex; align-items: center; gap: .55rem; min-width: 0; }
+  .trilha li + li::before { content: ""; flex: none; width: 6px; height: 6px; border: solid var(--linha-forte); border-width: 1.5px 1.5px 0 0; transform: rotate(45deg); }
+  .trilha a { display: inline-flex; align-items: center; min-height: 44px; color: var(--tinta-2); text-decoration: none; }
+  @media (hover: hover) and (pointer: fine) { .trilha a:hover { color: var(--azul); text-decoration: underline; } }
+  .trilha [aria-current] { color: var(--tinta); font-weight: 600; }
+  .pp-grade { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 4rem); align-items: start; }
+  .pp-galeria { position: sticky; top: 92px; min-width: 0; }
+  /* a peca na mesa de corte da bancada: o desenho muda enquanto a pessoa escreve */
+  .pp-foto { position: relative; display: grid; place-items: center; margin: 0; overflow: hidden; aspect-ratio: 1; border-radius: 26px; background: var(--branco); box-shadow: inset 0 0 0 1px var(--linha); }
+  .pp-foto.mesa { padding: clamp(1rem, 4vw, 2.8rem); }
+  .pp-foto svg { display: block; width: min(100%, 520px); height: auto; }
+  .pp-foto img { display: block; width: 100%; height: 100%; object-fit: cover; transform-origin: var(--zx, 50%) var(--zy, 50%); transition: transform .3s var(--ease-out); }
+  @media (hover: hover) and (pointer: fine) { .pp-foto:has(img) { cursor: zoom-in; } .pp-foto.zoom img { transform: scale(2.1); } }
+  .pp-foto .selo { z-index: 1; right: 1rem; top: 1rem; }
+  .pp-foto .tag-gravar { left: 1rem; bottom: 1rem; z-index: 1; }
+  .pp-foto-nota { margin-top: .75rem; color: var(--tinta-2); font-size: .92rem; }
+  .pp-info { display: flex; flex-direction: column; gap: 1rem; min-width: 0; }
+  .pp-info .produto-marca { font-size: .95rem; font-weight: 700; }
+  .pp-info h1 { margin-top: -.55rem; font-size: clamp(1.8rem, 1.25rem + 1.6vw, 2.6rem); line-height: 1.04; overflow-wrap: break-word; }
+  .pp-info h1:focus { outline: 0; }
+  .pp-nota { display: inline-flex; flex-wrap: wrap; align-items: center; gap: .1rem .5rem; align-self: start; min-height: 44px; margin-top: -.6rem; color: var(--tinta-2); font-size: .95rem; text-decoration: none; }
+  @media (hover: hover) and (pointer: fine) { .pp-nota:hover { color: var(--tinta); text-decoration: underline; text-underline-offset: 3px; } }
+  .pp-preco { display: grid; grid-template-columns: minmax(0, 1fr); gap: .2rem; padding-top: .9rem; border-top: 1px solid var(--linha); }
+  .pp-preco strong { font: 800 clamp(2.1rem, 1.7rem + 1.1vw, 2.7rem)/1 var(--fonte); letter-spacing: -.02em; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+  .pp-preco span { color: var(--tinta-2); }
+  .pp-desc { color: var(--tinta-2); }
+  .pp-compra { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .6rem; margin-top: .2rem; }
+  .pp-compra .qtd { min-height: 54px; }
+  .pp-compra .btn { min-height: 54px; }
+  .pp-compra .btn-linha { grid-column: 1 / -1; }
+  .pp-compra .btn:disabled, .pp-barra .btn:disabled { background: var(--ceu); color: var(--tinta-2); box-shadow: inset 0 0 0 1px var(--linha); cursor: not-allowed; }
+  .pp-status { font-variant-numeric: tabular-nums; min-height: 1.5em; margin-top: -.4rem; font-size: .95rem; }
+  .pp-status:empty { display: none; }
+  .pp-empresas { display: flex; flex-wrap: wrap; align-items: center; gap: .2rem .6rem; padding: .8rem 1rem; border-radius: 14px; background: var(--azul-claro); color: var(--tinta); font-size: .95rem; }
+  .pp-empresas a { font-weight: 700; }
+  /* receber e pagar: o cartao creme com a faixa azul das bolinhas, como a fita de fatos */
+  .pp-receber { display: grid; grid-template-columns: minmax(0, 1fr); gap: .85rem; margin-top: .4rem; padding: 0 1.45rem 1.5rem; overflow: hidden; border-radius: 20px; background: var(--ceu); }
+  .pp-receber h2 { display: flex; align-items: center; gap: .65rem; margin: 0 -1.45rem .2rem; padding: .85rem 1.45rem; background: var(--marinho); color: #fff; font-size: min(1.15rem, 7vw); letter-spacing: -.01em; }
+  .pp-cep { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .5rem; }
+  .pp-cep input { width: 100%; min-width: 0; min-height: 50px; padding: .5rem .95rem; border: 0; border-radius: 12px; background: #fff; box-shadow: inset 0 0 0 1.5px var(--linha-forte); color: var(--tinta); font: 400 1rem/1.2 var(--fonte); }
+  .pp-cep input:focus { outline: none; box-shadow: inset 0 0 0 2px var(--azul); }
+  .pp-cep .btn { min-height: 50px; }
+  .pp-cep-res { margin-top: -.2rem; padding: .75rem .9rem; border-radius: 12px; background: var(--branco); font-size: .95rem; }
+  .pp-cep-res:empty { display: none; }
+  .pp-modos { display: grid; gap: .7rem; margin: 0; padding: .3rem 0 0; list-style: none; color: var(--tinta-2); font-size: .95rem; line-height: 1.4; }
+  .pp-modos li { display: grid; grid-template-columns: 14px minmax(0, 1fr); gap: .75rem; align-items: start; }
+  .pp-modos li::before { content: ""; width: 14px; height: 14px; margin-top: .2rem; border-radius: 50%; background: #F07A1A; }
+  .pp-modos li:nth-child(2)::before { background: #2FA34F; }
+  .pp-modos li:nth-child(3)::before { background: #1D5FC4; }
+  .pp-modos li:nth-child(4)::before { background: #F2C230; }
+  .pp-modos strong { display: block; color: var(--tinta); font-weight: 700; }
+  .pp-zap { display: inline-flex; align-items: center; gap: .5rem; justify-self: start; min-height: 44px; color: var(--tinta); font-weight: 700; text-underline-offset: 3px; overflow-wrap: anywhere; }
+  .pp-zap svg { width: 22px; height: 22px; flex: none; color: #12803B; }
+  /* descricao, personalizacao e detalhes em acordeao */
+  .pp-sobre { max-width: 54rem; margin-top: clamp(2.5rem, 5vw, 4rem); border-top: 1px solid var(--linha); }
+  .pp-sobre details { border-bottom: 1px solid var(--linha); }
+  .pp-sobre summary { display: flex; justify-content: space-between; align-items: center; gap: 1rem; min-height: 64px; cursor: pointer; list-style: none; font: 800 min(1.2rem, 7.5vw)/1.2 var(--fonte-titulo); letter-spacing: -.01em; }
+  .pp-sobre summary::-webkit-details-marker { display: none; }
+  .pp-sobre summary::after { content: ""; flex: none; width: 10px; height: 10px; margin-right: .3rem; border: solid var(--azul); border-width: 0 2.5px 2.5px 0; transform: translateY(-3px) rotate(45deg); transition: transform var(--dur-ui) var(--ease-out); }
+  .pp-sobre details[open] summary::after { transform: translateY(2px) rotate(225deg); }
+  .pp-sobre details > div { display: grid; gap: .7rem; padding-bottom: 1.5rem; color: var(--tinta-2); }
+  .pp-detalhes { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: .45rem 1.75rem; margin: 0; }
+  .pp-detalhes dt { color: var(--tinta); font-weight: 700; }
+  .pp-detalhes dd { margin: 0; overflow-wrap: anywhere; }
+  .pp-mais { padding-block: clamp(2.2rem, 5vw, 3.5rem) clamp(3.5rem, 7vw, 5.5rem); margin-top: clamp(3rem, 6vw, 5rem); }
+  .pp-mais .prateleira-topo h2 { margin-right: auto; font-size: min(clamp(1.5rem, 1.2rem + 1.1vw, 2.1rem), 10vw); }
+  .pp-barra { display: none; }
+  @media (max-width: 860px) {
+    .pp-grade { grid-template-columns: minmax(0, 1fr); }
+    .pp-galeria { position: static; }
+    .pp-foto { border-radius: 20px; }
+    .trilha li:last-child { display: none; } /* o nome ja vem logo abaixo da foto */
+    .pp-barra {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 25; display: flex; align-items: center; gap: .9rem;
+      padding: .7rem var(--margem) calc(.7rem + env(safe-area-inset-bottom)); background: var(--branco); border-top: 1px solid var(--linha);
+      box-shadow: 0 -12px 28px -20px rgba(16, 42, 92, .45); transform: translateY(105%); transition: transform .3s var(--ease-out);
+    }
+    .pp-barra.visivel { transform: none; }
+    .pp-barra strong { font: 800 1.35rem/1 var(--fonte); white-space: nowrap; }
+    .pp-barra .btn { flex: 1; min-width: 0; min-height: 50px; padding-inline: .8rem; }
+    .pp-mais { padding-bottom: 6rem; }
+  }
+  @media (max-width: 420px) { .pp-cep { grid-template-columns: minmax(0, 1fr); } .pp-detalhes { grid-template-columns: minmax(0, 1fr); row-gap: .15rem; } .pp-detalhes dd + dt { margin-top: .5rem; } .pp-receber { padding-inline: 1.1rem; } .pp-receber h2 { margin-inline: -1.1rem; padding-inline: 1.1rem; } }
+  @media (prefers-reduced-motion: reduce) { .pp-barra, .pp-foto img, .pp-sobre summary::after { transition: none; } }
+  html:has(dialog[open]) { overflow: hidden; }
+
+  /* ---------- carrinho: gaveta que entra pela direita ---------- */
+  .sacola {
+    position: fixed; inset: 0 0 0 auto; margin: 0; padding: 0; border: 0;
+    width: min(100%, 460px); max-width: 100%; height: 100dvh; max-height: 100dvh;
+    border-radius: 22px 0 0 22px; background: var(--branco); color: var(--tinta);
+    transform: translateX(100%); transition: transform .34s var(--ease-gaveta);
+  }
+  .sacola[open] { display: flex; flex-direction: column; }
+  .sacola.aberta { transform: none; }
+  .sacola::backdrop { background: rgba(16, 42, 92, .55); opacity: 0; transition: opacity .34s ease; }
+  .sacola.aberta::backdrop { opacity: 1; }
+  @media (prefers-reduced-motion: reduce) { .sacola { transform: none; opacity: 0; transition: opacity .2s ease; } .sacola.aberta { opacity: 1; } }
+  .sacola-topo { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem 1.3rem; border-bottom: 1px solid var(--linha); }
+  .sacola-topo h2 { font-size: 1.6rem; }
+  .fechar { display: grid; place-items: center; width: 46px; height: 46px; flex: none; border: 0; border-radius: 50%; background: var(--ceu); color: var(--tinta); cursor: pointer; }
+  .fechar svg { width: 22px; height: 22px; }
+  .sacola-corpo { flex: 1; overflow: auto; overscroll-behavior: contain; display: grid; align-content: start; gap: 1.4rem; padding: 1.2rem 1.3rem; }
+  .itens { display: grid; gap: 1rem; padding: 0; margin: 0; list-style: none; }
+  .item { display: grid; grid-template-columns: 68px minmax(0, 1fr); gap: .35rem .9rem; }
+  .item img { grid-row: span 4; width: 68px; aspect-ratio: 1; object-fit: contain; border-radius: 10px; background: #fff; box-shadow: inset 0 0 0 1px var(--linha); }
+  .item h3 { font: 600 1rem/1.3 var(--fonte); }
+  .item-linha { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 0 .6rem; }
+  .item-linha .remover { grid-column: 1 / -1; justify-self: start; }
+  .qtd { display: inline-flex; align-items: center; border-radius: 10px; box-shadow: inset 0 0 0 1px var(--linha-forte); }
+  .qtd button { width: 44px; height: 44px; border: 0; border-radius: 10px; background: none; color: var(--tinta); font-size: 1.2rem; cursor: pointer; }
+  .qtd output { min-width: 1.6rem; text-align: center; font-weight: 600; }
+  .remover { min-height: 44px; padding: 0 .2rem; border: 0; background: none; color: var(--tinta-2); font: 400 .95rem/1 var(--fonte); text-decoration: underline; cursor: pointer; }
+  .item-var { color: var(--tinta-2); font-size: .9rem; }
+  .item-preco { justify-self: end; font-size: 1rem; white-space: nowrap; }
+  .vazia { display: grid; justify-items: center; gap: 1rem; padding: 2.5rem 0; color: var(--tinta-2); text-align: center; }
+  .vazia svg { width: 96px; height: auto; }
+  .bloco { display: grid; gap: .7rem; min-width: 0; margin: 0; padding: 1.2rem 0 0; border: 0; border-top: 1px solid var(--linha); }
+  .bloco legend { float: left; width: 100%; margin-bottom: .7rem; padding: 0; font: 700 1.2rem/1.2 var(--fonte-titulo); }
+  .escolhas { display: grid; gap: .5rem; }
+  .escolha { position: relative; display: grid; gap: .1rem; padding: .8rem 1rem .85rem 2.9rem; border-radius: 12px; box-shadow: inset 0 0 0 1px var(--linha-forte); cursor: pointer; transition: box-shadow var(--dur-ui) ease, background-color var(--dur-ui) ease; }
+  .escolha input { position: absolute; left: 1rem; top: 1.05rem; width: 1.15rem; height: 1.15rem; margin: 0; accent-color: var(--tinta); }
+  .escolha strong { font-weight: 600; }
+  .escolha small { color: var(--tinta-2); font-size: .9rem; }
+  .escolha:has(input:checked) { background: var(--ceu); box-shadow: inset 0 0 0 2px var(--tinta); }
+  .pilulas { display: flex; flex-wrap: wrap; gap: .45rem; }
+  .pilula { position: relative; display: inline-flex; align-items: center; min-height: 44px; padding: .45rem 1rem; border-radius: 10px; box-shadow: inset 0 0 0 1px var(--linha-forte); cursor: pointer; transition: background-color var(--dur-ui) ease, color var(--dur-ui) ease; }
+  .pilula input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; }
+  .pilula:has(input:checked) { background: var(--marinho); color: #fff; box-shadow: none; }
+  .pilula:has(input:focus-visible), .escolha:has(input:focus-visible) { outline: 3px solid var(--azul); outline-offset: 2px; }
+  .pilula:has(input:disabled) { opacity: .4; cursor: not-allowed; }
+  .pilula:has(input:disabled) input { cursor: not-allowed; }
+  .campos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; }
+  .campo { display: grid; grid-template-columns: minmax(0, 1fr); gap: .3rem; min-width: 0; font-weight: 600; font-size: .95rem; }
+  .campo-largo { grid-column: 1 / -1; }
+  .campo small { font-weight: 400; color: var(--tinta-2); }
+  .campo input, .campo select {
+    width: 100%; min-width: 0; min-height: 48px; padding: .6rem .85rem; border: 0; border-radius: 10px;
+    background: var(--branco); box-shadow: inset 0 0 0 1.5px var(--linha-forte); color: var(--tinta); font: 400 1rem/1.3 var(--fonte);
+    transition: box-shadow var(--dur-ui) ease;
+  }
+  .campo input:focus, .campo select:focus { outline: none; box-shadow: inset 0 0 0 2px var(--azul); }
+  .aviso { color: var(--tinta-2); font-size: .92rem; }
+  .nota { color: var(--tinta-2); font-size: .9rem; }
+  .previa-caixa summary { min-height: 44px; display: flex; align-items: center; cursor: pointer; font-weight: 600; color: var(--azul); }
+  .previa { padding: .9rem 1rem 1.05rem; border-radius: 12px 12px 12px 3px; background: #D9FDD3; color: #12241B; font-size: .95rem; line-height: 1.5; white-space: pre-line; overflow-wrap: anywhere; }
+  .sacola-pe { display: grid; gap: .55rem; padding: 1rem 1.3rem max(1.2rem, env(safe-area-inset-bottom)); border-top: 1px solid var(--linha); }
+  .sacola-pe .btn { width: 100%; }
+  .subtotal { display: flex; justify-content: space-between; align-items: baseline; font-size: 1.05rem; }
+  .subtotal strong { font-size: 1.3rem; }
+  .sacola-pe p { color: var(--tinta-2); font-size: .88rem; text-align: center; }
+  .sacola-pe .erro { color: #B3261E; font-weight: 600; }
+  /* pagamento simulado: Pix com QR Code, cartao e pedido aprovado */
+  .campo-cartao { position: relative; }
+  .campo-cartao input { padding-right: 6.5rem; }
+  .bandeira { position: absolute; right: .7rem; bottom: 13px; padding: .15rem .5rem; border-radius: 6px; background: var(--ceu); font-size: .78rem; font-weight: 700; pointer-events: none; }
+  .bandeira:empty { visibility: hidden; }
+  .demo { justify-self: center; padding: .25rem .75rem; border-radius: 999px; background: var(--ceu); box-shadow: inset 0 0 0 1px var(--linha-forte); color: var(--tinta-2); font-size: .8rem; font-weight: 600; }
+  .pagar, .aprovado { display: grid; justify-items: center; gap: .8rem; padding: .4rem 0 1rem; text-align: center; }
+  .pagar h3, .aprovado h3 { font-size: 1.6rem; }
+  .pagar > p { max-width: 30ch; color: var(--tinta-2); }
+  .pagar .valor { color: var(--tinta); font-size: 1.5rem; font-weight: 700; }
+  .qr { width: 200px; padding: 12px; border-radius: 16px; background: #fff; box-shadow: inset 0 0 0 1.5px var(--linha-forte); }
+  .qr svg { display: block; width: 100%; height: auto; }
+  .copia { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .5rem; width: 100%; }
+  .copia input { min-width: 0; min-height: 48px; padding: .6rem .85rem; border: 0; border-radius: 10px; background: var(--ceu); box-shadow: inset 0 0 0 1.5px var(--linha-forte); color: var(--tinta-2); font: 400 .9rem/1.3 var(--fonte); text-overflow: ellipsis; }
+  .copia .btn { min-height: 48px; padding-inline: 1.1rem; }
+  .status { display: inline-flex; align-items: center; gap: .55rem; font-weight: 600; }
+  .pulso { width: 10px; height: 10px; border-radius: 50%; background: var(--azul); animation: pulso 1.2s ease-in-out infinite; }
+  .status.pago { color: #12803B; }
+  .status.pago .pulso { background: #179A48; animation: none; }
+  @keyframes pulso { 50% { opacity: .3; transform: scale(.7); } }
+  .girando::before { content: ""; width: 1.1em; height: 1.1em; border: 2.5px solid currentColor; border-right-color: transparent; border-radius: 50%; animation: gira .7s linear infinite; }
+  @keyframes gira { to { transform: rotate(1turn); } }
+  .btn.girando { gap: .6rem; cursor: progress; }
+  .aprovado svg { width: 84px; height: 84px; }
+  .aprovado circle { fill: #E3F6E8; }
+  .aprovado path { fill: none; stroke: #179A48; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 40; stroke-dashoffset: 40; animation: risca .45s .15s var(--ease-out) forwards; }
+  @keyframes risca { to { stroke-dashoffset: 0; } }
+  .aprovado p { max-width: 32ch; color: var(--tinta-2); }
+  .aprovado .numero { color: var(--tinta); font-weight: 700; }
+  @media (prefers-reduced-motion: reduce) { .pulso, .girando::before { animation: none; } .aprovado path { animation: none; stroke-dashoffset: 0; } }
+  @media (max-width: 520px) { .sacola { border-radius: 0; } .campos { grid-template-columns: minmax(0, 1fr); } .campos.cartao-campos { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+  /* ---------- botao flutuante ---------- */
+  .flutuante {
+    display: grid; place-items: center; position: fixed; z-index: 25;
+    right: max(clamp(16px, 2vw, 28px), env(safe-area-inset-right)); bottom: calc(clamp(16px, 2vw, 28px) + env(safe-area-inset-bottom));
+    width: 62px; height: 62px; border-radius: 50%; background: #12803B; color: #fff;
+    box-shadow: 0 10px 28px -10px rgba(18, 128, 59, .6), 0 2px 6px rgba(16, 42, 92, .2);
+    opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity .25s var(--ease-out), transform .25s var(--ease-out), background-color .2s;
+  }
+  .flutuante.visivel { opacity: 1; transform: none; pointer-events: auto; }
+  .flutuante:hover { background: #0E6A31; }
+  .flutuante svg { width: 30px; height: 30px; }
+  @media (max-width: 600px) { .flutuante { width: 56px; height: 56px; } .flutuante svg { width: 27px; height: 27px; } }
+  @media (prefers-reduced-motion: reduce) { .flutuante { transition: none; transform: none; } }
+
+  /* ============================================================
+     JEITO DA CASA: o que faz esta loja nao parecer as outras.
+     A abertura e a propria bancada de gravacao: a pessoa escreve o
+     nome e ve na caneca, na garrafa e no copo. O nome digitado
+     aparece tambem nos produtos da vitrine. Fundo de mesa de corte
+     (grade fina) atras dos produtos, categorias em etiqueta com furo,
+     faixa de fatos azul com as tres bolinhas do logo.
+     ============================================================ */
+  h1, h2, h3 { font-weight: 800; letter-spacing: -.025em; line-height: 1.02; }
+  /* a Syne e larga: titulos um pouco menores para a palavra longa caber no celular */
+  h2 { font-size: clamp(1.7rem, 1.2rem + 2vw, 2.7rem); }
+  .empresas h2 { font-size: clamp(1.8rem, 1.2rem + 2.3vw, 3rem); }
+  .marca { gap: .6rem; color: var(--tinta-2); }
+  .marca .logo { width: 52px; height: 46px; flex: none; }
+  .marca strong { font-style: normal; font-size: 1.55rem; letter-spacing: -.01em; color: var(--tinta); }
+  .marca small { font-size: .8rem; }
+  @media (max-width: 480px) { .marca .logo { width: 44px; height: 39px; } .marca strong { font-size: 1.3rem; } }
+  .rodape-nome { font-style: normal; }
+
+
+  /* ---------- abertura: bancada de personalizacao ---------- */
+  .bancada { padding-block: clamp(1.2rem, 3vw, 2.4rem) clamp(1.6rem, 3vw, 2.4rem); }
+  /* texto e campos na esquerda, a peca na direita; no celular a peca fica entre o texto e os campos */
+  .bancada-grade { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); grid-template-areas: "texto palco" "campos palco"; column-gap: clamp(1.6rem, 4vw, 3.5rem); row-gap: 1.3rem; align-items: start; }
+  .bancada-texto { grid-area: texto; align-self: end; }
+  .gravar { grid-area: campos; }
+  .bancada-palco { grid-area: palco; align-self: center; }
+  .bancada-texto { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.15rem; min-width: 0; }
+  .bolinhas { display: inline-flex; gap: 4px; }
+  .bolinhas i { width: 10px; height: 10px; border-radius: 50%; background: #F07A1A; }
+  .bolinhas i:nth-child(2) { background: #2FA34F; }
+  .bolinhas i:nth-child(3) { background: #1D5FC4; }
+  .bancada h1 { font-size: clamp(2rem, 1.2rem + 2.5vw, 3.25rem); line-height: 1; max-width: 12em; }
+  .bancada-texto > p { max-width: 34rem; color: var(--tinta-2); font-size: 1.1rem; }
+  .gravar { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; margin: 0; padding: 0; border: 0; min-width: 0; }
+  .rotulo-campo { display: block; margin-bottom: .4rem; font-weight: 700; font-size: .95rem; }
+  .rotulo-campo small { font-weight: 500; color: var(--tinta-2); }
+  .gravar-campo { width: 100%; min-height: 58px; padding: .7rem 1rem; border: 0; border-radius: 14px; background: var(--branco); box-shadow: inset 0 0 0 2px var(--linha-forte); color: var(--tinta); font: 600 1.25rem/1.2 var(--fonte); transition: box-shadow var(--dur-ui) ease; }
+  .gravar-campo:focus { outline: none; box-shadow: inset 0 0 0 2.5px var(--azul); }
+  .gravar-campo::placeholder { color: #8A8F9B; font-weight: 500; }
+  .pecas, .letras { display: flex; flex-wrap: wrap; gap: .45rem; }
+  .peca, .letra { position: relative; display: inline-flex; align-items: center; gap: .45rem; min-height: 48px; padding: .4rem .95rem .4rem .55rem; border-radius: 12px; background: var(--branco); box-shadow: inset 0 0 0 1.5px var(--linha); cursor: pointer; font-weight: 600; transition: box-shadow var(--dur-ui) ease, background-color var(--dur-ui) ease; }
+  .letra { padding-inline: 1rem; font-weight: 400; }
+  .peca input, .letra input, .cor input { position: absolute; inset: 0; margin: 0; opacity: 0; cursor: pointer; }
+  .peca svg { width: 34px; height: 34px; }
+  @media (hover: hover) and (pointer: fine) { .peca:hover, .letra:hover { box-shadow: inset 0 0 0 1.5px var(--linha-forte); } }
+  .peca:has(input:checked), .letra:has(input:checked) { background: var(--azul-claro); box-shadow: inset 0 0 0 2px var(--azul); }
+  .peca:has(input:focus-visible), .letra:has(input:focus-visible), .cor:has(input:focus-visible) { outline: 3px solid var(--azul); outline-offset: 2px; }
+  .letra span { font-size: 1.15rem; line-height: 1; }
+  .cores { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .cor { position: relative; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; }
+  .cor span { width: 34px; height: 34px; border-radius: 50%; background: var(--c); box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .14); transition: transform var(--dur-ui) var(--ease-out); }
+  .cor:has(input:checked) { box-shadow: inset 0 0 0 2.5px var(--tinta); }
+  .cor:has(input:checked) span { transform: scale(.82); }
+  .rotulo-campo strong { font-weight: 600; color: var(--tinta-2); }
+
+  .bancada-palco { position: relative; display: grid; grid-template-rows: minmax(0, 1fr) auto; min-width: 0; overflow: hidden; border-radius: 26px; box-shadow: inset 0 0 0 1px var(--linha); }
+  .palco-arte { display: grid; place-items: center; aspect-ratio: 1.08; padding: clamp(.8rem, 3vw, 2rem); }
+  .palco-arte svg { width: min(100%, 470px); height: auto; }
+  .palco-pe { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: .6rem 1rem; padding: 1rem clamp(1rem, 2.5vw, 1.5rem); background: var(--branco); border-top: 1px solid var(--linha); }
+  .palco-pe h2 { font-size: 1.15rem; letter-spacing: -.01em; line-height: 1.2; }
+  .palco-pe p { color: var(--tinta-2); font-size: .92rem; }
+  .palco-preco { font: 800 1.6rem/1 var(--fonte); color: var(--tinta); white-space: nowrap; }
+  .palco-pe .btn { grid-column: 1 / -1; width: 100%; }
+  .palco-status { grid-column: 1 / -1; font-size: .95rem; font-variant-numeric: tabular-nums; }
+  .palco-status:empty { display: none; }
+  .na-hora { position: absolute; z-index: 1; top: 1rem; left: 1rem; padding: .35rem .8rem; border-radius: 999px; background: var(--branco); box-shadow: inset 0 0 0 1px var(--linha); color: var(--azul); font-size: .85rem; font-weight: 700; }
+  @media (max-width: 900px) {
+    .bancada-grade { grid-template-columns: minmax(0, 1fr); grid-template-areas: "texto" "palco" "campos"; }
+    .palco-arte { aspect-ratio: 1.25; }
+  }
+
+  /* faixa de fatos: azul do "W", com as bolinhas do logo separando */
+
+  /* produto: mesa de corte atras, etiqueta "personalizavel" */
+  .produto { border-radius: 18px; box-shadow: 0 0 0 1px var(--linha); }
+  .produto-foto { margin: 7px 7px 0; border-radius: 13px; border-bottom: 0; overflow: hidden; }
+  .produto-foto svg { display: block; width: 100%; height: 100%; transition: transform .6s var(--ease-out); }
+  .produto-foto img { object-fit: cover; }
+  @media (hover: hover) and (pointer: fine) { .produto:hover .produto-foto svg { transform: scale(1.04); } }
+  .selo { left: auto; right: .6rem; top: .6rem; border-radius: 8px; background: var(--vermelho); }
+  .produto-marca { color: var(--vermelho); }
+  @media (max-width: 560px) { .tag-gravar { display: none; } .produto .btn svg { display: none; } .produto .btn { font-size: .95rem; } }
+  .produto-preco { font-size: 1.3rem; font-weight: 800; line-height: 1.1; }
+
+  /* pagina do produto: campo de gravacao */
+  .pp .campo input { font-size: 1.05rem; }
+  .pp .letras .letra { min-height: 44px; }
+
+  /* ---------- empresas: quantidade e preco por faixa ---------- */
+  .empresas { background: var(--azul); color: #fff; padding-block: clamp(3rem, 7vw, 5.5rem); }
+  .empresas-grade { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+  .empresas h2 { color: #fff; }
+  .empresas-texto { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.3rem; }
+  .empresas-texto > p { max-width: 34rem; color: #DDF0E2; font-size: 1.1rem; }
+  .usos { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; padding: 0; list-style: none; }
+  .usos li { padding: .4rem .85rem; border-radius: 999px; background: rgba(0, 0, 0, .16); font-size: .95rem; font-weight: 600; }
+  .calculo { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.1rem; padding: clamp(1.3rem, 3vw, 1.9rem); border-radius: 22px; background: var(--branco); color: var(--tinta); }
+  .calculo h3 { font-size: clamp(1.35rem, 1.2rem + .6vw, 1.7rem); }
+  .calculo .pecas { gap: .4rem; }
+  .qtd-linha { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
+  .qtd-grande { display: inline-flex; align-items: center; border-radius: 12px; box-shadow: inset 0 0 0 1.5px var(--linha-forte); }
+  .qtd-grande button { width: 48px; height: 50px; border: 0; background: none; color: var(--tinta); font-size: 1.35rem; cursor: pointer; }
+  .qtd-grande input { width: 4.6rem; min-height: 50px; border: 0; background: none; color: var(--tinta); font: 700 1.2rem/1 var(--fonte); text-align: center; -moz-appearance: textfield; }
+  .qtd-grande input::-webkit-inner-spin-button { -webkit-appearance: none; }
+  .qtd-grande input:focus { outline: 2px solid var(--azul); outline-offset: -2px; border-radius: 8px; }
+  .atalhos { display: flex; flex-wrap: wrap; gap: .35rem; }
+  .atalhos button { min-height: 44px; padding: .3rem .8rem; border: 0; border-radius: 10px; background: var(--ceu); color: var(--tinta); font: 600 .95rem/1 var(--fonte); cursor: pointer; }
+  @media (hover: hover) and (pointer: fine) { .atalhos button:hover { background: var(--ceu-2); } }
+  .faixas { width: 100%; border-collapse: collapse; font-size: .97rem; }
+  .faixas th, .faixas td { padding: .55rem .6rem; text-align: left; border-top: 1px solid var(--linha); }
+  .faixas th { color: var(--tinta-2); font-weight: 600; font-size: .88rem; border-top: 0; }
+  .faixas td:last-child, .faixas th:last-child { text-align: right; }
+  .faixas td:last-child { white-space: nowrap; }
+  @media (max-width: 420px) { .faixas { font-size: .9rem; } .faixas th, .faixas td { padding-inline: .3rem; } .faixas th { overflow-wrap: anywhere; } }
+  .faixas tr.atual td { background: var(--azul-claro); font-weight: 700; }
+  .faixas tr.atual td:first-child { border-radius: 8px 0 0 8px; }
+  .faixas tr.atual td:last-child { border-radius: 0 8px 8px 0; }
+  .total-empresa { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .3rem 1rem; padding-top: .9rem; border-top: 1px solid var(--linha); }
+  .total-empresa strong { font: 800 min(1.9rem, 9vw)/1 var(--fonte); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .total-empresa span { color: var(--tinta-2); }
+  .calculo .btn { width: 100%; }
+  .calculo-nota { color: var(--tinta-2); font-size: .88rem; }
+  @media (max-width: 900px) { .empresas-grade { grid-template-columns: minmax(0, 1fr); } }
+
+  /* a loja */
+  .loja-fotos img { aspect-ratio: 4 / 5; }
+  .premio { display: inline-flex; align-items: center; gap: .6rem; justify-self: start; padding: .5rem .9rem .5rem .6rem; border-radius: 12px; background: var(--ceu); font-weight: 600; font-size: .95rem; }
+  .premio svg { width: 30px; height: 30px; flex: none; }
+  /* carrinho: a peca aparece com o nome gravado */
+  .item-fig { grid-row: span 4; display: block; width: 68px; height: 68px; overflow: hidden; border-radius: 10px; background: #fff; box-shadow: inset 0 0 0 1px var(--linha); }
+  .item-fig svg, .item .item-fig img { display: block; width: 100%; height: 100%; object-fit: cover; box-shadow: none; border-radius: 0; }
+
+
+  /* ============================================================
+     NOVA RODADA: loja de presentes primeiro. Fotos reais da loja,
+     pecas com volume sobre fundo liso e nome so como opcao no pedido.
+     ============================================================ */
+  h1, h2, h3 { font-family: var(--fonte-titulo); }
+  h2 { font-size: clamp(1.7rem, 1.25rem + 1.7vw, 2.5rem); }
+  .empresas h2 { font-size: clamp(1.8rem, 1.3rem + 1.8vw, 2.7rem); }
+  .mesa { background: var(--peca); }
+  .bolinhas { display: none; }
+  .marca strong, .rodape-nome { font-family: var(--fonte-titulo); }
+  .produto-foto { margin: 0; border-radius: 0; background: var(--peca); }
+  .produto-foto svg { box-sizing: border-box; padding: 7%; }
+  .produto-foto img { object-fit: cover; }
+  .pp-foto { background: var(--peca); }
+  .pp-foto img { object-fit: cover; }
+  .selo { left: .6rem; right: auto; top: .6rem; border-radius: 6px; padding: .2rem .55rem; font-size: .78rem; width: max-content; height: max-content; }
+  .produto-marca { color: var(--tinta-2); font-weight: 600; }
+  .produto-nome { -webkit-line-clamp: 2; }
+  .produto-preco { font-variant-numeric: tabular-nums; }
+  .fita .fatos { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem 1.6rem; margin-inline: auto; padding-block: 1.15rem; }
+  .fita .fato svg { width: 30px; height: 30px; stroke: var(--azul); stroke-width: 1.6; }
+  .fita .fato { grid-template-columns: 30px minmax(0, 1fr); }
+  @media (max-width: 960px) { .fita .fatos { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 460px) { .fita .fatos { grid-template-columns: minmax(0, 1fr); gap: .75rem; } }
+  /* empresas: faixa clara, o preco continua na conta */
+  .empresas { background: var(--ceu); color: var(--tinta); }
+  .empresas h2 { color: var(--tinta); }
+  .empresas-texto > p { color: var(--tinta-2); }
+  .usos li { background: var(--branco); box-shadow: inset 0 0 0 1px var(--linha); font-weight: 500; }
+  .calculo { box-shadow: 0 1px 2px rgba(11, 20, 32, .05), 0 10px 30px rgba(11, 20, 32, .06); }
+  .loja-fotos img { aspect-ratio: 4 / 5; object-fit: cover; }
+  .pp-receber h2 { font-size: 1.15rem; }
+  .prateleira-setas .seta:disabled { color: var(--tinta-2); opacity: .55; }
+  .banner h1, .banner h2, .capa h1 { color: #fff; }
+  #loja { background: var(--branco); }
+  #chegar { background: var(--ceu); }
+  .empresas-grade { align-items: center; }
+  .chegar-dados p, .chegar-dados a:not(.btn) { font-family: var(--fonte); font-size: 1.05rem; font-weight: 600; letter-spacing: 0; line-height: 1.4; }
+  .chegar-dados h3 { font-family: var(--fonte); font-weight: 500; }
+
+  /* V2: vitrine em tres banners, categorias em bolha, cartao com botao */
+  :root {
+    --branco: #FFFFFF; --ceu: #F1F6F1; --ceu-2: #E2ECE3; --peca: #F3F5F1;
+    --azul: #14663A; --azul-2: #0F4F2C; --azul-claro: #E5F1E7;
+    --vermelho: #C2500C; --vermelho-2: #9C3F09;
+    --marinho: #0F3D25; --marinho-2: #17512F;
+    --tinta: #17211B; --tinta-2: #4C5A50; --linha: #E2E7E1; --linha-forte: #7A877D;
+    --raio: 14px; --largura: 1320px;
+    --fonte: "Nunito Sans", Arial, sans-serif;
+    --fonte-titulo: "Bree Serif", Georgia, serif;
+  }
+  html { scrollbar-color: #A9B7AC #FFFFFF; }
+  .menu { gap: 0 clamp(.8rem, 1.5vw, 1.4rem); }
+  h1, h2, h3 { font-weight: 400; letter-spacing: -.005em; line-height: 1.12; }
+  .banners { display: grid; grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 16px; padding-block: 16px 0; min-height: min(68svh, 560px); }
+  .banner { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); overflow: hidden; border-radius: var(--raio); color: #fff; text-decoration: none; }
+  .banner-1 { grid-row: span 2; background: var(--azul); }
+  .banner-2 { background: #C2500C; }
+  .banner-3 { background: var(--marinho); }
+  .banner img { display: block; width: 100%; height: 100%; object-fit: cover; min-height: 0; transition: transform .6s var(--ease-out); }
+  @media (hover: hover) and (pointer: fine) { .banner:hover img { transform: scale(1.03); } }
+  .banner-texto { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: .55rem; min-width: 0; padding: clamp(1rem, 2vw, 1.5rem); }
+  .banner-texto p { color: rgba(255, 255, 255, .92); font-size: .98rem; line-height: 1.4; }
+  .banner h2 { font-size: clamp(1.3rem, 1rem + .9vw, 1.7rem); }
+  .banner-1 .banner-texto { gap: 1.1rem; padding: clamp(1.4rem, 4vw, 3.4rem); }
+  .banner-1 h1 { font-size: min(clamp(2.3rem, 1.4rem + 3vw, 4rem), 14vw); line-height: 1.04; overflow-wrap: break-word; min-width: 0; }
+  .banner-1 p { font-size: 1.1rem; max-width: 26rem; }
+  .banner-1 .btn { background: #fff; color: var(--azul-2); }
+  @media (max-width: 860px) {
+    .banners { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; min-height: 0; }
+    .banner-1 { grid-row: auto; grid-template-columns: minmax(0, 1fr); }
+    .banner-1 img { aspect-ratio: 16 / 10; order: -1; height: auto; }
+    .banner-2 img, .banner-3 img { aspect-ratio: 1; height: auto; }
+  }
+  .fita { border-bottom: 1px solid var(--linha); }
+  .fita .fato { color: var(--tinta-2); }
+  .fita .fato strong { color: var(--tinta); }
+
+  /* categorias: bolhas com foto */
+  #produtos { padding-top: clamp(2.2rem, 4vw, 3rem); }
+  .secao-cabeca { margin-bottom: 1.4rem; }
+  .categorias { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1rem; margin-bottom: clamp(2.2rem, 4vw, 3rem); }
+  .categoria { min-height: 44px; }
+  .categoria span:first-child { width: min(100%, 132px); background: var(--peca); }
+  .categoria img { padding: 0; object-fit: cover; }
+  .categoria-todos span:first-child { background: var(--azul-claro); }
+  .categoria[aria-pressed="true"] span:first-child { box-shadow: 0 0 0 3px var(--azul); }
+  @media (max-width: 860px) {
+    .categorias { display: flex; }
+    .categoria { flex: 0 0 104px; }
+  }
+
+  /* cartao: foto no alto, nome, preco e botao */
+  .fileira { --col: 4; }
+  @media (max-width: 860px) { .fileira { --col: 3; } }
+  @media (max-width: 560px) { .fileira { --col: 2; } }
+  .produto { border-radius: var(--raio); }
+  .produto-info { gap: .45rem; padding: .85rem .9rem .95rem; }
+  .produto-preco { font-size: 1.25rem; font-weight: 800; color: var(--tinta); margin-top: auto; }
+  .produto-nome { font-size: 1.02rem; }
+  .produto .btn { margin-top: .25rem; }
+  .prateleira-topo h3 { font-size: min(clamp(1.45rem, 1.2rem + .8vw, 1.9rem), 10vw); }
+  /* a unica chamada para gravacao: um cartao na fileira das garrafas */
+  .promo { position: relative; display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; min-width: 0; min-height: 100%; border-radius: var(--raio); background: var(--marinho); color: #fff; text-decoration: none; }
+  .promo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease-out); }
+  .promo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(8, 28, 16, .9) 12%, rgba(8, 28, 16, .1) 62%); }
+  .promo-texto { position: relative; z-index: 1; display: grid; gap: .3rem; padding: 1rem; }
+  .promo-titulo { font: 400 1.3rem/1.15 var(--fonte-titulo); }
+  .promo-texto > span:last-child { font-size: .93rem; line-height: 1.4; color: rgba(255, 255, 255, .92); }
+  @media (hover: hover) and (pointer: fine) { .promo:hover img { transform: scale(1.03); } }
+  .filtrada .promo { min-height: 320px; }
+  /* produto: nome recolhido */
+  .pp-nome { border-radius: 12px; box-shadow: inset 0 0 0 1px var(--linha); }
+  .pp-nome summary { display: flex; align-items: center; min-height: 48px; padding: .4rem .95rem; font-weight: 700; color: var(--azul); cursor: pointer; }
+  .pp-nome-corpo { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; padding: .2rem .95rem 1rem; }
+</style>
+<script>document.documentElement.classList.add("com-js");</script>
+<script>
+/* janela aberta com mouse ou dedo: ao fechar, o foco volta ao link ou botao sem a moldura de selecao;
+   quem navega pelo teclado (Tab/Enter) continua vendo onde esta */
+(() => {
+  let viaPonteiro = false;
+  addEventListener("pointerdown", () => { viaPonteiro = true; }, true);
+  addEventListener("keydown", (e) => { if (["Tab", "Enter", " "].includes(e.key)) viaPonteiro = false; }, true);
+  const abrir = HTMLDialogElement.prototype.showModal;
+  HTMLDialogElement.prototype.showModal = function () {
+    const dlg = this;
+    if (viaPonteiro) {
+      /* o navegador devolve o foco assim que a janela fecha: solta na hora, antes de a moldura aparecer */
+      const soltar = (ev) => {
+        if (dlg.open) return;
+        document.removeEventListener("focusin", soltar, true);
+        if (viaPonteiro && !ev.target.closest("dialog[open]")) ev.target.blur();
+      };
+      document.addEventListener("focusin", soltar, true);
+      dlg.addEventListener("close", () => setTimeout(() => document.removeEventListener("focusin", soltar, true)), { once: true });
+    }
+    return abrir.apply(this, arguments);
+  };
+})();
+</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <linearGradient id="g-vol" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#0B1420" stop-opacity=".26"/><stop offset=".14" stop-color="#0B1420" stop-opacity=".05"/><stop offset=".27" stop-color="#fff" stop-opacity=".34"/><stop offset=".42" stop-color="#fff" stop-opacity="0"/><stop offset=".78" stop-color="#0B1420" stop-opacity=".07"/><stop offset="1" stop-color="#0B1420" stop-opacity=".3"/></linearGradient>
+  <linearGradient id="g-alca" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#0B1420" stop-opacity=".3"/><stop offset=".6" stop-color="#fff" stop-opacity=".22"/><stop offset="1" stop-color="#0B1420" stop-opacity=".22"/></linearGradient>
+  <linearGradient id="g-fundo" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#0B1420" stop-opacity=".5"/><stop offset=".6" stop-color="#0B1420" stop-opacity=".12"/><stop offset="1" stop-color="#0B1420" stop-opacity=".3"/></linearGradient>
+  <linearGradient id="g-pano" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".1"/><stop offset=".55" stop-color="#0B1420" stop-opacity=".03"/><stop offset="1" stop-color="#0B1420" stop-opacity=".16"/></linearGradient>
+  <filter id="f-sombra" x="-30%" y="-150%" width="160%" height="400%"><feGaussianBlur stdDeviation="7"/></filter>
+</defs></svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-sacola" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" d="M3 4h2.2l2.3 11h10.2l2-8H6.3M9.5 19.5a1 1 0 1 0 0 .01M16.5 19.5a1 1 0 1 0 0 .01"/></symbol>
+  <symbol id="i-facebook" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 21v-7.5H16l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21h3Z"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/></g><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></symbol>
+  <symbol id="i-estrela" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9Z"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></symbol>
+  <symbol id="i-caixa" viewBox="0 0 80 64"><path d="M58 22c14-1 15 26 0 27" fill="none" stroke="#F07A1A" stroke-width="6" stroke-linecap="round"/><rect x="14" y="14" width="46" height="44" rx="8" fill="#FBF4EC" stroke="#E7E1D8" stroke-width="2"/><ellipse cx="37" cy="14" rx="23" ry="5" fill="#F07A1A"/><circle cx="31" cy="36" r="5" fill="#2FA34F"/><circle cx="42" cy="36" r="5" fill="#1D5FC4"/></symbol>
+</svg>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topo">
+  <div class="envoltorio topo-grade">
+    <a class="marca" href="#" translate="no">
+      <svg class="logo" viewBox="0 0 60 53" aria-hidden="true"><circle cx="19" cy="31" r="18" fill="#F07A1A"/><circle cx="40" cy="17" r="15" fill="#2FA34F"/><circle cx="43" cy="38" r="15" fill="#1D5FC4"/><circle cx="20" cy="6" r="5" fill="#1D5FC4"/><g fill="#fff" font-family="Arial Black, Arial, sans-serif" font-weight="900" text-anchor="middle"><text x="18" y="38" font-size="20">G</text><text x="40" y="23" font-size="17">P</text><text x="43" y="44" font-size="17">W</text></g></svg>
+      <span><strong>PGW</strong><small>Presentes que encantam</small></span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Principal">
+      <a href="#produtos" data-ir="presentes">Presentes</a>
+      <a href="#produtos" data-ir="canecas">Canecas e copos</a>
+      <a href="#empresas">Para empresas</a>
+      <a href="#loja">A loja</a>
+      <a href="#chegar">Como chegar</a>
+    </nav>
+    <button class="sacola-botao" type="button" id="abrir-sacola" aria-haspopup="dialog">
+      <svg aria-hidden="true"><use href="#i-sacola"/></svg><span class="rotulo">Carrinho</span>
+      <span class="conta" id="sacola-conta">0</span><span class="so-leitor" id="sacola-sr">0 itens no carrinho</span>
+    </button>
+    <button class="menu-botao" type="button" id="menu-botao" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="envoltorio">
+  <section class="banners" aria-labelledby="titulo">
+    <a class="banner banner-1" href="#produtos" data-ir="presentes">
+      <div class="banner-texto">
+        <h1 id="titulo">Presentes que encantam</h1>
+        <p>Buquês, cestas e caixas montados por nós, prontos para retirar em Cravinhos.</p>
+        <span class="btn">Ver os presentes</span>
+      </div>
+      <img src="img/caixa-urso.webp" width="532" height="538" alt="Caixa transparente com urso de pelúcia, flores e chocolates, com laço dourado" fetchpriority="high">
+    </a>
+    <a class="banner banner-2" href="#produtos" data-ir="garrafas">
+      <div class="banner-texto"><h2>Garrafas térmicas</h2><p>Em várias cores, para levar o dia inteiro.</p></div>
+      <img src="img/garrafas-cores.webp" width="900" height="1083" alt="Garrafas térmicas em verde, rosa, azul e lilás no balcão da loja">
+    </a>
+    <a class="banner banner-3" href="#empresas">
+      <div class="banner-texto"><h2>Para empresas</h2><p>Brindes com o seu logo, a partir de 10 unidades.</p></div>
+      <img src="img/caixas-pgw.webp" width="245" height="300" alt="Caixas de pedidos da PGW prontas para a entrega">
+    </a>
+  </section>
+</div>
+
+<div class="fita">
+  <ul class="envoltorio fatos">
+    <li class="fato"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v10h16V10M3 10l2-6h14l2 6M3 10a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0M10 20v-5h4v5"/></svg><span><strong>Retire na loja</strong>Av. Pedro Duarte Amoroso, 532</span></li>
+    <li class="fato"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h11v11H3zM14 10h4l3 3v4h-7z"/><circle cx="7.5" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/></svg><span><strong>Entrega em Cravinhos</strong>Taxa informada pelo WhatsApp</span></li>
+    <li class="fato"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span><strong>5,0 no Google</strong>144 avaliações</span></li>
+    <li class="fato"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3 10h18M7 15h4"/></svg><span><strong>Pix ou cartão</strong>Em até 4x sem juros</span></li>
+  </ul>
+</div>
+
+<main id="conteudo">
+  <section class="secao" id="produtos" aria-labelledby="titulo-produtos">
+    <div class="envoltorio">
+      <div class="secao-cabeca" data-revela><h2 id="titulo-produtos">Escolha por categoria</h2></div>
+      <div class="categorias" id="categorias" role="group" aria-label="Filtrar por categoria" data-revela></div>
+      <ul class="vitrine" id="vitrine" aria-label="Produtos"></ul>
+    </div>
+  </section>
+  <section class="empresas" id="empresas" aria-labelledby="titulo-empresas">
+    <div class="envoltorio empresas-grade">
+      <div class="empresas-texto">
+        <h2 id="titulo-empresas">Brindes com o logo da sua empresa</h2>
+        <p>Canecas, garrafas, copos e ecobags gravados com a sua marca. Escolha a peça e a quantidade para ver o preço por unidade. Quanto mais peças, menor o preço.</p>
+        <ul class="usos"><li>Fim de ano</li><li>Clientes</li><li>Equipe</li><li>Eventos e feiras</li><li>Formaturas</li></ul>
+      </div>
+      <div class="calculo" id="calculo">
+        <h3>Simule o seu pedido</h3>
+        <div>
+          <span class="rotulo-campo" id="rotulo-brinde">Peça</span>
+          <div class="pecas" id="brindes" role="radiogroup" aria-labelledby="rotulo-brinde"></div>
+        </div>
+        <div>
+          <label class="rotulo-campo" for="qtd-empresa">Quantidade</label>
+          <div class="qtd-linha">
+            <div class="qtd-grande"><button type="button" data-qtd="-1" aria-label="Diminuir quantidade">−</button><input id="qtd-empresa" type="number" inputmode="numeric" min="10" max="2000" value="50"><button type="button" data-qtd="1" aria-label="Aumentar quantidade">+</button></div>
+            <div class="atalhos" id="atalhos"></div>
+          </div>
+        </div>
+        <table class="faixas" id="faixas"></table>
+        <div class="total-empresa" aria-live="polite"><span id="total-det"></span><strong id="total-empresa"></strong></div>
+        <a class="btn btn-zap" id="orcamento" href="https://wa.me/5516991732180" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Pedir orçamento pelo WhatsApp</a>
+        <p class="calculo-nota">Valores de exemplo. O orçamento final depende da arte e do prazo; envie o logo pela conversa.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao secao-ceu" id="loja" aria-labelledby="titulo-loja">
+    <div class="envoltorio loja-grade">
+      <div class="loja-fotos" data-revela>
+        <figure><img src="img/fachada.webp" width="1080" height="813" alt="Fachada laranja e verde da PGW Brindes, na Avenida Pedro Duarte Amoroso" loading="lazy"></figure>
+        <figure><img src="img/garrafas-cores.webp" width="900" height="1083" alt="Garrafas térmicas em verde, rosa, azul e lilás no balcão da loja" loading="lazy"></figure>
+      </div>
+      <div class="loja-texto" data-revela style="--i:1">
+        <h2 id="titulo-loja">Nossa loja em Cravinhos</h2>
+        <p>Estamos na Av. Pedro Duarte Amoroso, ao lado da Praça Itamaraty, com presentes prontos para levar. O que precisa de gravação, impressão ou montagem nós mesmos produzimos e conferimos antes da entrega.</p>
+        <p class="premio"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="12" r="9" fill="#C9CED6"/><circle cx="16" cy="12" r="5.5" fill="#EEF0F3"/><path d="M10 19l-3 10 5-2 3 4 2-9M22 19l3 10-5-2-3 4-2-9" fill="#1D5FC4"/></svg>Prata no Prêmio LocalBest Cravinhos 2024, categoria Presentes</p>
+      </div>
+    </div>
+    <div class="envoltorio google" id="avaliacoes">
+      <div class="google-nota" data-revela>
+        <p class="google-marca"><svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8a10 10 0 0 1-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-7.1-5.5c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.8-12.2-9H4.5v5.7A22 22 0 0 0 24 46z"/><path fill="#FBBC05" d="M11.8 28.3a13.2 13.2 0 0 1 0-8.6v-5.7H4.5a22 22 0 0 0 0 20z"/><path fill="#EA4335" d="M24 10.7c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3A22 22 0 0 0 4.5 14l7.3 5.7c1.7-5.2 6.5-9 12.2-9z"/></svg>Avaliações no Google</p>
+        <p class="google-numero">5,0</p>
+        <span class="estrelas" role="img" aria-label="Nota 5,0 de 5"><svg aria-hidden="true"><use href="#i-estrela"/></svg><svg aria-hidden="true"><use href="#i-estrela"/></svg><svg aria-hidden="true"><use href="#i-estrela"/></svg><svg aria-hidden="true"><use href="#i-estrela"/></svg><svg aria-hidden="true"><use href="#i-estrela"/></svg></span>
+        <p class="google-texto">144 avaliações de clientes da loja</p>
+        <a class="btn btn-branco" href="https://www.google.com/maps?cid=4250982567176522581" target="_blank" rel="noopener">Ver todas no Google</a>
+      </div>
+      <ul class="depoimentos" data-revela style="--i:1">
+          <li>
+            <div class="dep-autor"><span class="dep-avatar" style="--av:#BF4E0A" aria-hidden="true">G</span><p><strong>Gabriela de S. S.</strong><span>outubro de 2026</span></p><svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8a10 10 0 0 1-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-7.1-5.5c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.8-12.2-9H4.5v5.7A22 22 0 0 0 24 46z"/><path fill="#FBBC05" d="M11.8 28.3a13.2 13.2 0 0 1 0-8.6v-5.7H4.5a22 22 0 0 0 0 20z"/><path fill="#EA4335" d="M24 10.7c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3A22 22 0 0 0 4.5 14l7.3 5.7c1.7-5.2 6.5-9 12.2-9z"/></svg></div>
+            <span class="estrelas" role="img" aria-label="5 de 5 estrelas"><svg aria-hidden="true"><use href="#i-estrela"/></svg><svg aria-hidden="true"><use href="#i-estrela"/></svg><svg aria-hidden="true"><use href="#i-estrela"/></svg><svg aria-hidden="true"><use href="#i-estrela"/></svg><svg aria-hidden="true"><use href="#i-estrela"/></svg></span>
+            <blockquote>“Sempre muito atenciosos e caprichosos com os meus pedidos!! Já comprei 3 vezes com eles e vou continuar comprando!”</blockquote>
+          </li>
+          <li>
+            <div class="dep-autor"><span class="dep-avatar" style="--av:#1B7A3A" aria-hidden="true">V</span><p><strong>Vanessa C.</strong><span>setembro de 2026</span></p><svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8a10 10 0 0 1-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-7.1-5.5c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.8-12.2-9H4.5v5.7A22 22 0 0 0 24 46z"/><path fill="#FBBC05" d="M11.8 28.3a13.2 13.2 0 0 1 0-8.6v-5.7H4.5a22 22 0 0 0 0 20z"/><path fill="#EA4335" d="M24 10.7c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3A22 22 0 0 0 4.5 14l7.3 5.7c1.7-5.2 6.5-9 12.2-9z"/></svg></div>
+            <span class="estrelas" role="img" aria-label="5 de 5 estrelas"><svg aria-hidden="true"><use href="#i-estrela"/></svg><svg aria-hidden="true"><use href="#i-estrela"/></svg><svg aria-hidden="true"><use href="#i-estrela"/></svg><svg aria-hidden="true"><use href="#i-estrela"/></svg><svg aria-hidden="true"><use href="#i-estrela"/></svg></span>
+            <blockquote>“Os personalizados da PGW BRINDES possui uma qualidade surreal, a sublimação sem igual. Fora o atendimento, são super atenciosos um amor de pessoa. Super recomendo!”</blockquote>
+          </li>
+          <li>
+            <div class="dep-autor"><span class="dep-avatar" style="--av:#1D5FC4" aria-hidden="true">R</span><p><strong>Rafael D.</strong><span>dezembro de 2023</span></p><svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8a10 10 0 0 1-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-7.1-5.5c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.8-12.2-9H4.5v5.7A22 22 0 0 0 24 46z"/><path fill="#FBBC05" d="M11.8 28.3a13.2 13.2 0 0 1 0-8.6v-5.7H4.5a22 22 0 0 0 0 20z"/><path fill="#EA4335" d="M24 10.7c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3A22 22 0 0 0 4.5 14l7.3 5.7c1.7-5.2 6.5-9 12.2-9z"/></svg></div>
+            <span class="estrelas" role="img" aria-label="5 de 5 estrelas"><svg aria-hidden="true"><use href="#i-estrela"/></svg><svg aria-hidden="true"><use href="#i-estrela"/></svg><svg aria-hidden="true"><use href="#i-estrela"/></svg><svg aria-hidden="true"><use href="#i-estrela"/></svg><svg aria-hidden="true"><use href="#i-estrela"/></svg></span>
+            <blockquote>“Produtos de qualidade! Atendimento nota 1000! Customizações, ideias e o produto final ficou impressionante! Recomendo e sempre que precisar de brindes, já sei com quem vou comprar! Parabéns!”</blockquote>
+          </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="secao" id="chegar" aria-labelledby="titulo-chegar">
+    <div class="envoltorio">
+      <div class="secao-cabeca" data-revela><h2 id="titulo-chegar">Como chegar</h2></div>
+      <div class="chegar" data-revela>
+        <iframe class="chegar-mapa" title="Mapa da PGW Brindes em Cravinhos" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=PGW%20Brindes%20%26%20Personalizados%2C%20Av.%20Pedro%20Duarte%20Amoroso%2C%20532%2C%20Cravinhos%20-%20SP&amp;z=16&amp;output=embed"></iframe>
+        <div class="chegar-dados">
+          <div><h3>Endereço</h3><p>Av. Pedro Duarte Amoroso, 532<br>ao lado da Praça Itamaraty, Cravinhos (SP)</p></div>
+          <div><h3>WhatsApp</h3><a href="https://wa.me/5516991732180" target="_blank" rel="noopener">(16) 99173-2180</a></div>
+          <div><h3>Instagram</h3><a href="https://www.instagram.com/pgwbrindes" target="_blank" rel="noopener">@pgwbrindes</a></div>
+          <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=PGW%20Brindes%20%26%20Personalizados%2C%20Av.%20Pedro%20Duarte%20Amoroso%2C%20532%2C%20Cravinhos%20-%20SP" target="_blank" rel="noopener">Abrir a rota no mapa</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<main class="pp" id="pagina-produto" hidden></main>
+
+<footer class="rodape">
+  <div class="envoltorio rodape-grade">
+    <a class="rodape-marca" href="#" translate="no">
+      <span class="rodape-nome">PGW</span>
+      <span>Brindes &amp; Personalizados, Cravinhos</span>
+    </a>
+    <p class="redes">
+      <a href="https://www.instagram.com/pgwbrindes" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a>
+    </p>
+  </div>
+</footer>
+
+<a class="flutuante" id="flutuante" href="https://wa.me/5516991732180" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp" title="Conversar no WhatsApp" tabindex="-1">
+  <svg aria-hidden="true"><use href="#i-zap"/></svg>
+</a>
+
+<dialog class="sacola" id="sacola" aria-labelledby="sacola-titulo">
+  <div class="sacola-topo">
+    <h2 id="sacola-titulo">Seu carrinho</h2>
+    <button class="fechar" type="button" data-fechar aria-label="Fechar carrinho"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
+  </div>
+  <div class="sacola-corpo" id="sacola-corpo"></div>
+  <div class="sacola-pe" id="sacola-pe"></div>
+</dialog>
+
+
+<script>
+/* ============================================================
+   DADOS - o que a loja muda fica aqui em cima
+   ============================================================ */
+const WHATSAPP = "5516991732180";
+const LOJA = "Av. Pedro Duarte Amoroso, 532, Cravinhos";
+/* categorias: a figura e uma peca desenhada (arte + cor) ou uma foto */
+const CATEGORIAS = [
+  ["presentes", "Presentes prontos", { foto: "buque-chocolate" }],
+  ["canecas", "Canecas e copos", { foto: "caneca-foto" }],
+  ["garrafas", "Garrafas térmicas", { foto: "garrafas-cores" }],
+  ["vestir", "Camisetas, bolsas e retratos", { foto: "placa-familia" }],
+];
+/* arte: a peca e desenhada na tela e pode levar o nome; cada variacao e nome + cor.
+   sem arte: a variacao e nome + foto (pasta img).
+   gravar: abre o campo opcional; campo: o nome do campo; max: limite de letras. oc: ocasioes.
+   PRECOS E MEDIDAS DE EXEMPLO: trocar pela tabela da loja */
+const v = (n, f, extra = {}) => ({ n, f, ...extra });
+const PRODUTOS = [
+  { id: "caixa-urso", cat: "presentes", oc: ["natal", "namoro"], marca: "Presente montado", nome: "Caixa com urso e chocolates", desc: "Caixa transparente com urso de pelúcia, flores e chocolates, com laço e cartão.", preco: 189.90, rotulo: "Cor", gravar: true, campo: "Mensagem do cartão", max: 60, selo: "Mais pedido", vars: [v("", "caixa-urso")] },
+  { id: "buque", cat: "presentes", oc: ["aniversario", "namoro", "familia"], marca: "Presente montado", nome: "Buquê de chocolates com pelúcia", desc: "Chocolates sortidos e pelúcia, com cartão.", preco: 119.90, rotulo: "Cor", gravar: true, campo: "Mensagem do cartão", max: 60, vars: [v("", "buque-chocolate")] },
+  { id: "urso-love", cat: "presentes", oc: ["namoro", "aniversario"], marca: "Presente montado", nome: "Buquê com urso e caneca", desc: "Urso de pelúcia, chocolates e caneca, montados em buquê com cartão.", preco: 129.90, rotulo: "Cor", gravar: true, campo: "Mensagem do cartão", max: 60, vars: [v("", "urso-love")] },
+  { id: "cesta", cat: "presentes", oc: ["natal", "aniversario", "familia"], marca: "Presente montado", nome: "Cesta com pelúcia e chocolates", desc: "Montada no cesto, com laço e cartão.", preco: 149.90, rotulo: "Cor", gravar: true, campo: "Mensagem do cartão", max: 60, vars: [v("", "cesta")] },
+  { id: "urso-copo", cat: "presentes", oc: ["namoro", "natal"], marca: "Presente montado", nome: "Buquê com urso e copo térmico", desc: "Urso de pelúcia, chocolates e copo térmico decorado, com cartão.", preco: 159.90, rotulo: "Cor", gravar: true, campo: "Mensagem do cartão", max: 60, vars: [v("", "urso-copo")] },
+  { id: "caixa-laco", cat: "presentes", oc: ["natal", "familia"], marca: "Presente montado", nome: "Caixa com urso branco e laço", desc: "Caixa transparente com urso branco, flores e chocolates.", preco: 179.90, rotulo: "Cor", gravar: true, campo: "Mensagem do cartão", max: 60, selo: "Novidade", vars: [v("", "caixa-laco")] },
+  { id: "caneca", cat: "canecas", oc: ["dia", "aniversario"], marca: "Cerâmica 325 ml", nome: "Caneca de cerâmica", desc: "Alça e interior coloridos, em seis cores.", preco: 39.90, rotulo: "Cor", arte: "caneca", gravar: true,
+    vars: [v("Azul", "#2C6FD1"), v("Rosa", "#E86A9C"), v("Verde", "#2FA35A"), v("Amarelo", "#F2C230"), v("Laranja", "#F07A1A"), v("Preto", "#25272D")] },
+  { id: "caneca-magica", cat: "canecas", oc: ["dia", "aniversario"], marca: "Cerâmica 325 ml", nome: "Caneca mágica", desc: "Preta; a arte aparece com bebida quente.", preco: 54.90, rotulo: "Cor", arte: "magica", gravar: true, vars: [v("Preta", "#1F2126")] },
+  { id: "caneca-arte", cat: "canecas", oc: ["familia", "aniversario"], marca: "Arte exclusiva", nome: "Caneca com arte da nossa equipe", desc: "Conte a ideia e a nossa equipe cria a arte da caneca.", preco: 49.90, rotulo: "Cor", gravar: true, campo: "Tema ou ideia da arte", max: 60, vars: [v("", "caneca-foto")] },
+  { id: "copo", cat: "canecas", oc: ["dia", "natal"], marca: "Copo 473 ml", nome: "Copo térmico com tampa e canudo", desc: "Parede dupla, com tampa e canudo.", preco: 69.90, rotulo: "Cor", arte: "copo", gravar: true,
+    vars: [v("Rosa", "#E98AAE"), v("Preto", "#2A2C31"), v("Branco", "#F2F2EF"), v("Verde", "#3E9C5C"), v("Lilás", "#9C87D1")] },
+  { id: "garrafa-alca", cat: "garrafas", oc: ["dia", "natal", "aniversario"], marca: "Garrafa com alça", nome: "Garrafa térmica com alça", desc: "Bebida gelada ou quente por horas, em várias cores na loja.", preco: 79.90, rotulo: "Cor", gravar: true, campo: "Cor e nome, se desejar", max: 40, vars: [v("", "garrafas-cores")] },
+  { id: "garrafa", cat: "garrafas", oc: ["dia", "natal"], marca: "Garrafa 500 ml", nome: "Garrafa térmica 500 ml", desc: "Aço inox, bebida gelada ou quente por horas.", preco: 89.90, rotulo: "Cor", arte: "garrafa", gravar: true,
+    vars: [v("Verde-limão", "#9BCB3B"), v("Rosa", "#F1A9C4"), v("Lilás", "#A693D8"), v("Azul", "#3D7DD8"), v("Preto", "#2A2C31"), v("Branco", "#F2F2EF")] },
+  { id: "garrafa-time", cat: "garrafas", oc: ["aniversario", "dia"], marca: "Garrafa com gravação", nome: "Garrafa térmica do seu time", desc: "Escudo gravado a laser. Diga o time no pedido.", preco: 99.90, rotulo: "Cor", gravar: true, campo: "Time e nome", max: 40, vars: [v("", "garrafa-gravada")] },
+  { id: "camiseta", cat: "vestir", oc: ["dia", "familia"], marca: "Algodão", nome: "Camiseta de algodão", desc: "Do P ao GG, em quatro cores.", rotulo: "Cor", arte: "camiseta", gravar: true, ini: "Azul-marinho",
+    tams: [["P", 39.90], ["M", 39.90], ["G", 39.90], ["GG", 44.90]],
+    vars: [v("Branca", "#F7F7F4"), v("Preta", "#25272D"), v("Azul-marinho", "#1E2F5C"), v("Verde", "#2E8B4E")] },
+  { id: "ecobag", cat: "vestir", oc: ["dia"], marca: "Algodão cru", nome: "Ecobag de algodão", desc: "Sacola de algodão com alça.", preco: 29.90, rotulo: "Estampa", arte: "ecobag", gravar: true,
+    vars: [v("Preta", "#25272D"), v("Verde", "#2E8B4E"), v("Laranja", "#D9601A"), v("Azul", "#1D5FC4")] },
+  { id: "necessaire", cat: "vestir", oc: ["natal", "familia"], marca: "Bolsa", nome: "Bolsa listrada com alças", desc: "Com bolsos transparentes, para viagem e dia a dia.", preco: 94.90, rotulo: "Cor", vars: [v("", "necessaire")] },
+  { id: "placa", cat: "vestir", oc: ["familia", "natal"], marca: "Decoração", nome: "Retrato da família em placa", desc: "Com suporte. A foto vai pelo WhatsApp depois do pedido.", preco: 79.90, rotulo: "Cor", gravar: true, campo: "Nomes ou frase na placa", max: 40, vars: [v("", "placa-familia")] },
+];
+/* letras da gravacao: nome, familia, peso e largura media da letra (para caber na peca) */
+const LETRAS = [["classica", "Clássica", "'Playfair Display', Georgia, serif", "italic 700", .5], ["manuscrita", "Manuscrita", "'Dancing Script', cursive", "700", .42], ["moderna", "Moderna", "'Nunito Sans', sans-serif", "800", .82]];
+/* empresas: preco por unidade a partir de cada quantidade. VALORES DE EXEMPLO */
+const BRINDES = [
+  ["caneca", "Caneca", "canecas", "#2C6FD1", [[10, 32.90], [25, 29.90], [50, 26.90], [100, 23.90]]],
+  ["garrafa", "Garrafa", "garrafas", "#2A2C31", [[10, 74.90], [25, 69.90], [50, 64.90], [100, 59.90]]],
+  ["copo", "Copo térmico", "copos térmicos", "#3E9C5C", [[10, 58.90], [25, 54.90], [50, 49.90], [100, 45.90]]],
+  ["ecobag", "Ecobag", "ecobags", "#1D5FC4", [[10, 22.90], [25, 19.90], [50, 16.90], [100, 14.90]]],
+];
+const $ = (s, el = document) => el.querySelector(s);
+const reduzir = matchMedia("(prefers-reduced-motion: reduce)");
+const fotoP = (n) => `img/${n}.webp`;
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const ler = (k, padrao) => { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : padrao; } catch { return padrao; } };
+const gravar = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} };
+const reais = (v) => v.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+const zap = (texto) => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(texto)}`;
+const porId = (id) => PRODUTOS.find((p) => p.id === id);
+/* com tamanho, o preco e o do tamanho; sem, o do produto */
+const precoDe = (p, t) => p.tams ? p.tams[t ?? 0][1] : p.preco;
+const LETRA = Object.fromEntries(LETRAS.map(([id, n, fam, peso, fator]) => [id, { n, fam, peso, fator }]));
+const rotuloTexto = (p) => p.campo || "Nome";
+/* "Cor: Azul, nome: "Rafaela", letra manuscrita" */
+const detalhe = (p, va, t, txt, est) => [
+  va.n ? `${p.rotulo}: ${va.n}` : "",
+  p.tams && t != null ? `tamanho ${p.tams[t][0]}` : "",
+  p.gravar && txt ? `${rotuloTexto(p).toLowerCase()}: “${txt}”` : "",
+  p.arte && txt && est ? `letra ${LETRA[est].n.toLowerCase()}` : "",
+].filter(Boolean).join(", ");
+
+/* ---------- as pecas desenhadas: o nome entra na peca no tamanho que cabe ---------- */
+const tamanhoTexto = (s, est, larg, max) => Math.max(12, Math.min(max, larg / (LETRA[est].fator * Math.max(s.length, 3))));
+const fonteTexto = (s, est, larg, max) => `${LETRA[est].peso} ${tamanhoTexto(s, est, larg, max).toFixed(1)}px ${LETRA[est].fam}`;
+function gravado(x, y, larg, max, cor, t, est) {
+  const s = t || "";
+  return `<text class="gravado" x="${x}" y="${y}" text-anchor="middle" dominant-baseline="central" fill="${cor}" data-larg="${larg}" data-max="${max}" style="font:${fonteTexto(s, est, larg, max)}">${esc(s)}</text>`;
+}
+function regravar(raiz, t, est) {
+  raiz.querySelectorAll(".gravado").forEach((el) => {
+    const s = t || "";
+    el.textContent = s;
+    el.style.font = fonteTexto(s, est, +el.dataset.larg, +el.dataset.max);
+    
+  });
+}
+/* cor clara pede gravacao escura, e o contrario */
+const clara = (hex) => { const n = parseInt(hex.slice(1), 16), r = n >> 16, g = (n >> 8) & 255, b = n & 255; return (r * 299 + g * 587 + b * 114) / 1000 > 165; };
+const sombra = `<ellipse cx="150" cy="277" rx="92" ry="9" fill="#0B1420" opacity=".2" filter="url(#f-sombra)"/>`;
+const DESENHOS = {
+  caneca: (c, t, est, corpo = "#FBFBF9", tinta = "#1F2433") => `${sombra}
+    <path d="M222 112c52-6 58 92 2 96" fill="none" stroke="${c}" stroke-width="19" stroke-linecap="round"/>
+    <path d="M222 112c52-6 58 92 2 96" fill="none" stroke="url(#g-alca)" stroke-width="19" stroke-linecap="round"/>
+    <path d="M52 78v166c0 16 12 28 28 28h120c16 0 28-12 28-28V78z" fill="${corpo}"/>
+    <path d="M52 78v166c0 16 12 28 28 28h120c16 0 28-12 28-28V78z" fill="url(#g-vol)"/>
+    <ellipse cx="140" cy="78" rx="88" ry="15" fill="#fff"/>
+    <ellipse cx="140" cy="79" rx="81" ry="11" fill="${c}"/><ellipse cx="140" cy="79" rx="81" ry="11" fill="url(#g-fundo)"/>
+    ${gravado(140, 176, 140, 44, tinta, t, est)}`,
+  magica: (c, t, est) => DESENHOS.caneca(c, t, est, c, "#EDE7DC"),
+  garrafa: (c, t, est) => `${sombra}
+    <path d="M122 28c0-9 7-15 15-15h26c8 0 15 6 15 15v30h-56z" fill="#23262C"/><path d="M122 28c0-9 7-15 15-15h26c8 0 15 6 15 15v30h-56z" fill="url(#g-vol)"/>
+    <path d="M178 26c26-2 26 28 0 28" fill="none" stroke="#23262C" stroke-width="7"/>
+    <rect x="118" y="58" width="64" height="12" fill="#C9CED6"/><rect x="118" y="58" width="64" height="12" fill="url(#g-vol)"/>
+    <path d="M118 70c-14 8-20 18-20 32v150c0 12 10 22 22 22h60c12 0 22-10 22-22V102c0-14-6-24-20-32z" fill="${c}"/>
+    <path d="M118 70c-14 8-20 18-20 32v150c0 12 10 22 22 22h60c12 0 22-10 22-22V102c0-14-6-24-20-32z" fill="url(#g-vol)"/>
+    ${gravado(150, 178, 84, 30, clara(c) ? "#3E434D" : "#EEF1F4", t, est)}`,
+  copo: (c, t, est) => `${sombra}
+    <rect x="164" y="6" width="8" height="66" rx="4" fill="#E9E5DC" transform="rotate(9 168 40)"/><rect x="164" y="6" width="3" height="66" rx="1.5" fill="#fff" transform="rotate(9 168 40)"/>
+    <path d="M78 62c0-7 5-11 11-11h122c6 0 11 4 11 11v14H78z" fill="#E7E9EC"/><path d="M78 62c0-7 5-11 11-11h122c6 0 11 4 11 11v14H78z" fill="url(#g-vol)"/>
+    <path d="M84 76h132l-17 186c-1 8-7 13-14 13h-70c-7 0-13-5-14-13z" fill="${c}"/>
+    <path d="M84 76h132l-17 186c-1 8-7 13-14 13h-70c-7 0-13-5-14-13z" fill="url(#g-vol)"/>
+    ${gravado(150, 170, 96, 32, clara(c) ? "#3E434D" : "#F2F4F6", t, est)}`,
+  camiseta: (c, t, est) => `${sombra}
+    <path d="M104 36 56 58 26 118l42 19 14-24v158c0 3 2 5 5 5h126c3 0 5-2 5-5V113l14 24 42-19-30-60-48-22c-7 18-24 28-46 28s-39-10-46-28z" fill="${c}"/>
+    <path d="M104 36 56 58 26 118l42 19 14-24v158c0 3 2 5 5 5h126c3 0 5-2 5-5V113l14 24 42-19-30-60-48-22c-7 18-24 28-46 28s-39-10-46-28z" fill="url(#g-pano)"/>
+    <path d="M104 36c7 18 24 28 46 28s39-10 46-28" fill="none" stroke="#0B1420" stroke-opacity=".2" stroke-width="7"/>
+    ${gravado(150, 150, 104, 32, clara(c) ? "#1F2433" : "#FFFFFF", t, est)}`,
+  ecobag: (c, t, est) => `${sombra}
+    <path d="M110 100V64a40 40 0 0 1 80 0v36" fill="none" stroke="#D3C4A2" stroke-width="10"/>
+    <path d="M62 94h176l-8 180H70z" fill="#F0E7D2"/><path d="M62 94h176l-8 180H70z" fill="url(#g-pano)"/>
+    <path d="M62 94h176v9H62z" fill="#0B1420" opacity=".05"/>
+    ${gravado(150, 190, 128, 40, c, t, est)}`,
+};
+const desenho = (arte, cor, t, est, nome = "") => `<svg viewBox="0 0 300 300" role="img" aria-label="${esc(nome)}">${DESENHOS[arte](cor, t, est)}</svg>`;
+/* a figura do produto: desenho com o nome, ou a foto */
+const figura = (p, k, t, est) => p.arte
+  ? desenho(p.arte, p.vars[k].f, t, est || "classica", `${p.nome}${p.vars[k].n ? `, ${p.rotulo.toLowerCase()} ${p.vars[k].n}` : ""}${t ? `, com “${t}”` : ""}`)
+  : `<img src="${fotoP(p.vars[k].f)}" width="600" height="600" alt="" loading="lazy">`;
+
+/* o nome que a pessoa escreveu no topo vale para a vitrine inteira */
+const pg = { txt: "", est: "classica" };
+
+/* ---------- movimento padrao: revela cada bloco uma vez, ao entrar na tela ---------- */
+const observador = new IntersectionObserver((itens) => {
+  itens.forEach((it) => { if (it.isIntersecting) { it.target.classList.add("visto"); observador.unobserve(it.target); } });
+}, { rootMargin: "0px 0px -8% 0px", threshold: .12 });
+document.querySelectorAll("[data-revela]").forEach((el) => observador.observe(el));
+
+/* troca de conteudo: some e reaparece rapido, para mostrar o que mudou */
+function piscar(el) {
+  if (reduzir.matches || !el || !el.animate) return;
+  el.animate([{ opacity: .35, transform: "translateY(3px)" }, { opacity: 1, transform: "none" }], { duration: 260, easing: "cubic-bezier(0.23, 1, 0.32, 1)" });
+}
+
+/* ---------- categorias, filtros e vitrine ---------- */
+const tem = (va) => !va.esgotado;
+const varInicial = (p) => { const k = p.vars.findIndex((va) => va.n === p.ini && tem(va)); return k >= 0 ? k : Math.max(0, p.vars.findIndex(tem)); };
+const precoCartao = (p) => { const ps = p.tams ? p.tams.map(([, preco]) => preco) : [p.preco], min = Math.min(...ps); return min < Math.max(...ps) ? `<small>a partir de</small> ${reais(min)}` : reais(min); };
+const iconeTodos = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h6v6H4zM14 5h6v6h-6zM4 15h6v6H4zM14 15h6v6h-6z"/></svg>`;
+const lapis = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16zM13.5 6.5l4 4"/></svg>`;
+$("#categorias").innerHTML = [["todos", "Todos"], ...CATEGORIAS].map(([id, nome, f]) => `<button class="categoria${f ? "" : " categoria-todos"}" type="button" data-cat="${id}" aria-pressed="${id === "todos"}"><span aria-hidden="true">${!f ? iconeTodos : f.arte ? `<svg viewBox="0 0 300 300">${DESENHOS[f.arte](f.cor, "", "classica").replace(/<text[^]*?<\/text>/, "")}</svg>` : `<img src="${fotoP(f.foto)}" alt="" loading="lazy" style="border-radius:8px;object-fit:cover">`}</span><span>${nome}</span></button>`).join("");
+
+const cartao = (p, nivel = 4) => {
+  const k = varInicial(p);
+  return `
+  <li class="produto">
+    <a class="produto-foto" href="?produto=${p.id}" data-abrir="${p.id}" tabindex="-1" aria-hidden="true">${figura(p, k, pg.txt, pg.est)}${p.selo ? `<span class="selo">${p.selo}</span>` : ""}</a>
+    <div class="produto-info">
+      <h${nivel} class="produto-nome"><a href="?produto=${p.id}" data-abrir="${p.id}">${esc(p.nome)}</a></h${nivel}>
+      <p class="produto-preco">${precoCartao(p)}</p>
+      <button class="btn btn-linha" type="button" data-abrir="${p.id}" aria-label="Comprar ${esc(p.nome)}">Comprar</button>
+    </div>
+  </li>`;
+};
+
+/* uma chamada so para a gravacao, no tamanho de um cartao, na fileira das garrafas */
+const fimFileira = (id) => id !== "garrafas" ? "" : `<li><a class="promo" href="?produto=placa" data-abrir="placa"><img src="img/placa-familia.webp" width="800" height="919" alt="Placa redonda com a foto de uma família" loading="lazy"><span class="promo-texto"><span class="promo-titulo">Quer com nome ou foto?</span><span>Gravamos e imprimimos aqui na loja.</span></span></a></li>`;
+$("#vitrine").innerHTML = CATEGORIAS.map(([id, nome]) => {
+  const lista = PRODUTOS.filter((p) => p.cat === id);
+  return `<li class="prateleira" data-cat="${id}">
+    <div class="prateleira-topo">
+      <h3 id="fileira-${id}">${nome}</h3>
+      <button class="ver-tudo" type="button" data-ver="${id}">Ver tudo (${lista.length})</button>
+      <div class="prateleira-setas">
+        <button class="seta" type="button" data-passo="-1" aria-label="Voltar em ${nome}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="seta" type="button" data-passo="1" aria-label="Mais em ${nome}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+    <ul class="fileira" aria-labelledby="fileira-${id}">${lista.map((p) => cartao(p)).join("")}${fimFileira(id, lista.length)}</ul>
+  </li>`;
+}).join("");
+
+function filtrar(cat) {
+  document.querySelectorAll("[data-cat][aria-pressed]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.cat === cat)));
+  document.querySelectorAll(".prateleira").forEach((li) => li.classList.toggle("some", cat !== "todos" && li.dataset.cat !== cat));
+  $("#vitrine").classList.toggle("filtrada", cat !== "todos");
+  setas();
+  piscar($("#vitrine"));
+}
+const rolar = (el, block = "start") => el.scrollIntoView({ behavior: reduzir.matches ? "auto" : "smooth", block });
+$("#categorias").addEventListener("click", (e) => { const b = e.target.closest("[data-cat]"); if (b) filtrar(b.dataset.cat); });
+$("#vitrine").addEventListener("click", (e) => {
+  const ver = e.target.closest("[data-ver]");
+  if (ver) { filtrar(ver.dataset.ver); rolar($("#categorias")); return; }
+  const seta = e.target.closest("[data-passo]"); if (!seta) return;
+  const fileira = $(".fileira", seta.closest(".prateleira"));
+  fileira.scrollBy({ left: seta.dataset.passo * fileira.clientWidth, behavior: reduzir.matches ? "auto" : "smooth" });
+});
+/* setas so aparecem quando a fileira passa da tela; apagam nas pontas */
+function setas() {
+  document.querySelectorAll(".prateleira").forEach((pr) => {
+    const f = $(".fileira", pr), [ant, prox] = pr.querySelectorAll("[data-passo]");
+    const sobra = f.scrollWidth - f.clientWidth;
+    $(".prateleira-setas", pr).hidden = sobra < 2;
+    ant.disabled = f.scrollLeft < 2;
+    prox.disabled = f.scrollLeft > sobra - 2;
+  });
+}
+document.querySelectorAll(".fileira").forEach((f) => f.addEventListener("scroll", setas, { passive: true }));
+addEventListener("resize", setas);
+setas();
+
+const radio = (nome, valor, marcado, conteudo, cls, extra = "") => `<label class="${cls}"${extra}><input type="radio" name="${nome}" value="${valor}"${marcado ? " checked" : ""}>${conteudo}</label>`;
+const miniatura = (arte, cor) => `<svg viewBox="0 0 300 300" aria-hidden="true">${DESENHOS[arte](cor, "", "classica").replace(/<text[^]*?<\/text>/, "")}</svg>`;
+
+
+/* ---------- pagina do produto ---------- */
+const TITULO = document.title;
+const pp = $("#pagina-produto");
+let ppP = null, ppK = 0, ppT = 0, ppQtd = 1, ppTxt = "", ppEst = "classica";
+/* ?produto=caneca&cor=Rosa, ?produto=camiseta&cor=Preta&tamanho=g */
+const chaveVar = (p) => (p.rotulo || "opcao").toLowerCase();
+const urlProduto = (p, k, t) => `?produto=${p.id}${p.vars.length > 1 ? `&${chaveVar(p)}=${encodeURIComponent(p.vars[k].n)}` : ""}${p.tams?.length > 1 ? `&tamanho=${p.tams[t][0].toLowerCase()}` : ""}`;
+const varDaUrl = (p, q) => { const k = p.vars.findIndex((va) => va.n === q.get(chaveVar(p))); return k >= 0 ? k : undefined; };
+const tamDaUrl = (p, q) => { const t = p.tams ? p.tams.findIndex(([n]) => n.toLowerCase() === q.get("tamanho")) : -1; return t >= 0 ? t : undefined; };
+const nomeCat = (id) => CATEGORIAS.find((c) => c[0] === id)[1];
+const naHora = (p) => p.arte && (p.cat === "canecas" || p.cat === "garrafas");
+const BOLINHAS = `<span class="bolinhas" aria-hidden="true"><i></i><i></i><i></i></span>`;
+
+function escolhaPagina(p) {
+  let html = "";
+  if (p.vars.length > 1) {
+    const opcoes = p.arte
+      ? `<div class="cores">${p.vars.map((va, i) => `<label class="cor" style="--c:${va.f}" title="${esc(va.n)}"><input type="radio" name="pp-var" value="${i}" aria-label="${esc(va.n)}${tem(va) ? "" : ", sem estoque"}"${i === ppK ? " checked" : ""}${tem(va) ? "" : " disabled"}><span></span></label>`).join("")}</div>`
+      : `<div class="opcoes">${p.vars.map((va, i) => `<label class="opcao"><input type="radio" name="pp-var" value="${i}"${i === ppK ? " checked" : ""}${tem(va) ? "" : " disabled"}><span>${esc(va.n)}${tem(va) ? "" : ", sem estoque"}</span></label>`).join("")}</div>`;
+    html += `<fieldset class="variacao"><legend>${p.rotulo}: <strong id="pp-var-nome">${esc(p.vars[ppK].n)}</strong></legend>${opcoes}</fieldset>`;
+  }
+  if (p.tams) {
+    const opcoes = p.tams.map(([n], i) => `<label class="opcao"><input type="radio" name="pp-tam" value="${i}"${i === ppT ? " checked" : ""}><span>${n}</span></label>`).join("");
+    html += `<fieldset class="variacao"><legend>Tamanho: <strong id="pp-tam-nome">${p.tams[ppT][0]}</strong></legend><div class="opcoes">${opcoes}</div></fieldset>`;
+  }
+  if (p.gravar) {
+    const max = p.max || 18;
+    html += `<details class="pp-nome"${ppTxt ? " open" : ""}><summary>${p.arte ? "Adicionar nome à peça" : `Adicionar ${rotuloTexto(p).toLowerCase()}`}</summary><div class="pp-nome-corpo">`;
+    html += `<label class="campo campo-largo"><span>${rotuloTexto(p)} <small>(opcional, até ${max} letras)</small></span><input id="pp-txt" maxlength="${max}" value="${esc(ppTxt)}" autocomplete="off"${p.arte ? ' placeholder="Ex.: Rafaela"' : ""}></label>`;
+    if (p.arte) html += `<fieldset class="variacao"><legend>Letra</legend><div class="letras">${LETRAS.map(([id, n, fam, peso]) => `<label class="letra"><input type="radio" name="pp-est" value="${id}"${id === ppEst ? " checked" : ""}><span style="font:${peso} 1.1rem ${fam}">${n}</span></label>`).join("")}</div></fieldset>`;
+    html += "</div></details>";
+  }
+  return html;
+}
+const comoPersonalizar = (p) => p.arte
+  ? `<p>Escreva ${rotuloTexto(p).toLowerCase()} com até ${p.max || 18} letras e escolha a letra: clássica, manuscrita ou moderna. A prévia mostra como fica na peça.</p><p>A cor da gravação acompanha a peça: escura nas cores claras e clara nas cores escuras.</p><p>Antes de gravar, conferimos o texto com você pelo WhatsApp.</p>`
+  : `<p>Escreva ${rotuloTexto(p).toLowerCase()} no campo ou deixe para depois. Após o pedido, combinamos a arte pelo WhatsApp e enviamos a prévia para você aprovar.</p>`;
+
+function desenharProduto() {
+  const p = ppP, sem = p.vars.filter((va) => !tem(va)).length;
+  const mesma = PRODUTOS.filter((o) => o.cat === p.cat && o.id !== p.id);
+  const mais = [...mesma, ...PRODUTOS.filter((o) => o.cat !== p.cat)].slice(0, 6);
+  const detalhes = [["Modelo", p.marca], ["Categoria", nomeCat(p.cat)],
+    p.vars.length > 1 && ["Cores", `${p.vars.length - sem} disponíveis${sem ? ` (${sem} sem estoque no momento)` : ""}`],
+    p.tams && ["Tamanhos", p.tams.map(([n]) => n).join(", ")],
+    p.gravar && [rotuloTexto(p), `Opcional, até ${p.max || 18} letras`]].filter(Boolean);
+  const empresa = BRINDES.some((b) => b[0] === p.id);
+  pp.innerHTML = `
+  <div class="envoltorio">
+    <nav class="trilha" aria-label="Você está em"><ol>
+      <li><a href="#">Início</a></li>
+      <li><a href="#produtos" data-ir="${p.cat}">${nomeCat(p.cat)}</a></li>
+      <li><span aria-current="page">${esc(p.nome)}</span></li>
+    </ol></nav>
+    <div class="pp-grade">
+      <div class="pp-galeria">
+        <figure class="pp-foto${p.arte ? " mesa" : ""}" id="pp-foto"></figure>
+        <p class="pp-foto-nota">${p.arte ? "Imagem ilustrativa da peça." : "Foto de um pedido preparado pela loja."}</p>
+      </div>
+      <div class="pp-info">
+        <p class="produto-marca">${esc(p.marca)}</p>
+        <h1 id="pp-titulo" tabindex="-1">${esc(p.nome)}</h1>
+        <a class="pp-nota" href="#avaliacoes"><span class="estrelas" aria-hidden="true">${'<svg><use href="#i-estrela"/></svg>'.repeat(5)}</span><span>Loja com nota 5,0 no Google, em 144 avaliações</span></a>
+        <div class="pp-preco"><strong id="pp-preco"></strong><span id="pp-parcela"></span></div>
+        <p class="pp-desc">${esc(p.desc)}</p>
+        ${escolhaPagina(p)}
+        <div class="pp-compra">
+          <div class="qtd" role="group" aria-label="Quantidade"><button type="button" data-pp-qtd="-1" aria-label="Diminuir quantidade">−</button><output id="pp-qtd" aria-live="polite">1</output><button type="button" data-pp-qtd="1" aria-label="Aumentar quantidade">+</button></div>
+          <button class="btn" type="button" id="pp-add" data-pp-add></button>
+          <button class="btn btn-linha" type="button" id="pp-comprar">Comprar agora</button>
+        </div>
+        <p class="pp-status" id="pp-status" role="status"></p>
+        ${empresa ? `<p class="pp-empresas">Para empresas, a partir de 10 unidades: <a href="#empresas">simular o preço com o logo</a></p>` : ""}
+        <section class="pp-receber" aria-labelledby="pp-receber-titulo">
+          <h2 id="pp-receber-titulo">Receber e pagar</h2>
+          <form class="pp-cep" id="pp-cep"><label class="so-leitor" for="pp-cep-campo">CEP</label><input id="pp-cep-campo" inputmode="numeric" autocomplete="postal-code" maxlength="9" placeholder="Informe o seu CEP"><button class="btn" type="submit">Consultar</button></form>
+          <p class="pp-cep-res" id="pp-cep-res" role="status"></p>
+          <ul class="pp-modos">
+            <li><span><strong>${naHora(p) ? "Gravação na hora" : "Prazo de produção"}</strong>${naHora(p) ? "Para canecas, garrafas e copos com nome" : "Combinado pelo WhatsApp depois do pedido"}</span></li>
+            <li><span><strong>Retirada na loja, sem custo</strong>${esc(LOJA)}</span></li>
+            <li><span><strong>Entrega em Cravinhos</strong>A taxa é informada pelo WhatsApp</span></li>
+            <li><span><strong>Pix ou cartão em até 4x sem juros</strong>Dinheiro somente na retirada</span></li>
+          </ul>
+          <a class="pp-zap" href="${zap(`Olá! Vim pelo site e tenho uma dúvida sobre ${p.nome}.`)}" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Dúvidas sobre este produto? Fale conosco</a>
+        </section>
+      </div>
+    </div>
+    <div class="pp-sobre">
+      <details open><summary>Descrição</summary><div><p>${esc(p.desc)}</p><p>Preparado e entregue pela PGW Brindes, em Cravinhos.</p></div></details>
+      ${p.gravar ? `<details><summary>Como pedir com nome ou mensagem</summary><div>${comoPersonalizar(p)}</div></details>` : ""}
+      <details><summary>Detalhes do produto</summary><div><dl class="pp-detalhes">${detalhes.map(([t, d]) => `<dt>${t}</dt><dd>${esc(d)}</dd>`).join("")}</dl></div></details>
+    </div>
+  </div>
+  <section class="pp-mais secao-ceu" aria-labelledby="pp-mais-titulo">
+    <div class="envoltorio prateleira">
+      <div class="prateleira-topo">
+        <h2 id="pp-mais-titulo">${mais.some((o) => o.cat !== p.cat) ? "Você também pode gostar" : `Mais em ${nomeCat(p.cat).toLowerCase()}`}</h2>
+        <div class="prateleira-setas">
+          <button class="seta" type="button" data-passo="-1" aria-label="Voltar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button class="seta" type="button" data-passo="1" aria-label="Mais produtos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+      </div>
+      <ul class="fileira">${mais.map((o) => cartao(o, 3)).join("")}</ul>
+    </div>
+  </section>
+  <div class="pp-barra" id="pp-barra" inert><strong id="pp-barra-preco"></strong><button class="btn" type="button" id="pp-barra-add" data-pp-add></button></div>`;
+  $(".pp-mais .fileira", pp).addEventListener("scroll", setas, { passive: true });
+  mostrarOpcao();
+  barraCompra();
+  setas();
+}
+/* a barra de baixo so aparece no celular, depois que o botao principal passou para baixo do topo */
+function barraCompra() {
+  const barra = $("#pp-barra"); if (!barra || pp.hidden) return;
+  const ver = $("#pp-add").getBoundingClientRect().bottom < $(".topo").getBoundingClientRect().bottom;
+  if (barra.classList.contains("visivel") === ver) return;
+  barra.classList.toggle("visivel", ver); barra.inert = !ver;
+}
+addEventListener("scroll", barraCompra, { passive: true });
+
+/* trocar a cor redesenha a peca; trocar o tamanho troca o preco */
+function mostrarOpcao() {
+  const p = ppP, va = p.vars[ppK], preco = precoDe(p, ppT), foto = $("#pp-foto");
+  foto.innerHTML = figura(p, ppK, ppTxt.trim(), ppEst) + (p.selo ? `<span class="selo">${p.selo}</span>` : "") + "";
+  const img = $("img", foto); if (img) { img.alt = p.nome; img.removeAttribute("loading"); }
+  $("#pp-preco").textContent = reais(preco);
+  $("#pp-barra-preco").textContent = reais(preco);
+  $("#pp-parcela").textContent = preco >= 80 ? `à vista no Pix ou em até 4x de ${reais(preco / 4)} sem juros no cartão` : "à vista no Pix ou no cartão";
+  const nome = $("#pp-var-nome"); if (nome) nome.textContent = va.n;
+  const tam = $("#pp-tam-nome"); if (tam) tam.textContent = p.tams[ppT][0];
+  $("#pp-status").textContent = "";
+  ["#pp-add", "#pp-barra-add"].forEach((sel) => {
+    const b = $(sel); clearTimeout(b._t); b.classList.remove("adicionado");
+    b.disabled = !tem(va);
+    b.innerHTML = tem(va) ? `<svg aria-hidden="true"><use href="#i-sacola"/></svg>Adicionar ao carrinho` : "Sem estoque";
+  });
+  $("#pp-comprar").disabled = !tem(va);
+}
+
+function modoProduto(ligar) {
+  [".banners, .capa", ".fita", "#conteudo"].forEach((sel) => { $(sel).hidden = ligar; });
+  pp.hidden = !ligar;
+}
+function abrirProduto(id, k, empurrar = true, t) {
+  const p = porId(id); if (!p) return;
+  ppP = p; ppK = k ?? varInicial(p); ppT = p.tams ? (t ?? 0) : 0; ppQtd = 1;
+  /* a peca desenhada ja abre com o nome escrito no topo; o cartao e a placa comecam em branco */
+  ppTxt = p.arte ? pg.txt.trim() : ""; ppEst = pg.est;
+  if (empurrar) {
+    /* guarda onde a pessoa estava na vitrine, para o voltar devolver ao mesmo ponto */
+    if (pp.hidden) history.replaceState({ ...history.state, rolagem: scrollY }, "");
+    history.pushState({ produto: id }, "", urlProduto(p, ppK, ppT));
+  }
+  desenharProduto();
+  modoProduto(true);
+  document.title = `${p.nome} | PGW Brindes`;
+  scrollTo({ top: 0, behavior: "instant" });
+  $("#pp-titulo").focus({ preventScroll: true });
+}
+function voltarLoja(rolagem) {
+  if (pp.hidden) return;
+  modoProduto(false); ppP = null; pp.innerHTML = "";
+  document.title = TITULO;
+  setas(); mostrarFlutuante();
+  if (rolagem != null) scrollTo({ top: rolagem, behavior: "instant" });
+}
+addEventListener("popstate", (e) => {
+  const q = new URLSearchParams(location.search), p = porId(q.get("produto"));
+  if (p) { abrirProduto(p.id, varDaUrl(p, q), false, tamDaUrl(p, q)); return; }
+  voltarLoja(e.state?.rolagem ?? 0);
+});
+/* links internos (#produtos, #empresas, logo) dentro da pagina do produto voltam para a vitrine */
+document.addEventListener("click", (e) => {
+  const a = e.target.closest('a[href^="#"]');
+  if (!a || pp.hidden || a.closest("#sacola")) return;
+  e.preventDefault();
+  const alvo = a.getAttribute("href");
+  history.pushState(null, "", location.pathname + (alvo.length > 1 ? alvo : ""));
+  voltarLoja();
+  const el = alvo.length > 1 && document.querySelector(alvo);
+  if (el) el.scrollIntoView({ behavior: "instant" }); else scrollTo({ top: 0, behavior: "instant" });
+}, true);
+
+pp.addEventListener("change", (e) => {
+  if (e.target.name === "pp-tam") { ppT = +e.target.value; mostrarOpcao(); piscar($("#pp-preco")); }
+  else if (e.target.name === "pp-var") { ppK = +e.target.value; mostrarOpcao(); }
+  else if (e.target.name === "pp-est") { ppEst = e.target.value; regravar($("#pp-foto"), ppTxt.trim(), ppEst); return; }
+  else return;
+  history.replaceState(history.state, "", urlProduto(ppP, ppK, ppT));
+});
+pp.addEventListener("input", (e) => {
+  if (e.target.id === "pp-txt") { ppTxt = e.target.value; regravar($("#pp-foto"), ppTxt.trim(), ppEst); $("#pp-status").textContent = ""; }
+  if (e.target.id === "pp-cep-campo") e.target.value = e.target.value.replace(/\D/g, "").replace(/^(\d{5})(\d)/, "$1-$2").slice(0, 9);
+});
+pp.addEventListener("click", (e) => {
+  const q = e.target.closest("[data-pp-qtd]");
+  if (q) { ppQtd = Math.min(20, Math.max(1, ppQtd + +q.dataset.ppQtd)); $("#pp-qtd").textContent = ppQtd; return; }
+  const add = e.target.closest("[data-pp-add]");
+  if (add && !add.disabled) {
+    const txt = ppTxt.trim();
+    adicionar(ppP.id, ppK, ppP.tams ? ppT : undefined, ppQtd, txt, ppEst);
+    $("#pp-status").innerHTML = `${ppQtd > 1 ? `${ppQtd} unidades no carrinho` : "No carrinho"}${txt ? ` com “${esc(txt)}”` : ""}. <button class="ver-sacola" type="button" data-ver-sacola>Ver o carrinho</button>`;
+    confirmar(add); return;
+  }
+  if (e.target.closest("#pp-comprar")) { adicionar(ppP.id, ppK, ppP.tams ? ppT : undefined, ppQtd, ppTxt.trim(), ppEst); abrirSacola(); return; }
+  if (e.target.closest("[data-ver-sacola]")) { abrirSacola(); return; }
+  const seta = e.target.closest("[data-passo]");
+  if (seta) { const f = $(".fileira", seta.closest(".prateleira")); f.scrollBy({ left: seta.dataset.passo * f.clientWidth, behavior: reduzir.matches ? "auto" : "smooth" }); }
+});
+/* lupa da foto (as pecas desenhadas nao precisam) */
+pp.addEventListener("pointermove", (e) => {
+  const f = e.target.closest("#pp-foto"); if (!f || e.pointerType !== "mouse" || !$("img", f)) return;
+  const r = f.getBoundingClientRect();
+  f.style.setProperty("--zx", `${((e.clientX - r.left) / r.width) * 100}%`);
+  f.style.setProperty("--zy", `${((e.clientY - r.top) / r.height) * 100}%`);
+  f.classList.add("zoom");
+});
+pp.addEventListener("pointerout", (e) => { const f = e.target.closest("#pp-foto"); if (f && !f.contains(e.relatedTarget)) f.classList.remove("zoom"); });
+/* consulta pelo CEP: a entrega e so em Cravinhos */
+pp.addEventListener("submit", async (e) => {
+  if (e.target.id !== "pp-cep") return;
+  e.preventDefault();
+  const n = $("#pp-cep-campo").value.replace(/\D/g, ""), res = $("#pp-cep-res");
+  if (n.length !== 8) { res.textContent = "Informe os 8 números do CEP."; return; }
+  res.textContent = "Consultando…";
+  try {
+    const d = await (await fetch(`https://viacep.com.br/ws/${n}/json/`)).json();
+    if (d.erro) { res.textContent = "CEP não encontrado. Confira os números."; return; }
+    if (d.localidade.toLowerCase() === "cravinhos") {
+      /* o carrinho ja abre com a entrega e o endereco preenchidos */
+      Object.assign(ck, { receber: "entrega", cep: `${n.slice(0, 5)}-${n.slice(5)}`, rua: d.logradouro || ck.rua, bairro: d.bairro || ck.bairro, cidade: `${d.localidade} (${d.uf})` }); ultimoCep = n;
+      res.innerHTML = `<strong>Entregamos no seu endereço${d.logradouro ? `, ${esc(d.logradouro)}` : ""}.</strong> A taxa é informada pela nossa equipe no WhatsApp. Se preferir, retire na loja sem custo.`;
+    } else res.innerHTML = `<strong>${esc(d.localidade)} (${esc(d.uf)}):</strong> a entrega é feita em Cravinhos. Para outras cidades, fale com a nossa equipe pelo WhatsApp ou retire o pedido na loja.`;
+    piscar(res);
+  } catch { res.textContent = "Não foi possível consultar agora. Tente de novo em instantes."; }
+});
+
+/* ---------- carrinho ---------- */
+let itens = ler("pgw-carrinho-1", []).filter((i) => { const va = porId(i.id)?.vars[i.v]; return va && tem(va); });
+const ck = { embalar: false, receber: "loja", pagamento: "Pix", nome: "", cep: "", rua: "", numero: "", bairro: "", cidade: "", compl: "" };
+const produtoDe = (i) => porId(i.id);
+const varDe = (i) => produtoDe(i).vars[i.v];
+const precoItem = (i) => precoDe(produtoDe(i), i.t);
+function salvar() { gravar("pgw-carrinho-1", itens); contar(); }
+function contar() {
+  const n = itens.reduce((s, i) => s + i.qtd, 0);
+  $("#sacola-conta").textContent = n;
+  $("#sacola-sr").textContent = n === 1 ? "1 item no carrinho" : `${n} itens no carrinho`;
+}
+/* o mesmo produto com outro nome e outra linha do carrinho */
+function adicionar(id, k, t, qtd = 1, txt = "", est = "classica") {
+  const p = porId(id), tam = p.tams ? (t ?? 0) : undefined, e = p.arte ? est : undefined;
+  const achado = itens.find((i) => i.id === id && i.v === k && i.t === tam && i.txt === txt && i.est === e);
+  if (achado) achado.qtd += qtd; else itens.push({ id, v: k, t: tam, qtd, txt, est: e });
+  salvar();
+  piscar($("#abrir-sacola"));
+}
+/* o botao confirma o que aconteceu e volta ao normal */
+function confirmar(b) {
+  const texto = b.innerHTML;
+  b.classList.add("adicionado");
+  b.textContent = "No carrinho";
+  clearTimeout(b._t);
+  b._t = setTimeout(() => { b.classList.remove("adicionado"); b.innerHTML = texto; }, 1400);
+}
+document.addEventListener("click", (e) => {
+  const abrir = e.target.closest("[data-abrir]");
+  /* ctrl/cmd + clique abre o produto em outra aba, como qualquer link */
+  if (abrir) { if (e.ctrlKey || e.metaKey || e.shiftKey || e.button) return; e.preventDefault(); abrirProduto(abrir.dataset.abrir, abrir.dataset.var ? +abrir.dataset.var : undefined); return; }
+  const ir = e.target.closest("[data-ir]");
+  if (ir) { filtrar(ir.dataset.ir); rolar($("#categorias")); }
+});
+
+const sacola = $("#sacola");
+let sacolaFecha;
+function abrirSacola() {
+  clearTimeout(sacolaFecha);
+  desenharSacola();
+  if (!sacola.open) sacola.showModal();
+  requestAnimationFrame(() => requestAnimationFrame(() => sacola.classList.add("aberta")));
+}
+function fecharSacola() {
+  sacola.classList.remove("aberta");
+  parar();
+  if (etapa !== "sacola") { etapa = "sacola"; pedido = null; }
+  sacolaFecha = setTimeout(() => sacola.close(), reduzir.matches ? 200 : 340);
+}
+$("#abrir-sacola").addEventListener("click", abrirSacola);
+sacola.addEventListener("cancel", (e) => { e.preventDefault(); fecharSacola(); });
+sacola.addEventListener("click", (e) => {
+  if (e.target === sacola || e.target.closest("[data-fechar]")) { fecharSacola(); return; }
+  if (e.target.closest("#pagar")) { pagar(e.target.closest("#pagar")); return; }
+  if (e.target.closest("#voltar")) { parar(); etapa = "sacola"; desenharSacola(); return; }
+  const copiar = e.target.closest("#copiar");
+  if (copiar) {
+    const campoPix = copiar.previousElementSibling;
+    (navigator.clipboard ? navigator.clipboard.writeText(campoPix.value) : Promise.reject()).catch(() => { campoPix.select(); document.execCommand("copy"); });
+    copiar.textContent = "Copiado"; depois(1600, () => { copiar.textContent = "Copiar"; });
+    return;
+  }
+  const b = e.target.closest("button[data-acao]"); if (!b) return;
+  const k = +b.dataset.i, i = itens[k];
+  if (b.dataset.acao === "mais") i.qtd++;
+  if (b.dataset.acao === "menos") i.qtd = Math.max(1, i.qtd - 1);
+  if (b.dataset.acao === "remover") itens.splice(k, 1);
+  salvar();
+  desenharSacola(b.dataset.acao === "remover" ? null : `button[data-acao="${b.dataset.acao}"][data-i="${k}"]`);
+});
+
+/* pagamento simulado: nada e cobrado nem enviado; os dados do cartao ficam so na tela */
+let etapa = "sacola", pedido = null, timers = [];
+const pagCartao = { numero: "", nome: "", validade: "", cvv: "", parcelas: "1" };
+const totalSacola = () => itens.reduce((t, i) => t + precoItem(i) * i.qtd, 0);
+const parar = () => { timers.forEach(clearTimeout); timers = []; };
+const depois = (ms, fn) => timers.push(setTimeout(fn, ms));
+const comEndereco = () => ck.receber !== "loja";
+
+const escolha = (nome, valor, titulo, det) => `<label class="escolha"><input type="radio" name="${nome}" value="${valor}"${ck[nome] === valor ? " checked" : ""}><strong>${titulo}</strong><small>${det}</small></label>`;
+const pilula = (nome, valor, desligada = false) => `<label class="pilula"><input type="radio" name="${nome}" value="${valor}"${ck[nome] === valor ? " checked" : ""}${desligada ? " disabled" : ""}><span>${valor}</span></label>`;
+const campo = (k, rotulo, attrs = "", largo = false) => `<label class="campo${largo ? " campo-largo" : ""}"><span>${rotulo}</span><input data-k="${k}" value="${esc(ck[k])}" ${attrs}></label>`;
+const campoCartao = (k, rotulo, attrs = "", largo = false) => `<label class="campo${largo ? " campo-largo" : ""}"><span>${rotulo}</span><input data-c="${k}" value="${esc(pagCartao[k])}" autocomplete="off" ${attrs}></label>`;
+const vazioIcone = `<svg viewBox="0 0 80 64" aria-hidden="true"><use href="#i-caixa"/></svg>`;
+
+function desenharSacola(focar) {
+  const corpo = $("#sacola-corpo"), pe = $("#sacola-pe");
+  if (etapa === "pix") return desenharPix();
+  if (etapa === "aprovado") return desenharAprovado();
+  if (!itens.length) {
+    corpo.innerHTML = `<div class="vazia">${vazioIcone}<p>Seu carrinho está vazio.</p><a class="btn btn-linha" href="#produtos" data-fechar>Ver os presentes</a></div>`;
+    pe.innerHTML = "";
+    return;
+  }
+  if (ck.receber !== "loja" && ck.pagamento === "Dinheiro") ck.pagamento = "Pix";
+  corpo.innerHTML = `
+    <ul class="itens">${itens.map((i, k) => { const p = produtoDe(i), va = varDe(i), d = detalhe(p, va, i.t, i.txt, i.est); return `
+      <li class="item">
+        <span class="item-fig${p.arte ? " mesa" : ""}">${figura(p, i.v, i.txt, i.est)}</span>
+        <h3>${esc(p.nome)}</h3>
+        ${d ? `<p class="item-var">${esc(d)}</p>` : ""}
+        <div class="item-linha">
+          <div class="qtd"><button type="button" data-acao="menos" data-i="${k}" aria-label="Diminuir quantidade">−</button><output aria-live="polite">${i.qtd}</output><button type="button" data-acao="mais" data-i="${k}" aria-label="Aumentar quantidade">+</button></div>
+          <strong class="item-preco">${reais(precoItem(i) * i.qtd)}</strong>
+          <button class="remover" type="button" data-acao="remover" data-i="${k}">Remover</button>
+        </div>
+      </li>`; }).join("")}</ul>
+    <label class="embalar"><input type="checkbox" name="embalar"${ck.embalar ? " checked" : ""}><strong>É para presente: quero embalagem</strong><small>A loja confirma pelo WhatsApp.</small></label>
+    <fieldset class="bloco">
+      <legend>Como você quer receber</legend>
+      <div class="escolhas">
+        ${escolha("receber", "loja", "Retirar na loja", esc(LOJA))}
+        ${escolha("receber", "entrega", "Entrega em Cravinhos", "A taxa é informada pelo WhatsApp")}
+      </div>
+    </fieldset>
+    <div class="campos" id="endereco"${comEndereco() ? "" : " hidden"}>
+      ${campo("cep", "CEP <small>(preenche a rua)</small>", 'inputmode="numeric" autocomplete="postal-code" maxlength="9" placeholder="14140-000"')}
+      ${campo("numero", "Número", 'autocomplete="address-line2" maxlength="10"')}
+      ${campo("rua", "Rua", 'autocomplete="address-line1" maxlength="80"', true)}
+      ${campo("bairro", "Bairro", 'maxlength="50"')}
+      ${campo("cidade", "Cidade", 'autocomplete="address-level2" maxlength="50"')}
+      ${campo("compl", "Complemento <small>(opcional)</small>", 'maxlength="40"', true)}
+    </div>
+    <fieldset class="bloco">
+      <legend>Forma de pagamento</legend>
+      <div class="pilulas">${["Pix", "Cartão", "Dinheiro"].map((v) => pilula("pagamento", v, v === "Dinheiro" && ck.receber !== "loja")).join("")}</div>
+      <p class="nota"${ck.receber === "loja" ? " hidden" : ""}>Pagamento em dinheiro só na retirada na loja.</p>
+      <div class="campos cartao-campos" id="cartao"${ck.pagamento === "Cartão" ? "" : " hidden"}>
+        <label class="campo campo-largo campo-cartao"><span>Número do cartão</span><input data-c="numero" value="${esc(pagCartao.numero)}" autocomplete="off" inputmode="numeric" maxlength="23" placeholder="0000 0000 0000 0000"><span class="bandeira" id="bandeira" aria-live="polite">${bandeira(pagCartao.numero)}</span></label>
+        ${campoCartao("nome", "Nome impresso no cartão", 'maxlength="40"', true)}
+        ${campoCartao("validade", "Validade", 'inputmode="numeric" maxlength="5" placeholder="MM/AA"')}
+        ${campoCartao("cvv", "CVV", 'inputmode="numeric" maxlength="4" placeholder="123"')}
+        <label class="campo campo-largo"><span>Parcelas</span><select data-c="parcelas">${[1, 2, 3, 4].map((n) => `<option value="${n}"${pagCartao.parcelas == n ? " selected" : ""}>${n}x de ${reais(totalSacola() / n)} sem juros</option>`).join("")}</select></label>
+      </div>
+      <div class="campos" style="margin-top:.4rem">${campo("nome", "Seu nome", 'autocomplete="name" maxlength="60"', true)}</div>
+    </fieldset>
+    <details class="previa-caixa"><summary>Ver a mensagem do pedido</summary><div class="previa" id="previa" aria-live="polite"></div></details>`;
+  rodape();
+  if (focar) sacola.querySelector(focar)?.focus();
+}
+
+/* o rodape muda com a forma de pagamento: Pix e cartao pagam no site, dinheiro vai pelo WhatsApp */
+function rodape() {
+  const total = totalSacola(), pe = $("#sacola-pe");
+  const acao = ck.pagamento === "Dinheiro"
+    ? `<a class="btn btn-zap" id="enviar" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Enviar pedido pelo WhatsApp</a>
+       <p>Você paga em dinheiro na retirada.</p>`
+    : `<button class="btn" type="button" id="pagar">${ck.pagamento === "Pix" ? `Pagar ${reais(total)} com Pix` : `Pagar ${reais(total)} no cartão`}</button>
+       <p class="erro" id="erro-pagar" role="alert" hidden></p>
+       <p>Demonstração: nenhum valor é cobrado.${ck.receber === "loja" ? "" : " A taxa de entrega é combinada depois."}</p>`;
+  pe.innerHTML = `<p class="subtotal"><span>Subtotal</span><strong>${reais(total)}</strong></p>${acao}`;
+  mensagem();
+}
+
+function bandeira(n) {
+  n = n.replace(/\D/g, "");
+  if (/^(4011|4312|4389|4514|4576|5041|5066|5067|6277|6362|6363|6504|6505|6516)/.test(n)) return "Elo";
+  if (/^3[47]/.test(n)) return "Amex";
+  if (/^(5[1-5]|2[2-7])/.test(n)) return "Mastercard";
+  if (/^4/.test(n)) return "Visa";
+  return "";
+}
+
+/* o que falta para pagar: devolve [campo, mensagem] ou nada */
+function falta() {
+  if (comEndereco() && !ck.rua.trim()) return ['[data-k="rua"]', "Informe a rua."];
+  if (comEndereco() && !ck.numero.trim()) return ['[data-k="numero"]', "Informe o número."];
+  if (!ck.nome.trim()) return ['[data-k="nome"]', "Informe o seu nome."];
+  if (ck.pagamento !== "Cartão") return;
+  const num = pagCartao.numero.replace(/\D/g, ""), [mm, aa] = pagCartao.validade.split("/").map(Number);
+  const hoje = new Date(), venc = new Date(2000 + (aa || 0), mm || 0, 1);
+  if (num.length < 13) return ['[data-c="numero"]', "Confira o número do cartão."];
+  if (!pagCartao.nome.trim()) return ['[data-c="nome"]', "Informe o nome impresso no cartão."];
+  if (!(mm >= 1 && mm <= 12) || venc <= hoje) return ['[data-c="validade"]', "Confira a validade do cartão."];
+  if (pagCartao.cvv.length < 3) return ['[data-c="cvv"]', "Confira o CVV."];
+}
+
+function pagar(botao) {
+  const f = falta(), erro = $("#erro-pagar");
+  if (f) { erro.textContent = f[1]; erro.hidden = false; piscar(erro); sacola.querySelector(f[0])?.focus(); return; }
+  erro.hidden = true;
+  pedido = { numero: "P" + Math.floor(1000 + Math.random() * 9000), total: totalSacola(), forma: ck.pagamento, parcelas: +pagCartao.parcelas };
+  if (ck.pagamento === "Pix") { etapa = "pix"; desenharPix(); $("#sacola-corpo").scrollTop = 0; return; }
+  botao.disabled = true;
+  botao.classList.add("girando");
+  botao.textContent = "Processando pagamento…";
+  depois(1800, aprovar);
+}
+
+/* QR Code de enfeite (nao le em banco nenhum): grade com os tres quadrados de canto */
+function qrFalso(semente) {
+  const t = 25; let x = semente, quad = "";
+  const rnd = () => (x = (x * 9301 + 49297) % 233280) / 233280;
+  const canto = (cx, cy) => `<path d="M${cx} ${cy}h7v7h-7zM${cx + 1} ${cy + 1}v5h5v-5z" fill-rule="evenodd"/><rect x="${cx + 2}" y="${cy + 2}" width="3" height="3"/>`;
+  for (let i = 0; i < t; i++) for (let j = 0; j < t; j++) {
+    const noCanto = (i < 8 && j < 8) || (i < 8 && j > t - 9) || (i > t - 9 && j < 8);
+    if (!noCanto && rnd() > .52) quad += `<rect x="${j}" y="${i}" width="1" height="1"/>`;
+  }
+  return `<svg viewBox="0 0 ${t} ${t}" shape-rendering="crispEdges" fill="#102A5C" role="img" aria-label="QR Code do Pix (demonstração)">${canto(0, 0)}${canto(t - 7, 0)}${canto(0, t - 7)}${quad}</svg>`;
+}
+
+function desenharPix() {
+  const codigo = `00020126580014br.gov.bcb.pix0136pgwbrindes-demo52040000530398${pedido.total.toFixed(2).length}${pedido.total.toFixed(2)}5802BR5911PGW BRINDES6009CRAVINHOS62070503${pedido.numero}6304DEMO`;
+  $("#sacola-corpo").innerHTML = `<div class="pagar">
+    <span class="demo">Demonstração</span>
+    <h3>Pague com Pix</h3>
+    <p>Abra o app do seu banco, escolha Pix e leia o QR Code ou cole o código.</p>
+    <div class="qr">${qrFalso(+pedido.numero.slice(1))}</div>
+    <p class="valor">${reais(pedido.total)}</p>
+    <div class="copia"><input value="${codigo}" readonly aria-label="Código Pix copia e cola"><button class="btn btn-linha" type="button" id="copiar">Copiar</button></div>
+    <p class="status" id="status-pix" aria-live="polite"><span class="pulso" aria-hidden="true"></span><span>Aguardando o pagamento, expira em <span id="expira">10:00</span></span></p>
+  </div>`;
+  $("#sacola-pe").innerHTML = `<button class="btn btn-linha" type="button" id="voltar">Voltar para o carrinho</button>`;
+  let resta = 600;
+  const conta = () => { resta--; const el = $("#expira"); if (el) el.textContent = `${Math.floor(resta / 60)}:${String(resta % 60).padStart(2, "0")}`; if (resta > 0 && etapa === "pix") depois(1000, conta); };
+  depois(1000, conta);
+  /* na demonstracao o banco "confirma" sozinho depois de alguns segundos */
+  depois(7000, () => {
+    if (etapa !== "pix") return;
+    const st = $("#status-pix");
+    st.classList.add("pago");
+    st.lastElementChild.textContent = "Pagamento recebido!";
+    depois(1100, aprovar);
+  });
+}
+
+function aprovar() {
+  parar();
+  pedido.texto = textoPedido(true);
+  pedido.receber = ck.receber;
+  itens = []; salvar();
+  etapa = "aprovado";
+  desenharAprovado();
+}
+
+function desenharAprovado() {
+  const forma = pedido.forma === "Pix" ? "no Pix" : `no cartão${pedido.parcelas > 1 ? ` em ${pedido.parcelas}x` : ""}`;
+  const combinar = { loja: "o prazo e a retirada na loja", entrega: "o prazo e a entrega" }[pedido.receber];
+  $("#sacola-corpo").innerHTML = `<div class="aprovado">
+    <svg viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="42"/><path d="M27 43l10 10 20-21"/></svg>
+    <h3>Pagamento aprovado</h3>
+    <p><span class="numero">Pedido ${pedido.numero}</span><br>${reais(pedido.total)} ${forma}</p>
+    <p>Envie o pedido para a nossa equipe pelo WhatsApp para confirmar o pedido e combinar ${combinar}.</p>
+    <span class="demo">Demonstração: nenhum valor foi cobrado</span>
+  </div>`;
+  $("#sacola-pe").innerHTML = `<a class="btn btn-zap" href="${zap(pedido.texto)}" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Enviar pedido pelo WhatsApp</a>
+    <button class="btn btn-linha" type="button" data-fechar>Continuar comprando</button>`;
+  $("#sacola-corpo").scrollTop = 0;
+}
+
+function textoPedido(pago) {
+  const linhas = [pago ? `Olá! Fiz o pedido ${pedido.numero} pelo site:` : "Olá! Gostaria de fazer um pedido pelo site:"];
+  itens.forEach((i) => { const p = produtoDe(i), d = detalhe(p, varDe(i), i.t, i.txt, i.est); linhas.push(`- ${i.qtd}x ${p.nome}${d ? ` (${d})` : ""}: ${reais(precoItem(i) * i.qtd)}`); });
+  linhas.push(`Subtotal: ${reais(totalSacola())}`);
+  if (ck.embalar) linhas.push("É para presente: poderiam embalar, por favor?");
+  if (comEndereco()) {
+    const n = ck.numero.trim(), ruaNum = ck.rua.trim() ? `${ck.rua.trim()}${n ? ", " + n : ""}` : (n ? `nº ${n}` : "");
+    const partes = [ruaNum, ck.compl.trim(), ck.bairro.trim(), ck.cidade.trim()].filter(Boolean);
+    const end = partes.length ? partes.join(", ") : "endereço a combinar";
+    linhas.push(`Entrega em: ${end}${ck.cep.trim() ? ` (CEP ${ck.cep.trim()})` : ""}`);
+  } else linhas.push(`Vou retirar na loja: ${LOJA}`);
+  if (pago) linhas.push(`Pagamento: ${pedido.forma === "Pix" ? "Pix" : `cartão${pedido.parcelas > 1 ? ` em ${pedido.parcelas}x` : ""}`}, aprovado no site`);
+  else linhas.push(`Pagamento: ${ck.pagamento === "Dinheiro" ? "dinheiro, na retirada" : ck.pagamento}`);
+  if (ck.nome.trim()) linhas.push(`Meu nome é ${ck.nome.trim()}.`);
+  linhas.push(ck.receber === "entrega" ? "Poderiam confirmar o pedido, o prazo e a taxa de entrega?" : "Poderiam confirmar o pedido e o prazo?");
+  return linhas.join("\n");
+}
+function mensagem() {
+  const texto = textoPedido(false);
+  const previa = $("#previa"); if (previa) previa.textContent = texto;
+  const enviar = $("#enviar"); if (enviar) enviar.href = zap(texto);
+}
+
+let ultimoCep = "";
+async function buscarCep() {
+  const n = ck.cep.replace(/\D/g, "");
+  if (n.length !== 8 || n === ultimoCep) return;
+  ultimoCep = n;
+  try {
+    const r = await fetch(`https://viacep.com.br/ws/${n}/json/`);
+    const d = await r.json();
+    if (d.erro) return;
+    Object.assign(ck, { rua: d.logradouro || ck.rua, bairro: d.bairro || ck.bairro, cidade: d.localidade ? `${d.localidade} (${d.uf})` : ck.cidade });
+    ["rua", "bairro", "cidade"].forEach((k) => { const el = sacola.querySelector(`[data-k="${k}"]`); if (el) { el.value = ck[k]; piscar(el); } });
+    mensagem();
+  } catch {}
+}
+sacola.addEventListener("input", (e) => {
+  const t = e.target;
+  if (t.dataset.k) {
+    if (t.dataset.k === "cep") { t.value = t.value.replace(/\D/g, "").replace(/^(\d{5})(\d)/, "$1-$2").slice(0, 9); }
+    ck[t.dataset.k] = t.value;
+    if (t.dataset.k === "cep") buscarCep();
+  }
+  if (t.dataset.c && t.tagName === "INPUT") {
+    const d = t.value.replace(/\D/g, "");
+    if (t.dataset.c === "numero") { t.value = d.slice(0, 19).replace(/(\d{4})(?=\d)/g, "$1 "); $("#bandeira").textContent = bandeira(d); }
+    if (t.dataset.c === "validade") t.value = d.slice(0, 4).replace(/^(\d{2})(\d)/, "$1/$2");
+    if (t.dataset.c === "cvv") t.value = d.slice(0, 4);
+    pagCartao[t.dataset.c] = t.value;
+  }
+  const erro = $("#erro-pagar"); if (erro) erro.hidden = true;
+  mensagem();
+});
+sacola.addEventListener("change", (e) => {
+  const t = e.target;
+  if (t.dataset.c === "parcelas") { pagCartao.parcelas = t.value; return; }
+  if (t.name === "embalar") { ck.embalar = t.checked; mensagem(); piscar($("#previa")); return; }
+  if (t.name !== "receber" && t.name !== "pagamento") return;
+  const eraCartao = ck.pagamento === "Cartão", eraEndereco = comEndereco();
+  ck[t.name] = t.value;
+  desenharSacola(`input[name="${t.name}"][value="${ck[t.name]}"]`);
+  if (ck.pagamento === "Cartão" && !eraCartao) piscar($("#cartao"));
+  if (comEndereco() && !eraEndereco) piscar($("#endereco"));
+  piscar($("#previa"));
+});
+contar();
+
+/* ---------- empresas: quantidade, faixa de preco e orcamento ---------- */
+const emp = { id: "caneca", qtd: 50 };
+const FAIXAS = ["10 a 24", "25 a 49", "50 a 99", "100 ou mais"];
+const brinde = () => BRINDES.find(([id]) => id === emp.id);
+$("#brindes").innerHTML = BRINDES.map(([id, n, , cor]) => radio("brinde", id, id === emp.id, `${miniatura(id, cor)}<span>${n}</span>`, "peca")).join("");
+$("#atalhos").innerHTML = [10, 25, 50, 100, 200].map((n) => `<button type="button" data-n="${n}">${n}</button>`).join("");
+function calcular() {
+  const [, n, plural, , tabela] = brinde(), q = emp.qtd;
+  const faixa = tabela.reduce((f, [min], i) => (q >= min ? i : f), 0), unit = tabela[faixa][1];
+  $("#faixas").innerHTML = `<thead><tr><th scope="col">Quantidade</th><th scope="col">Preço por unidade</th></tr></thead><tbody>${tabela.map(([, preco], i) => `<tr${i === faixa ? ' class="atual"' : ""}><td>${FAIXAS[i]}</td><td>${reais(preco)}</td></tr>`).join("")}</tbody>`;
+  $("#total-det").textContent = `${q} ${q === 1 ? n.toLowerCase() : plural} × ${reais(unit)}`;
+  $("#total-empresa").textContent = reais(unit * q);
+  $("#orcamento").href = zap(`Olá! Vim pelo site e gostaria de um orçamento para a minha empresa: ${q} ${plural} com o nosso logo. Pela simulação do site, ficaria ${reais(unit)} por unidade (${reais(unit * q)}). Posso enviar o logo por aqui?`);
+}
+const qtdCampo = $("#qtd-empresa");
+const mudarQtd = (n) => { emp.qtd = Math.min(2000, Math.max(10, Math.round(n) || 10)); qtdCampo.value = emp.qtd; calcular(); };
+$("#calculo").addEventListener("change", (e) => {
+  if (e.target.name === "brinde") { emp.id = e.target.value; calcular(); piscar($("#faixas")); }
+  if (e.target === qtdCampo) mudarQtd(+qtdCampo.value);
+});
+qtdCampo.addEventListener("input", () => { const n = +qtdCampo.value; if (n >= 10 && n <= 2000) { emp.qtd = n; calcular(); } });
+$("#calculo").addEventListener("click", (e) => {
+  const passo = e.target.closest("[data-qtd]"); if (passo) mudarQtd(emp.qtd + +passo.dataset.qtd * (emp.qtd >= 100 ? 10 : 5));
+  const atalho = e.target.closest("[data-n]"); if (atalho) { mudarQtd(+atalho.dataset.n); piscar($("#total-empresa")); }
+});
+calcular();
+
+/* ---------- botao do canto: aparece depois da abertura e sai no rodape ---------- */
+const flutuante = $("#flutuante");
+flutuante.href = zap("Olá! Vim pelo site da PGW Brindes e gostaria de atendimento.");
+function mostrarFlutuante() {
+  const passou = $(".fita").getBoundingClientRect().bottom < 0 && $(".rodape").getBoundingClientRect().top > innerHeight;
+  flutuante.classList.toggle("visivel", passou);
+  flutuante.tabIndex = passou ? 0 : -1;
+}
+addEventListener("scroll", mostrarFlutuante, { passive: true });
+
+/* ---------- menu do celular ---------- */
+const topo = $(".topo"), menuBotao = $("#menu-botao");
+function menu(abrir) {
+  topo.classList.toggle("menu-aberto", abrir);
+  menuBotao.setAttribute("aria-expanded", String(abrir));
+  menuBotao.setAttribute("aria-label", abrir ? "Fechar menu" : "Abrir menu");
+}
+menuBotao.addEventListener("click", () => menu(!topo.classList.contains("menu-aberto")));
+$("#menu").addEventListener("click", (e) => { if (e.target.closest("a")) menu(false); });
+document.addEventListener("click", (e) => { if (!topo.contains(e.target)) menu(false); });
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && topo.classList.contains("menu-aberto")) { menu(false); menuBotao.focus(); }
+});
+matchMedia("(min-width: 60.01em)").addEventListener("change", (m) => { if (m.matches) menu(false); });
+
+mostrarFlutuante();
+/* endereco do produto: ?produto=id (os links antigos #produto-id continuam funcionando) */
+{
+  const q = new URLSearchParams(location.search), antigo = location.hash.match(/^#produto-(.+)$/);
+  const p = porId(q.get("produto") || antigo?.[1]);
+  if (p) {
+    if (antigo) history.replaceState(null, "", urlProduto(p, varInicial(p), 0));
+    abrirProduto(p.id, varDaUrl(p, q), false, tamDaUrl(p, q));
+  }
+}
+</script>
+</body>
+</html>
